@@ -927,6 +927,26 @@
         "/tutorials/shadowrocket-subscription-import/"
       ],
       "conversionTarget": "v2rayN订阅导入更新与专线选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/v2rayn-node-timeout/",
+      "h1": "v2rayN节点 Timeout 怎么办？全部节点连接超时、Core、网络与服务器异常完整排查",
+      "keyword": "v2rayN节点Timeout",
+      "intent": "informational_investigation",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayn-windows/",
+      "childUrls": [
+        "/tutorials/v2rayn-windows/",
+        "/tutorials/v2rayn-subscription/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/clash-node-timeout/",
+        "/issues/shadowrocket-node-timeout/",
+        "/tutorials/v2rayn-windows/"
+      ],
+      "conversionTarget": "v2rayN节点连接超时排障与专线选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
