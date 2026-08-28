@@ -707,6 +707,26 @@
         "/recommend/best-tizi/"
       ],
       "conversionTarget": "Clash速度慢排查与高速专线选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/shadowrocket-tizi/",
+      "h1": "Shadowrocket怎么用？小火箭订阅、节点、规则与iPhone完整配置教程",
+      "keyword": "Shadowrocket怎么用",
+      "intent": "informational_investigation",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/iphone-tizi/",
+      "childUrls": [
+        "/tutorials/shadowrocket/longmao-cloud/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/"
+      ],
+      "lateralUrls": [
+        "/tutorials/iphone-tizi/",
+        "/tutorials/android-tizi/",
+        "/tutorials/clash-tizi/"
+      ],
+      "conversionTarget": "iPhone小火箭专线配置与选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
