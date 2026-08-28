@@ -1011,6 +1011,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Windows v2rayN客户端配置与专线选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-054",
+      "keyword": "v2rayN订阅怎么导入",
+      "intent": "informational_investigation",
+      "pageType": "tutorial",
+      "url": "/tutorials/v2rayn-subscription/",
+      "category": "教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "v2rayN订阅导入更新与专线选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
