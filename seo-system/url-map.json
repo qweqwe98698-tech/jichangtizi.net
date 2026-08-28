@@ -847,6 +847,26 @@
         "/tutorials/shadowrocket-tizi/"
       ],
       "conversionTarget": "小火箭DNS解析优化与专线选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/shadowrocket-nodes/",
+      "h1": "Shadowrocket节点怎么选？香港、日本、新加坡、美国节点与延迟、线路、AI和流媒体完整指南",
+      "keyword": "Shadowrocket节点怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/shadowrocket-tizi/",
+      "childUrls": [
+        "/tutorials/shadowrocket-rules/",
+        "/tutorials/shadowrocket-tizi/",
+        "/issues/shadowrocket-slow-speed/"
+      ],
+      "lateralUrls": [
+        "/tutorials/shadowrocket-rules/",
+        "/issues/shadowrocket-slow-speed/",
+        "/tutorials/shadowrocket-tizi/"
+      ],
+      "conversionTarget": "小火箭节点选择与多地区专线选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
