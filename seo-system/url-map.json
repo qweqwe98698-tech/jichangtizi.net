@@ -727,6 +727,26 @@
         "/tutorials/clash-tizi/"
       ],
       "conversionTarget": "iPhone小火箭专线配置与选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/shadowrocket-subscription-import/",
+      "h1": "Shadowrocket订阅怎么导入？小火箭订阅链接、节点更新与订阅失败完整教程",
+      "keyword": "Shadowrocket订阅",
+      "intent": "informational_investigation",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/shadowrocket-tizi/",
+      "childUrls": [
+        "/tutorials/shadowrocket/longmao-cloud/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/"
+      ],
+      "lateralUrls": [
+        "/tutorials/shadowrocket-tizi/",
+        "/tutorials/clash-subscription-import/",
+        "/tutorials/iphone-tizi/"
+      ],
+      "conversionTarget": "小火箭订阅导入与专线选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
