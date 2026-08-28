@@ -987,6 +987,26 @@
         "/tutorials/v2rayn-windows/"
       ],
       "conversionTarget": "v2rayN速度慢排障与专线选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/v2rayn-tun/",
+      "h1": "v2rayN TUN怎么用？系统代理、TUN、虚拟网卡、Routing与DNS完整指南",
+      "keyword": "v2rayN TUN怎么用",
+      "intent": "informational_investigation",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayn-windows/",
+      "childUrls": [
+        "/tutorials/v2rayn-windows/",
+        "/issues/v2rayn-connected-no-internet/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/wiki/clash-tun-mode-vs-system-proxy/",
+        "/issues/v2rayn-connected-no-internet/",
+        "/tutorials/v2rayn-windows/"
+      ],
+      "conversionTarget": "v2rayN TUN模式虚拟网卡配置与专线选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
