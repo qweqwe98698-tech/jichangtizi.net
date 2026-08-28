@@ -500,6 +500,27 @@
         "/protocols/iepl-vs-iplc-transit/"
       ],
       "conversionTarget": "场景化精准选型 (光速云 / 微风 / 唯兔云)"
+    },
+    {
+      "url": "/wiki/what-is-tizi/",
+      "h1": "梯子是什么？梯子工具、VPN、机场、代理到底有什么区别？新手完整指南",
+      "keyword": "梯子是什么",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/",
+      "childUrls": [
+        "/wiki/airport-vs-vpn-difference/",
+        "/wiki/what-is-clash/",
+        "/wiki/mihomo-vs-clash/",
+        "/tutorials/clash-verge-rev/"
+      ],
+      "lateralUrls": [
+        "/recommend/best-tizi/",
+        "/recommend/which-tizi-is-best/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "conversionTarget": "2026梯子推荐 / 新手入门配置"
     }
   ]
 }
