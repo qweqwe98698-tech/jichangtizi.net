@@ -33,12 +33,12 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  siteUrl: 'https://template.ulna520.top',
-  siteTitle: 'ulBo Astro Theme',
-  siteTitleSuffix: '个人博客',
-  siteDescription: 'A configurable Astro blog theme with centralized config and zero-content defaults.',
+  siteUrl: 'https://jichangtizi.net',
+  siteTitle: '机场梯子',
+  siteTitleSuffix: '2026 稳定机场推荐与梯子评测导航',
+  siteDescription: '机场梯子 (jichangtizi.net) 专注于2026最新高速稳定科学上网机场推荐、Clash/Shadowrocket梯子评测与ChatGPT解锁专线实测。',
   locale: 'zh-CN',
-  headerGithubRepoUrl: 'https://github.com/xxy1103/ulbo-astro-theme-template',
+  headerGithubRepoUrl: '',
   faviconIco: '/favicon.ico',
 };
 

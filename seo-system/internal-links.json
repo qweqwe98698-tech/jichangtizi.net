@@ -1,0 +1,57 @@
+{
+  "$schema": "https://jichangtizi.net/schemas/seo-internal-links.json",
+  "version": "1.0.0",
+  "updated_at": "2026-08-28T18:20:00.000Z",
+  "description": "全站网状内链拓扑体系：自上而下父子链、自下而上回流链、同级横向互联与商业转化桥接",
+  "linking_rules": {
+    "hierarchical_upward": "所有子页面（Spoke/Leaf）正文底部或首屏必须包含指向其所属 Pillar/Hub 页面的反向锚文本链接，传递页面权重（PageRank）。",
+    "hierarchical_downward": "所有核心 Pillar 页面必须在正文关键模块中自然包含指向全部子 Hub/Spoke 页面的深度导航链接。",
+    "cluster_lateral": "同一 Topic Cluster 内的横向页面（如评测 vs 购买决策、排障 vs Timeout）必须相互推荐，形成闭环流量池。",
+    "commercial_bridge": "所有技术排障、风险预警与概念科普文章，在提供解决方案后，必须自然提供 1~2 个指向高转化商业页（如替代方案、推荐大榜）的桥接入口。"
+  },
+  "anchor_text_dictionary": {
+    "/recommend/best-airports/": [
+      "2026 机场推荐与稳定排行榜",
+      "精选机场评测大榜",
+      "稳定机场推荐排行榜"
+    ],
+    "/reviews/guangsu-cloud/": [
+      "光速云深度评测",
+      "光速云 2020 老牌物理 IPLC 专线",
+      "光速云实测数据"
+    ],
+    "/reviews/weifeng-cloud/": [
+      "微风网络深度评测",
+      "微风网络 7 元/月 IEPL 专线"
+    ],
+    "/reviews/longmao-cloud/": [
+      "龙猫云品牌全景总评",
+      "龙猫云机场怎么样"
+    ],
+    "/compare/longmao-cloud-alternatives/": [
+      "龙猫云替代机场选型指南",
+      "龙猫云替代方案有哪些",
+      "类似龙猫云的机场推荐"
+    ],
+    "/compare/longmao-vs-guangsu/": [
+      "龙猫云和光速云哪个好",
+      "龙猫云 vs 光速云深度对比"
+    ],
+    "/tutorials/clash-verge-rev/": [
+      "Clash Verge Rev 下载与安装教程",
+      "Clash Verge 客户端配置指南"
+    ],
+    "/issues/clash-connected-no-internet/": [
+      "Clash 有节点无法上网排查手册",
+      "节点连接正常但网页打不开排障"
+    ],
+    "/protocols/iepl-vs-iplc-transit/": [
+      "IEPL、IPLC 与中转直连底层区别",
+      "机场专线原理解析"
+    ],
+    "/risk/airport-running-away-warning-signs/": [
+      "机场跑路前 10 大反常信号",
+      "机场防坑避险指南"
+    ]
+  }
+}

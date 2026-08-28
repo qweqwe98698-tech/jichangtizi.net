@@ -1,5 +1,4 @@
 import type { ImageMetadata } from 'astro';
-import defaultAvatar from '../assets/profile.jpg';
 
 /**
  * Allowed social entry keys in profile configuration.
@@ -54,16 +53,11 @@ export interface ProfileConfig {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: defaultAvatar,
-  name: 'Your Name',
-  title: 'Your Role / Focus',
-  bio: 'Write a short self-introduction here. This content is used in About and article schema.',
-  location: 'Your City',
-  email: 'you@example.com',
-  githubProfileUrl: 'https://example.com',
-  socials: [
-    { key: 'github', label: 'GitHub', url: 'https://example.com' },
-    { key: 'x', label: 'X', url: 'https://example.com' },
-    { key: 'website', label: 'Website', url: 'https://example.com' },
-  ],
+  name: '机场梯子编辑部',
+  title: '机场评测 · 网络工具 · Clash / Mihomo 内容团队',
+  bio: '机场梯子（jichangtizi.net）专注机场推荐、品牌评测、客户端教程、节点订阅、线路协议和常见网络问题。',
+  location: '全球',
+  email: 'contact@jichangtizi.net',
+  githubProfileUrl: '',
+  socials: [],
 };

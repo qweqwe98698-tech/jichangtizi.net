@@ -1,0 +1,67 @@
+{
+  "$schema": "https://jichangtizi.net/schemas/seo-sitemap-map.json",
+  "version": "1.0.0",
+  "updated_at": "2026-08-28T18:20:00.000Z",
+  "sitemap_index_url": "https://jichangtizi.net/sitemap-index.xml",
+  "partition_rules": {
+    "max_urls_per_sitemap": 1000,
+    "strategy": "By Intent-Segregated Topic Namespace",
+    "frequency": "Daily / On Deploy"
+  },
+  "sitemaps": [
+    {
+      "name": "sitemap-main.xml",
+      "scope": "Core Homepage and Global Static Landing Pages",
+      "matchingPattern": "^(https://jichangtizi.net/(about/)?)$",
+      "estimatedUrls": 2
+    },
+    {
+      "name": "sitemap-recommend.xml",
+      "scope": "Commercial Rankings and Buying Hubs",
+      "matchingPattern": "^https://jichangtizi.net/recommend/.*",
+      "estimatedUrls": 5
+    },
+    {
+      "name": "sitemap-reviews.xml",
+      "scope": "Brand Entity Reviews and Sub-pages",
+      "matchingPattern": "^https://jichangtizi.net/reviews/.*",
+      "estimatedUrls": 10
+    },
+    {
+      "name": "sitemap-compare.xml",
+      "scope": "1-to-1 Comparisons and Alternative Selections",
+      "matchingPattern": "^https://jichangtizi.net/compare/.*",
+      "estimatedUrls": 5
+    },
+    {
+      "name": "sitemap-tutorials.xml",
+      "scope": "Step-by-Step Client and Configuration Guides",
+      "matchingPattern": "^https://jichangtizi.net/tutorials/.*",
+      "estimatedUrls": 8
+    },
+    {
+      "name": "sitemap-issues.xml",
+      "scope": "Troubleshooting Handbooks and Diagnostics",
+      "matchingPattern": "^https://jichangtizi.net/issues/.*",
+      "estimatedUrls": 10
+    },
+    {
+      "name": "sitemap-protocols.xml",
+      "scope": "Technical Specifications and Line Benchmarks",
+      "matchingPattern": "^https://jichangtizi.net/protocols/.*",
+      "estimatedUrls": 5
+    },
+    {
+      "name": "sitemap-wiki.xml",
+      "scope": "Industry Knowledge, Concepts and Explanations",
+      "matchingPattern": "^https://jichangtizi.net/wiki/.*",
+      "estimatedUrls": 6
+    },
+    {
+      "name": "sitemap-risk.xml",
+      "scope": "Risk Warnings, Audits and Status Monitoring",
+      "matchingPattern": "^https://jichangtizi.net/risk/.*",
+      "estimatedUrls": 5
+    }
+  ]
+}

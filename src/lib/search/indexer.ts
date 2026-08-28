@@ -13,7 +13,7 @@ export function createSearchDocument(post: BlogPost): SearchDocument {
 		excerpt,
 		tags: post.data.tags,
 		categories: post.data.categories,
-		url: `/blog/${post.id}/`,
+		url: `/${post.id}/`,
 		blocks: parseSearchBlocks(body),
 	};
 }

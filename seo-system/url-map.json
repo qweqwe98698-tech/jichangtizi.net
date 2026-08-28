@@ -1,0 +1,462 @@
+{
+  "$schema": "https://jichangtizi.net/schemas/seo-url-map.json",
+  "version": "1.0.0",
+  "updated_at": "2026-08-28T18:20:00.000Z",
+  "site_domain": "https://jichangtizi.net",
+  "total_urls": 28,
+  "url_structure_spaces": [
+    "/recommend/",
+    "/reviews/",
+    "/compare/",
+    "/tutorials/",
+    "/issues/",
+    "/protocols/",
+    "/wiki/",
+    "/risk/"
+  ],
+  "mappings": [
+    {
+      "url": "/recommend/best-airports/",
+      "h1": "2026 机场推荐与稳定机场排行榜：17 家价格、线路与 AI 全景横评",
+      "keyword": "2026机场推荐",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "cluster": "Core-Airports-Ranking",
+      "parentUrl": "/",
+      "childUrls": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/reviews/longmao-cloud/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "lateralUrls": [
+        "/protocols/iepl-vs-iplc-transit/",
+        "/tutorials/clash-verge-rev/"
+      ],
+      "conversionTarget": "光速云 / 微风网络 / 飞猫云 / 星岛梦"
+    },
+    {
+      "url": "/reviews/guangsu-cloud/",
+      "h1": "光速云深度评测：2020老牌IEPL专线、晚高峰跑分与解锁实测",
+      "keyword": "光速云评测",
+      "intent": "commercial_investigation",
+      "pageType": "review",
+      "cluster": "GuangSuYun",
+      "parentUrl": "/recommend/best-airports/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/reviews/weifeng-cloud/",
+        "/compare/longmao-vs-guangsu/"
+      ],
+      "conversionTarget": "光速云官网 (优惠码 AMM)"
+    },
+    {
+      "url": "/reviews/weifeng-cloud/",
+      "h1": "微风网络评测：小流量套餐值不值得买？价格、线路与适合人群分析",
+      "keyword": "微风网络评测",
+      "intent": "commercial_investigation",
+      "pageType": "review",
+      "cluster": "BreezeNet",
+      "parentUrl": "/recommend/best-airports/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/reviews/guangsu-cloud/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "conversionTarget": "微风网络官网 (优惠码 flat888)"
+    },
+    {
+      "url": "/reviews/longmao-cloud/",
+      "h1": "龙猫云机场怎么样？套餐、线路、节点与使用体验深度评测",
+      "keyword": "龙猫云机场怎么样",
+      "intent": "commercial_investigation",
+      "pageType": "review",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/recommend/best-airports/",
+      "childUrls": [
+        "/reviews/longmao-cloud/buying-guide/",
+        "/reviews/longmao-cloud/pricing/",
+        "/reviews/longmao-cloud/nodes/",
+        "/reviews/longmao-cloud/lines/"
+      ],
+      "lateralUrls": [
+        "/compare/longmao-cloud-alternatives/",
+        "/compare/longmao-vs-guangsu/"
+      ],
+      "conversionTarget": "中立引流至光速云/全景大榜"
+    },
+    {
+      "url": "/reviews/longmao-cloud/buying-guide/",
+      "h1": "龙猫云值得买吗？适合哪些用户，购买前要注意什么",
+      "keyword": "龙猫云值得买吗",
+      "intent": "commercial_investigation",
+      "pageType": "review",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/reviews/longmao-cloud/pricing/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "conversionTarget": "龙猫云替代选型 / 光速云"
+    },
+    {
+      "url": "/reviews/longmao-cloud/pricing/",
+      "h1": "龙猫云套餐多少钱？价格、流量与付款周期怎么选",
+      "keyword": "龙猫云套餐多少钱",
+      "intent": "commercial_investigation",
+      "pageType": "review",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/reviews/longmao-cloud/nodes/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "conversionTarget": "价格决策 / 替代选型"
+    },
+    {
+      "url": "/reviews/longmao-cloud/nodes/",
+      "h1": "龙猫云节点有哪些？香港、日本、新加坡、美国节点怎么选",
+      "keyword": "龙猫云节点有哪些",
+      "intent": "informational",
+      "pageType": "review",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/reviews/longmao-cloud/lines/",
+        "/issues/longmao-cloud-node-timeout/"
+      ],
+      "conversionTarget": "节点选路 / 原生解锁"
+    },
+    {
+      "url": "/reviews/longmao-cloud/lines/",
+      "h1": "龙猫云是什么线路？直连、中转、IEPL/IPLC 应该怎么看",
+      "keyword": "龙猫云是什么线路",
+      "intent": "informational",
+      "pageType": "review",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/protocols/iepl-vs-iplc-transit/",
+        "/reviews/guangsu-cloud/"
+      ],
+      "conversionTarget": "专线科普 / 光速云物理专线"
+    },
+    {
+      "url": "/compare/longmao-cloud-alternatives/",
+      "h1": "龙猫云替代机场有哪些？不同预算、流量与线路需求怎么选",
+      "keyword": "龙猫云替代机场",
+      "intent": "commercial_investigation",
+      "pageType": "comparison",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [
+        "/compare/longmao-vs-guangsu/"
+      ],
+      "lateralUrls": [
+        "/recommend/best-airports/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/"
+      ],
+      "conversionTarget": "光速云 / 微风网络 / 飞猫云 / 星岛梦"
+    },
+    {
+      "url": "/compare/longmao-vs-guangsu/",
+      "h1": "龙猫云和光速云哪个好？价格、流量、线路与适合人群深度对比",
+      "keyword": "龙猫云和光速云哪个好",
+      "intent": "commercial_investigation",
+      "pageType": "comparison",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/compare/longmao-cloud-alternatives/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/longmao-cloud/"
+      ],
+      "conversionTarget": "光速云 (8折码 AMM)"
+    },
+    {
+      "url": "/tutorials/clash-verge-rev/",
+      "h1": "Clash Verge Rev 下载与安装教程：从零开始配置",
+      "keyword": "Clash Verge Rev下载安装教程",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Clash-Tutorials",
+      "parentUrl": "/wiki/what-is-clash/",
+      "childUrls": [
+        "/tutorials/clash-subscription-import/",
+        "/tutorials/clash/longmao-cloud/"
+      ],
+      "lateralUrls": [
+        "/issues/clash-connected-no-internet/",
+        "/wiki/mihomo-vs-clash/"
+      ],
+      "conversionTarget": "精选机场推荐大榜"
+    },
+    {
+      "url": "/tutorials/clash-subscription-import/",
+      "h1": "机场订阅怎么导入 Clash？新手 3 步完成配置完整教程",
+      "keyword": "Clash怎么导入机场订阅",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Clash-Tutorials",
+      "parentUrl": "/tutorials/clash-verge-rev/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/tutorials/clash/longmao-cloud/",
+        "/issues/clash-connected-no-internet/"
+      ],
+      "conversionTarget": "精选机场订阅"
+    },
+    {
+      "url": "/tutorials/clash/longmao-cloud/",
+      "h1": "龙猫云怎么导入 Clash Verge Rev？订阅配置完整教程",
+      "keyword": "龙猫云怎么导入Clash Verge",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/tutorials/clash-verge-rev/",
+        "/issues/longmao-cloud-connected-no-internet/"
+      ],
+      "conversionTarget": "Clash通用教程 / 排障中心"
+    },
+    {
+      "url": "/tutorials/shadowrocket/longmao-cloud/",
+      "h1": "龙猫云怎么导入 Shadowrocket？iPhone 小火箭订阅教程",
+      "keyword": "龙猫云怎么导入小火箭Shadowrocket",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/tutorials/clash/longmao-cloud/",
+        "/issues/longmao-cloud-node-timeout/"
+      ],
+      "conversionTarget": "iOS 科学上网配置指南"
+    },
+    {
+      "url": "/issues/clash-connected-no-internet/",
+      "h1": "Clash 连上有节点但上不了网怎么办？7 步排查与解决教程",
+      "keyword": "Clash有节点无法上网",
+      "intent": "problem",
+      "pageType": "problem",
+      "cluster": "Network-Troubleshooting",
+      "parentUrl": "/tutorials/clash-verge-rev/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/issues/low-ping-slow-speed-reasons/",
+        "/wiki/clash-tun-mode-vs-system-proxy/"
+      ],
+      "conversionTarget": "换用高稳定专线 (光速云)"
+    },
+    {
+      "url": "/issues/longmao-cloud-connected-no-internet/",
+      "h1": "龙猫云有节点但无法上网怎么办？完整排查指南",
+      "keyword": "龙猫云有节点但无法上网",
+      "intent": "problem",
+      "pageType": "problem",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/issues/longmao-cloud-node-timeout/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "conversionTarget": "龙猫云排障 / 替代方案"
+    },
+    {
+      "url": "/issues/longmao-cloud-node-timeout/",
+      "h1": "龙猫云节点 Timeout 怎么办？连接超时的常见原因与修复方法",
+      "keyword": "龙猫云节点Timeout超时",
+      "intent": "problem",
+      "pageType": "problem",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/issues/longmao-cloud-slow-speed/",
+        "/risk/longmao-cloud-status/"
+      ],
+      "conversionTarget": "Timeout排查 / 稳定备用"
+    },
+    {
+      "url": "/issues/longmao-cloud-slow-speed/",
+      "h1": "龙猫云速度慢是什么原因？节点、线路与晚高峰完整排查",
+      "keyword": "龙猫云速度慢晚高峰卡顿",
+      "intent": "problem",
+      "pageType": "problem",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/issues/low-ping-slow-speed-reasons/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "conversionTarget": "光速云物理 IPLC 专线"
+    },
+    {
+      "url": "/issues/low-ping-slow-speed-reasons/",
+      "h1": "为什么机场节点延迟低但速度慢？解析延迟与带宽的真实关系",
+      "keyword": "机场节点延迟低但速度慢",
+      "intent": "problem",
+      "pageType": "problem",
+      "cluster": "Network-Troubleshooting",
+      "parentUrl": "/recommend/best-airports/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/protocols/iepl-vs-iplc-transit/",
+        "/issues/clash-connected-no-internet/"
+      ],
+      "conversionTarget": "专线大带宽机场推荐"
+    },
+    {
+      "url": "/protocols/iepl-vs-iplc-transit/",
+      "h1": "IEPL、IPLC 与中转直连有什么区别？一文读懂机场线路原理与避坑指南",
+      "keyword": "IEPL与IPLC专线区别",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Protocols-And-Lines",
+      "parentUrl": "/recommend/best-airports/",
+      "childUrls": [
+        "/protocols/vless-trojan-hysteria2/"
+      ],
+      "lateralUrls": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/longmao-cloud/lines/"
+      ],
+      "conversionTarget": "光速云 IPLC / 微风网络 IEPL"
+    },
+    {
+      "url": "/protocols/vless-trojan-hysteria2/",
+      "h1": "VLESS、Trojan、Hysteria 2 与 Shadowsocks 怎么选？主流代理协议对比评测",
+      "keyword": "VLESS与Trojan与Hysteria2对比",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Protocols-And-Lines",
+      "parentUrl": "/protocols/iepl-vs-iplc-transit/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/wiki/what-is-clash/",
+        "/reviews/guangsu-cloud/"
+      ],
+      "conversionTarget": "协议选型与适配机场"
+    },
+    {
+      "url": "/wiki/what-is-clash/",
+      "h1": "Clash 是什么？新手从零搞懂规则分流、节点配置与代理模式",
+      "keyword": "Clash是什么新手指南",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Clash-Tutorials",
+      "parentUrl": "/recommend/best-airports/",
+      "childUrls": [
+        "/tutorials/clash-verge-rev/",
+        "/wiki/mihomo-vs-clash/",
+        "/wiki/clash-tun-mode-vs-system-proxy/"
+      ],
+      "lateralUrls": [
+        "/wiki/airport-vs-vpn-difference/"
+      ],
+      "conversionTarget": "新手教程 / 订阅导入"
+    },
+    {
+      "url": "/wiki/airport-vs-vpn-difference/",
+      "h1": "机场和 VPN 有什么区别？从底层协议、隐私安全到使用场景全面对比",
+      "keyword": "机场和VPN有什么区别",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Industry-Foundations",
+      "parentUrl": "/recommend/best-airports/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/protocols/iepl-vs-iplc-transit/",
+        "/wiki/what-is-clash/"
+      ],
+      "conversionTarget": "机场推荐大榜"
+    },
+    {
+      "url": "/wiki/mihomo-vs-clash/",
+      "h1": "Mihomo 和 Clash 到底有什么区别？内核演进、协议支持与客户端选型指南",
+      "keyword": "Mihomo和Clash有什么区别",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Clash-Tutorials",
+      "parentUrl": "/wiki/what-is-clash/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/tutorials/clash-verge-rev/",
+        "/protocols/vless-trojan-hysteria2/"
+      ],
+      "conversionTarget": "Clash Verge Rev 教程"
+    },
+    {
+      "url": "/wiki/clash-tun-mode-vs-system-proxy/",
+      "h1": "Clash TUN 模式和系统代理有什么区别？全面解析虚拟网卡接管、DNS 防污染与游戏分流",
+      "keyword": "Clash TUN模式和系统代理区别",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Clash-Tutorials",
+      "parentUrl": "/wiki/what-is-clash/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/issues/clash-connected-no-internet/",
+        "/tutorials/clash-verge-rev/"
+      ],
+      "conversionTarget": "TUN 模式配置排障"
+    },
+    {
+      "url": "/risk/airport-running-away-warning-signs/",
+      "h1": "机场跑路前有哪些风险信号？10 个预警与防坑避险指南",
+      "keyword": "机场跑路前有哪些预警信号",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Risk-Database",
+      "parentUrl": "/recommend/best-airports/",
+      "childUrls": [
+        "/risk/longmao-cloud-status/"
+      ],
+      "lateralUrls": [
+        "/risk/longmao-cloud-security/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "conversionTarget": "老牌防跑路大厂 (光速云 / 星岛梦)"
+    },
+    {
+      "url": "/risk/longmao-cloud-security/",
+      "h1": "龙猫云安全吗？订阅、节点、隐私与长期使用风险分析",
+      "keyword": "龙猫云安全吗隐私风险分析",
+      "intent": "commercial_investigation",
+      "pageType": "review",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/reviews/longmao-cloud/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/risk/longmao-cloud-status/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "conversionTarget": "安全专线选型"
+    },
+    {
+      "url": "/risk/longmao-cloud-status/",
+      "h1": "龙猫云跑路了吗？官网、节点、订阅与当前服务状态怎么判断",
+      "keyword": "龙猫云跑路了吗服务状态核验",
+      "intent": "problem",
+      "pageType": "problem",
+      "cluster": "LongMaoCloud",
+      "parentUrl": "/risk/airport-running-away-warning-signs/",
+      "childUrls": [],
+      "lateralUrls": [
+        "/compare/longmao-cloud-alternatives/",
+        "/issues/longmao-cloud-connected-no-internet/"
+      ],
+      "conversionTarget": "龙猫云替代机场 / 备用通道"
+    }
+  ]
+}

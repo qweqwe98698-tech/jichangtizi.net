@@ -34,13 +34,13 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   home: {
-    text: 'Build your ideas, one post at a time.',
-    subtitle: 'A clean Astro theme with centralized configuration.',
+    text: '2026 免费机场便宜稳定梯子VPN翻墙机场推荐与魔法梯子科学上网总控（持续更新中）',
+    subtitle: '严选稳定、高性价比、流媒体与 ChatGPT 专线翻墙梯子 · 晚高峰实测数据驱动',
     backgroundImage: defaultBackground.src,
   },
   blog: {
-    text: 'All Posts',
-    subtitle: 'Browse your writing archive.',
+    text: '机场梯子知识库',
+    subtitle: '机场推荐、Clash / Mihomo、节点订阅、线路协议与常见问题解决指南',
     backgroundImage: defaultBackground.src,
   },
   tags: {
@@ -49,8 +49,8 @@ export const heroConfig: HeroConfig = {
     backgroundImage: defaultBackground.src,
   },
   about: {
-    text: 'About',
-    subtitle: 'Introduce yourself and your work.',
+    text: '关于机场梯子',
+    subtitle: '专注机场推荐、机场评测、Clash / Mihomo 与网络工具使用指南',
     backgroundImage: defaultBackground.src,
   },
   postDefaultBackground: defaultBackground.src,

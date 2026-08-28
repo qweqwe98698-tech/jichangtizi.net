@@ -2,45 +2,179 @@
 import ContentCard from '../components/ContentCard.astro';
 import HeroHeader from '../components/HeroHeader.astro';
 import PageShell from '../layouts/PageShell.astro';
-import PostListItem from '../components/PostListItem.astro';
-import SectionHeader from '../components/SectionHeader.astro';
-import { heroConfig, locale, siteDescription, siteTitle } from '../config';
-import { getBlogPosts } from '../lib/content/blog';
+import { heroConfig, locale, siteDescription, siteTitle, siteUrl } from '../config';
 
-const posts = await getBlogPosts();
-const siteURL = Astro.site ?? Astro.url;
-const postCount = posts.length;
-const wordCount = posts.reduce((acc, post) => acc + (post.body ? post.body.length : 0), 0);
-const tagCount = new Set(posts.flatMap((post) => post.data.tags || [])).size;
-const sortedAscPosts = [...posts].sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
-const startDate = postCount > 0 ? sortedAscPosts[0].data.pubDate : null;
-const recentPosts = posts.slice(0, 10);
-const hasPosts = postCount > 0;
 const homeHero = heroConfig.home;
+
+// 用户主推的 2026 真实机场排行榜数据 (01 光速云, 02 微风网络, 03 飞猫云)
+const airports = [
+  {
+    num: '01',
+    id: 'guangsu',
+    name: '光速云',
+    enName: 'GuangSuYun',
+    tagline: '2020年老牌 · IEPL / 全球 IPLC 专线 · VLESS · 原生 IP 全解锁 ChatGPT / Netflix',
+    price: '¥7.5 / 月起 (年付折算)',
+    traffic: '59GB ~ 238GB / 月',
+    lineType: 'IEPL / 全球 IPLC 专线',
+    protocol: 'VLESS / Shadowsocks',
+    tags: ['2020年老牌', 'IPLC专线', 'VLESS', 'ChatGPT全解锁', '流媒体', '优惠码:AMM'],
+    promoNote: '新人注册8折码 AMM',
+    reviewUrl: '/reviews/guangsu-cloud/',
+    affUrl: 'https://sahude.gsyvipaff.com/#/?code=keqgvT5Y',
+  },
+  {
+    num: '02',
+    id: 'weifeng',
+    name: '微风网络',
+    enName: 'BreezeNet',
+    tagline: '2023年运营 · IEPL 专线小流量年付 · 日常办公与轻度查资料高性价比之选',
+    price: '¥7 / 月起 (年付折算)',
+    traffic: '50GB / 月',
+    lineType: 'IEPL 专线',
+    protocol: '通用全订阅',
+    tags: ['2023年运营', 'IEPL专线', '约7元/月', '自研客户端', '轻度办公', '优惠码:flat888'],
+    promoNote: '季付9折码 flat888',
+    reviewUrl: '/reviews/weifeng-cloud/',
+    affUrl: 'https://edp01.breezenetaff.com/#/?code=R9ZazSfE',
+  },
+  {
+    num: '03',
+    id: 'flycat',
+    name: '飞猫云',
+    enName: 'FlyCat',
+    tagline: '2023年运营 · IEPL 专线小流量入门 · 低价轻度用户首选',
+    price: '¥7 / 月起 (年付折算)',
+    traffic: '50GB / 月',
+    lineType: 'IEPL 专线',
+    protocol: '通用订阅',
+    tags: ['2023年运营', 'IEPL专线', '约7元/月', '轻度用户', 'AI办公', '优惠码:flycat888'],
+    promoNote: '季付8折码 flycat888',
+    reviewUrl: '/recommend/best-airports/',
+    affUrl: 'https://guangs.flycataff.com/#/?code=6uq0Xe9y',
+  },
+  {
+    num: '04',
+    id: 'xingdaomeng',
+    name: '星岛梦',
+    enName: 'XingDaoMeng',
+    tagline: '2020年老牌运营 · 企业级内网专线 · 低价长期套餐与不限时备用流量包',
+    price: '¥8 / 月起 (年付折算)',
+    traffic: '60GB / 月',
+    lineType: '企业级内网专线',
+    protocol: '通用全协议',
+    tags: ['2020老牌', '内网专线', '不限时套餐', '低价年付', '优惠码:nmw888'],
+    promoNote: '新人9折码 nmw888',
+    reviewUrl: '/recommend/best-airports/',
+    affUrl: 'https://guangs.xingdaomeng.com/#/?code=1TynBYnR',
+  },
+  {
+    num: '05',
+    id: 'v2yun',
+    name: '唯兔云',
+    enName: 'V2Yun',
+    tagline: '2023年运营 · 60+ 多地区节点 · 三网智能优化与自动负载均衡调度',
+    price: '¥14.9 / 月起 (月付)',
+    traffic: '100GB / 月',
+    lineType: '三网优化集群',
+    protocol: 'VLESS 协议',
+    tags: ['14.9元月付', 'VLESS', '60+节点', '三网优化', '智能调度', '优惠码:rabbit'],
+    promoNote: '新人9折码 rabbit',
+    reviewUrl: '/recommend/best-airports/',
+    affUrl: 'https://guangs.v2yunvipaff.com/#/?code=xIutqOBA',
+  },
+  {
+    num: '06',
+    id: 'u1s1',
+    name: 'U1S1',
+    enName: 'U1S1',
+    tagline: '2023年运营 · 20元主流月付档 · VLESS 与 IEPL 专线均衡配置',
+    price: '¥20 / 月起 (月付)',
+    traffic: '120GB / 月',
+    lineType: 'IEPL 专线',
+    protocol: 'VLESS 协议',
+    tags: ['20元月付', '120GB', 'VLESS', 'IEPL专线', '自研客户端'],
+    promoNote: '优惠码: akaka',
+    reviewUrl: '/recommend/best-airports/',
+    affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f',
+  },
+  {
+    num: '07',
+    id: 'civetnet',
+    name: '灵猫网络',
+    enName: 'CivetNet',
+    tagline: '2024年运营 · 19元即可获得 150GB 月流量 · 企业级内网专线大流量首选',
+    price: '¥19 / 月起 (月付)',
+    traffic: '150GB / 月',
+    lineType: '企业级内网专线',
+    protocol: '通用订阅',
+    tags: ['19元月付', '150GB大流量', '内网专线', '不限时套餐', '优惠码:lmao888'],
+    promoNote: '新人9折码 lmao888',
+    reviewUrl: '/recommend/best-airports/',
+    affUrl: 'https://vip01.civetnet.com/#/?code=8MIAyxak',
+  },
+  {
+    num: '08',
+    id: 'speedworld',
+    name: '速界',
+    enName: 'SpeedWorld',
+    tagline: '2024年运营 · 专为 ChatGPT / Claude / Gemini 调优的 AI 专用专线',
+    price: '¥25 / 月起 (月付)',
+    traffic: '150GB / 月',
+    lineType: 'IEPL 专线',
+    protocol: 'VLESS 协议',
+    tags: ['AI场景专用', 'ChatGPT', 'Claude', '150GB', 'IEPL专线', '自研客户端'],
+    promoNote: '优惠码: sss1111',
+    reviewUrl: '/recommend/best-airports/',
+    affUrl: 'https://guangs.speedworldaff.cc/#/register?code=xgXzEfZB',
+  },
+];
+
+// 17 个机场品牌全景对比摘要数据
+const fullComparisonAirports = [
+  { name: '光速云', year: '2020', price: '约 7.5~8 元/月', traffic: '59G~238G', type: '年付折算/月付', line: 'IEPL / 全球 IPLC / VLESS', pos: '老牌旗舰综合型', affUrl: 'https://sahude.gsyvipaff.com/#/?code=keqgvT5Y' },
+  { name: '微风网络', year: '2023', price: '约 7 元/月', traffic: '50GB', type: '年付折算', line: 'IEPL 专线', pos: '低价轻度专线', affUrl: 'https://edp01.breezenetaff.com/#/?code=R9ZazSfE' },
+  { name: '飞猫云', year: '2023', price: '约 7 元/月', traffic: '50GB', type: '年付折算', line: 'IEPL 专线', pos: '低价轻度用户', affUrl: 'https://guangs.flycataff.com/#/?code=6uq0Xe9y' },
+  { name: '星岛梦', year: '2020', price: '约 8 元/月', traffic: '60GB', type: '年付折算', line: '企业级内网专线', pos: '低价长期/不限时', affUrl: 'https://guangs.xingdaomeng.com/#/?code=1TynBYnR' },
+  { name: '唯兔云', year: '2023', price: '14.9 元/月', traffic: '100GB', type: '月付', line: 'VLESS / 60+节点', pos: '节点丰富/三网优化', affUrl: 'https://guangs.v2yunvipaff.com/#/?code=xIutqOBA' },
+  { name: '宇宙云', year: '2023', price: '14.9 元/月', traffic: '100GB', type: '月付', line: 'VLESS / IEPL', pos: '15元性价比', affUrl: 'https://guangs.yuzoucloud.cc/#/register?code=yrThwMP1' },
+  { name: '极连云', year: '2024', price: '18 元/月', traffic: '100GB', type: '月付', line: 'IEPL 专线', pos: '20元内综合型', affUrl: 'https://guangs.jlyvipaff.com/#/?code=VM1rKGUu' },
+  { name: '光年梯', year: '2025', price: '18 元/月', traffic: '110GB', type: '月付', line: 'VLESS / IEPL', pos: '18元综合专线', affUrl: 'https://guangs.gntaff.com/#/?code=X1FoxjGE' },
+  { name: '灵猫网络', year: '2024', price: '19 元/月', traffic: '150GB', type: '月付', line: '企业级内网专线', pos: '月付大流量', affUrl: 'https://vip01.civetnet.com/#/?code=8MIAyxak' },
+  { name: 'U1S1', year: '2023', price: '20 元/月', traffic: '120GB', type: '月付', line: 'VLESS / IEPL', pos: '20元均衡型', affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f' },
+  { name: '二猫云', year: '2023', price: '20 元/月', traffic: '130GB', type: '月付', line: 'VLESS / IEPL', pos: '20元中等流量', affUrl: 'https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW' },
+  { name: '一翻云', year: '2024', price: '20 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: '20元大流量', affUrl: 'https://guangs.1flyunaff.cc/#/register?code=Yr7FhB7r' },
+  { name: '全球云', year: '2026', price: '20 元/月', traffic: '120GB', type: '月付', line: 'VLESS / IEPL', pos: '20元综合型', affUrl: 'https://guangs.gcvipaff.com/#/?code=Ov2nvU9C' },
+  { name: 'SOGO 云', year: '2026', price: '25 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: '25元综合型', affUrl: 'https://guangs.sogoyunaff.cc/#/?code=327Vs0w7' },
+  { name: '可信云', year: '2024', price: '25 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: '150GB专线型', affUrl: 'https://guangs.kosingaff.com/#/register?code=UYDtNlCY' },
+  { name: '速界', year: '2024', price: '25 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: 'AI 场景首选', affUrl: 'https://guangs.speedworldaff.cc/#/register?code=xgXzEfZB' },
+  { name: '快狸', year: '2023', price: '25 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: '综合使用型', affUrl: 'https://guangs.kuailicloud.cc/#/register?code=AiqyM8oG' },
+];
+
 const webSiteSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': new URL('/#website', siteURL).toString(),
-  url: new URL('/', siteURL).toString(),
-  name: siteTitle,
-  description: siteDescription,
-  inLanguage: locale,
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteTitle,
+      description: siteDescription,
+      inLanguage: locale,
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${siteUrl}/#airport-ranking`,
+      name: '2026 精选机场推荐排行榜',
+      itemListElement: airports.map((ap, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: ap.name,
+        description: ap.tagline,
+      })),
+    },
+  ],
 };
-
-function formatWordCount(count: number) {
-  if (count > 10000) {
-    return `${(count / 10000).toFixed(2)} 万`;
-  }
-  return count.toString();
-}
-
-function formatDate(date: Date) {
-  return date.toLocaleDateString('zh-CN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
 ---
 
 <PageShell
@@ -50,277 +184,6 @@ function formatDate(date: Date) {
   transparentHeader={true}
   pageId="home"
 >
-  <style>
-      .stats-wrapper {
-        position: relative;
-        background-color: var(--color-bg);
-        min-height: 50vh;
-      }
-
-      .stats-container {
-        background: var(--color-surface);
-        border-radius: 16px;
-        box-shadow: var(--shadow-card);
-        padding: 2em;
-      }
-
-      .stats-container :global(.section-header) {
-        display: flex;
-        align-items: baseline;
-        gap: 0.5em;
-        margin-bottom: 0.5em;
-      }
-
-      .stats-container :global(.section-number) {
-        font-size: 0.9em;
-        color: var(--color-text-muted);
-        font-weight: 500;
-      }
-
-      .stats-container :global(.section-title) {
-        font-size: 1.8em;
-        font-weight: bold;
-        margin: 0;
-        color: var(--color-text);
-      }
-
-      .stats-container :global(.intro-text) {
-        color: var(--color-text-secondary);
-        margin-bottom: 2em;
-        font-size: 0.9em;
-        line-height: 1.6;
-      }
-
-      .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        background: var(--color-border);
-        border: 1px solid var(--color-border);
-        margin-bottom: 2em;
-      }
-
-      .stat-item {
-        background: var(--color-surface);
-        padding: 2em;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-      }
-
-      .stat-item:hover {
-        transform: translateY(-5px);
-        z-index: 1;
-        box-shadow: var(--shadow-card-hover);
-      }
-
-      .stat-value {
-        font-size: 2em;
-        font-weight: bold;
-        color: var(--color-text-strong);
-        margin-bottom: 0.2rem;
-        font-variant-numeric: tabular-nums;
-      }
-
-      .stat-label {
-        color: var(--color-text-secondary);
-        font-size: 0.9em;
-        font-weight: bold;
-      }
-
-      .blog-link {
-        display: block;
-        text-align: center;
-        color: var(--color-text);
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.9em;
-        transition: color 0.3s;
-      }
-
-      .blog-link:hover {
-        color: var(--accent);
-      }
-
-      .recent-posts-section {
-        margin-top: 3em;
-        padding-top: 2em;
-        border-top: 1px solid var(--color-border);
-      }
-
-      .home-posts-list.home-stagger-ready :global(.home-post-item) {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item) {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(1)) {
-        transition-delay: 0.1s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(2)) {
-        transition-delay: 0.2s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(3)) {
-        transition-delay: 0.3s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(4)) {
-        transition-delay: 0.4s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(5)) {
-        transition-delay: 0.5s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(6)) {
-        transition-delay: 0.6s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(7)) {
-        transition-delay: 0.7s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(8)) {
-        transition-delay: 0.8s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(9)) {
-        transition-delay: 0.9s;
-      }
-      .home-posts-list.home-stagger-ready.visible :global(.home-post-item:nth-child(10)) {
-        transition-delay: 1s;
-      }
-
-      .home-posts-list :global(.home-post-item) {
-        padding: 1.2em 0;
-        border-bottom: 1px solid var(--color-border-subtle);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out, background 0.2s;
-      }
-
-      .home-posts-list :global(.home-post-item:last-child) {
-        border-bottom: none;
-      }
-
-      .home-posts-list :global(.home-post-item:hover) {
-        background: var(--color-surface-elevated);
-        margin: 0 -1em;
-        padding-left: 1em;
-        padding-right: 1em;
-        border-radius: 8px;
-      }
-
-      .home-posts-list :global(.home-post-title) {
-        font-size: 1.2em;
-        font-weight: 600;
-        margin: 0 0 0.5em 0;
-      }
-
-      .home-posts-list :global(.home-post-title a) {
-        color: var(--color-text);
-        text-decoration: none;
-        display: inline;
-        background-image: linear-gradient(var(--accent), var(--accent));
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 2px;
-        transition: background-size 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s ease;
-        padding-bottom: 2px;
-      }
-
-      .home-posts-list :global(.home-post-item:hover .home-post-title a) {
-        color: var(--accent);
-        background-size: 100% 2px;
-      }
-
-      .home-posts-list :global(.home-post-meta) {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-        font-size: 0.85em;
-        color: var(--color-text-tertiary);
-        flex-wrap: wrap;
-      }
-
-      .home-posts-list :global(.home-post-meta-item) {
-        display: flex;
-        align-items: center;
-        gap: 0.3em;
-      }
-
-      .home-posts-list :global(.home-post-meta-item svg) {
-        width: 14px;
-        height: 14px;
-      }
-
-      .home-posts-list :global(.home-post-tags) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.4em;
-      }
-
-      .home-posts-list :global(.home-tag-link) {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.2em;
-        padding: 2px 8px;
-        background: var(--color-tag-bg);
-        color: var(--color-tag-text);
-        text-decoration: none;
-        border-radius: 4px;
-        font-size: 0.85em;
-        transition:
-          background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-          color 0.3s cubic-bezier(0.2, 0, 0, 1),
-          transform 0.3s cubic-bezier(0.2, 0, 0, 1),
-          box-shadow 0.3s cubic-bezier(0.2, 0, 0, 1);
-        transform-origin: center;
-      }
-
-      .home-posts-list :global(.home-tag-link:hover) {
-        background: var(--accent);
-        color: white;
-        transform: translateY(-2px) scale(1.05);
-        box-shadow: 0 3px 8px rgba(var(--accent-rgb), 0.25);
-      }
-
-      .home-posts-list :global(.home-tag-link:active) {
-        transform: translateY(0) scale(0.97);
-      }
-
-      .home-posts-list :global(.home-tag-link svg) {
-        width: 12px;
-        height: 12px;
-      }
-
-      .empty-state {
-        margin: 1.2em 0;
-        color: var(--color-text-secondary);
-        font-size: 0.95em;
-        line-height: 1.7;
-        text-align: center;
-        padding: 1.4em;
-        border: 1px dashed var(--color-border);
-        border-radius: 12px;
-        background: var(--color-surface-elevated);
-      }
-
-      @media (max-width: 720px) {
-        .hero-title {
-          font-size: 1.5em;
-        }
-
-        .stats-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .stats-container {
-          padding: 1.5em;
-          border-radius: 0;
-        }
-      }
-    </style>
-
   <HeroHeader
     text={homeHero.text}
     subtitle={homeHero.subtitle}
@@ -330,61 +193,715 @@ function formatDate(date: Date) {
 
   <div class="stats-wrapper">
     <ContentCard id="stats-card">
-      <div class="stats-container">
-        <SectionHeader
-          number="01"
-          title="文章"
-          intro={hasPosts
-            ? `从 ${formatDate(startDate!)} 的第一篇文章开始，本站已经更新了......`
-            : '当前模板未附带文章内容，你可以在 src/content/blog/ 中添加 Markdown 文章后自动显示统计与列表。'}
-        />
-
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-value">{postCount} 篇</span>
-            <span class="stat-label">文章</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">{formatWordCount(wordCount)}</span>
-            <span class="stat-label">字数</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">{tagCount} 个</span>
-            <span class="stat-label">标签</span>
-          </div>
-        </div>
-
-        <div class="recent-posts-section">
-          <SectionHeader number="02" title="最近更新" intro={hasPosts ? '最新发布的 10 篇文章' : '暂无文章可展示'} />
-
-          {recentPosts.length > 0 ? (
-            <>
-              <div class="home-posts-list">
-                {recentPosts.map((post) => (
-                  <PostListItem
-                    post={post}
-                    titleTag="h3"
-                    articleClass="home-post-item"
-                    titleClass="home-post-title"
-                    showExcerpt={false}
-                    metaContainerClass="home-post-meta"
-                    metaItemClass="home-post-meta-item"
-                    metaTagsClass="home-post-tags"
-                    tagLinkClass="home-tag-link hover-scale"
-                    tagLimit={3}
-                  />
-                ))}
-              </div>
-              <a href="/blog" class="blog-link" style="margin-top: 1em;">查看全部文章 ⇗</a>
-            </>
-          ) : (
-            <p class="empty-state">
-              这里还没有文章。请在 <code>src/content/blog/</code> 新建 <code>.md</code> 或 <code>.mdx</code> 文件。
+      <div class="editorial-home-container">
+        
+        <!-- 01 / RECOMMENDED 编辑部精选机场列表 (纵向杂志式排行榜) -->
+        <section class="editorial-ranking-section" id="ranking">
+          <div class="section-header-wrap">
+            <span class="section-badge-tag">01 / RECOMMENDED</span>
+            <h2 class="editorial-section-title">2026 精选机场推荐</h2>
+            <p class="editorial-section-desc">
+              根据套餐价格、线路类型、节点覆盖、客户端支持及不同使用场景整理（含专属优惠信息）。
             </p>
-          )}
-        </div>
+          </div>
+
+          <!-- 纵向排行榜列表 -->
+          <div class="editorial-ranking-list">
+            {airports.map((ap) => (
+              <article class="editorial-row-item">
+                <!-- 中间：核心信息区域 -->
+                <div class="editorial-main-col">
+                  
+                  <!-- 品牌名称与英文名 -->
+                  <div class="editorial-title-row">
+                    <h3 class="editorial-brand-name">
+                      <a href={ap.reviewUrl}>{ap.name}</a>
+                    </h3>
+                    {ap.enName && <span class="editorial-en-name">{ap.enName}</span>}
+                    {ap.promoNote && <span class="editorial-promo-pill">{ap.promoNote}</span>}
+                  </div>
+
+                  <!-- 一句核心定位 -->
+                  <p class="editorial-tagline">{ap.tagline}</p>
+
+                  <!-- 核心参数横向排列 (无边框表格) -->
+                  <div class="editorial-params-inline">
+                    <span class="param-strong">{ap.price}</span>
+                    <span class="param-sep">·</span>
+                    <span>{ap.traffic}</span>
+                    <span class="param-sep">·</span>
+                    <span>{ap.lineType}</span>
+                    <span class="param-sep">·</span>
+                    <span>{ap.protocol}</span>
+                  </div>
+
+                  <!-- 能力标签 -->
+                  <div class="editorial-tags-row">
+                    {ap.tags.map((tag) => (
+                      <span class="editorial-tag-chip">{tag}</span>
+                    ))}
+                  </div>
+
+                </div>
+
+                <!-- 右侧：行动点 CTA -->
+                <div class="editorial-actions-col">
+                  <a href={ap.reviewUrl} class="editorial-cta-primary">
+                    查看详细评测 →
+                  </a>
+                  <a
+                    href={ap.affUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="editorial-cta-secondary"
+                  >
+                    官网 ↗
+                  </a>
+                </div>
+
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <div class="editorial-divider"></div>
+
+        <!-- 02 / 全景参数与线路对比 (17 大品牌) -->
+        <section class="editorial-section" id="comparison">
+          <div class="section-header-wrap">
+            <span class="section-badge-tag">02 / COMPARISON</span>
+            <h2 class="editorial-section-title">17 大主流机场参数与线路全景对比</h2>
+            <p class="editorial-section-desc">
+              一表看清各家服务商在开业时间、价格类型、线路架构与主要推荐定位上的核心差异。
+            </p>
+          </div>
+
+          <div class="table-responsive-wrapper">
+            <table class="editorial-table">
+              <thead>
+                <tr>
+                  <th>品牌名称</th>
+                  <th>开业年份</th>
+                  <th>入门价格</th>
+                  <th>基础流量</th>
+                  <th>价格类型</th>
+                  <th>核心线路 / 协议</th>
+                  <th>主要推荐定位</th>
+                  <th>官网入口</th>
+                </tr>
+              </thead>
+              <tbody>
+                {fullComparisonAirports.map((ap) => (
+                  <tr>
+                    <td class="td-brand">
+                      <strong>{ap.name}</strong>
+                    </td>
+                    <td>{ap.year}年</td>
+                    <td class="td-price">{ap.price}</td>
+                    <td>{ap.traffic}</td>
+                    <td><span class="td-type-pill">{ap.type}</span></td>
+                    <td>{ap.line}</td>
+                    <td><span class="td-pos-tag">{ap.pos}</span></td>
+                    <td class="td-action">
+                      <a href={ap.affUrl} target="_blank" rel="noopener noreferrer" class="table-text-link">访问官网 ↗</a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="editorial-divider"></div>
+
+        <!-- 03 / 按使用场景精准选型 -->
+        <section class="editorial-section" id="scenarios">
+          <div class="section-header-wrap">
+            <span class="section-badge-tag">03 / SCENARIOS</span>
+            <h2 class="editorial-section-title">按使用场景精准选型</h2>
+            <p class="editorial-section-desc">
+              根据你的核心需求与预算，快速定位最合适的产品方案。
+            </p>
+          </div>
+
+          <div class="scenarios-editorial-grid">
+            <div class="scenario-item">
+              <h4 class="scenario-title">ChatGPT & AI 生产力</h4>
+              <p class="scenario-desc">
+                需要原生住宅 IP、稳定不过期的长连接，杜绝频繁报错降级。
+              </p>
+              <div class="scenario-footer">
+                <span class="recom-label">推荐：</span>
+                <span class="recom-text">光速云 · 速界</span>
+              </div>
+            </div>
+
+            <div class="scenario-item">
+              <h4 class="scenario-title">Netflix / 4K 高清流媒体</h4>
+              <p class="scenario-desc">
+                需要大带宽、低丢包，支持 4K/8K 视频秒开与全地区非自制剧解锁。
+              </p>
+              <div class="scenario-footer">
+                <span class="recom-label">推荐：</span>
+                <span class="recom-text">光速云 · 唯兔云</span>
+              </div>
+            </div>
+
+            <div class="scenario-item">
+              <h4 class="scenario-title">超低预算 / 轻度查资料</h4>
+              <p class="scenario-desc">
+                流量需求约 50GB，追求 IEPL 专线与极低年付均价（约 7 元/月）。
+              </p>
+              <div class="scenario-footer">
+                <span class="recom-label">推荐：</span>
+                <span class="recom-text">微风网络 · 飞猫云</span>
+              </div>
+            </div>
+
+            <div class="scenario-item">
+              <h4 class="scenario-title">月付大流量 / 备用防失联</h4>
+              <p class="scenario-desc">
+                每月需要 150GB 流量或需要 0 月租不限时备用流量包。
+              </p>
+              <div class="scenario-footer">
+                <span class="recom-label">推荐：</span>
+                <span class="recom-text">灵猫网络 · 星岛梦</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="editorial-divider"></div>
+
+        <!-- 04 / 知识库精选通道 -->
+        <section class="editorial-section" id="knowledge">
+          <div class="section-header-wrap">
+            <span class="section-badge-tag">04 / KNOWLEDGE BASE</span>
+            <h2 class="editorial-section-title">机场梯子知识库 & 客户端教程</h2>
+            <p class="editorial-section-desc">
+              完整的客户端安装、订阅导入、TUN 模式配置与故障排查技术手册。
+            </p>
+          </div>
+
+          <div class="kb-editorial-grid">
+            <a href="/reviews/guangsu-cloud/" class="kb-editorial-card">
+              <span class="kb-topic-tag">旗舰评测</span>
+              <h4 class="kb-item-title">光速云深度评测：2020老牌IEPL专线实测</h4>
+              <p class="kb-item-desc">晚高峰千兆跑分、VLESS 协议与 ChatGPT 解锁实测数据。</p>
+              <span class="kb-arrow-cta">阅读评测 →</span>
+            </a>
+
+            <a href="/reviews/weifeng-cloud/" class="kb-editorial-card">
+              <span class="kb-topic-tag">超低价专线</span>
+              <h4 class="kb-item-title">微风网络评测：约7元/月IEPL轻度专线</h4>
+              <p class="kb-item-desc">50GB 小流量轻度办公、自研客户端与 9 折优惠码实测。</p>
+              <span class="kb-arrow-cta">阅读评测 →</span>
+            </a>
+
+            <a href="/wiki/what-is-clash/" class="kb-editorial-card">
+              <span class="kb-topic-tag">新手入门</span>
+              <h4 class="kb-item-title">Clash 是什么？新手完整使用指南</h4>
+              <p class="kb-item-desc">搞懂规则分流、节点配置与代理模式核心原理。</p>
+              <span class="kb-arrow-cta">阅读指南 →</span>
+            </a>
+
+            <a href="/tutorials/clash-verge-rev/" class="kb-editorial-card">
+              <span class="kb-topic-tag">客户端教程</span>
+              <h4 class="kb-item-title">Clash Verge Rev 下载与安装教程</h4>
+              <p class="kb-item-desc">Windows/macOS 平台最主流的 Clash 客户端配置实战。</p>
+              <span class="kb-arrow-cta">阅读指南 →</span>
+            </a>
+          </div>
+
+          <div class="kb-bottom-cta">
+            <a href="/blog/" class="editorial-hub-link">
+              前往「知识库」浏览全部 28 篇深度评测与使用手册 ⇗
+            </a>
+          </div>
+        </section>
+
+        <div class="editorial-divider"></div>
+
+        <!-- 05 / 常见选购 FAQ -->
+        <section class="editorial-section" id="faq">
+          <div class="section-header-wrap">
+            <span class="section-badge-tag">05 / FAQ</span>
+            <h2 class="editorial-section-title">机场选购常见问答</h2>
+            <p class="editorial-section-desc">
+              解答新手在挑选机场时最关心的稳定度、年付/月付选择与优惠码使用方式。
+            </p>
+          </div>
+
+          <div class="faq-editorial-list">
+            <details class="faq-editorial-item" open>
+              <summary class="faq-editorial-q">光速云与微风网络、飞猫云有什么区别？分别适合谁？</summary>
+              <p class="faq-editorial-a">
+                <strong>光速云</strong>属于 2020 年老牌综合型旗舰，提供 IPLC/IEPL 全球大带宽专线与原生住宅 IP，适合对 ChatGPT、Netflix 4K 及大流量有高要求的用户；<strong>微风网络</strong>与<strong>飞猫云</strong>主打 IEPL 小流量年付极致性价比（约 7 元/月，50GB），更适合日常查资料、收发邮件和轻度学术用户。
+              </p>
+            </details>
+
+            <details class="faq-editorial-item">
+              <summary class="faq-editorial-q">购买机场套餐时，年付折算价格和普通月付有什么区别？</summary>
+              <p class="faq-editorial-a">
+                年付折算价（如微风网络与飞猫云约 7 元/月、光速云约 7.5~8 元/月）指购买一年套餐后的平均每月花费，需要一次性支付整年费用；月付价（如唯兔云 14.9 元、U1S1 20 元）则是按单月付费，灵活性更高。
+              </p>
+            </details>
+
+            <details class="faq-editorial-item">
+              <summary class="faq-editorial-q">优惠码应该在哪里输入？</summary>
+              <p class="faq-editorial-a">
+                进入机场官网注册并选定套餐后，在结算付款页面找到“优惠券/折扣码”输入框（例如光速云输入 <code>AMM</code> 享 8 折，微风网络输入 <code>flat888</code> 享 9 折，飞猫云输入 <code>flycat888</code> 享 8 折），点击应用后即可减免对应金额。
+              </p>
+            </details>
+          </div>
+        </section>
+
       </div>
     </ContentCard>
   </div>
-
 </PageShell>
+
+<style>
+  /* 整体容器与卡片浮动 */
+  .stats-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .editorial-home-container {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    padding: clamp(2em, 4vw, 3.5em);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .section-header-wrap {
+    margin-bottom: 2em;
+  }
+
+  .section-badge-tag {
+    display: inline-block;
+    font-size: 0.76em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 0.2em 0.6em;
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    margin-bottom: 0.6em;
+  }
+
+  .editorial-section-title {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight: 800;
+    color: var(--color-text-strong);
+    margin: 0 0 0.4em 0;
+    letter-spacing: -0.01em;
+  }
+
+  .editorial-section-desc {
+    font-size: 0.94em;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .editorial-divider {
+    height: 1px;
+    background: var(--color-border-subtle);
+    margin: 3.5em 0;
+  }
+
+  /* 01 / 杂志式排行榜列表 */
+  .editorial-ranking-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .editorial-row-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 1.8em;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--color-border-subtle);
+    transition: background 0.2s ease;
+  }
+
+  .editorial-row-item:first-child {
+    padding-top: 6px;
+  }
+
+  .editorial-row-item:last-child {
+    border-bottom: none;
+    padding-bottom: 6px;
+  }
+
+  /* 核心信息区 */
+  .editorial-main-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45em;
+  }
+
+  .editorial-title-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.6em;
+  }
+
+  .editorial-brand-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .editorial-brand-name a {
+    color: var(--color-text-strong);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .editorial-brand-name a:hover {
+    color: var(--accent);
+  }
+
+  .editorial-en-name {
+    font-size: 0.88rem;
+    color: var(--color-text-tertiary);
+    font-weight: 500;
+  }
+
+  .editorial-promo-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #10b981;
+    background: color-mix(in srgb, #10b981 12%, transparent);
+    padding: 0.15em 0.55em;
+    border-radius: 4px;
+  }
+
+  .editorial-tagline {
+    font-size: 0.92rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* 参数横向排列 (无表格框) */
+  .editorial-params-inline {
+    font-size: 0.88rem;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.2em;
+  }
+
+  .param-strong {
+    font-weight: 700;
+    color: var(--color-text-strong);
+  }
+
+  .param-sep {
+    color: var(--color-text-muted);
+  }
+
+  /* 能力标签 */
+  .editorial-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+    margin-top: 0.3em;
+  }
+
+  .editorial-tag-chip {
+    font-size: 0.76rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-subtle);
+    padding: 0.2em 0.55em;
+    border-radius: 4px;
+  }
+
+  /* 行动点 CTA */
+  .editorial-actions-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5em;
+  }
+
+  .editorial-cta-primary {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s ease, text-decoration 0.2s;
+  }
+
+  .editorial-cta-primary:hover {
+    transform: translateX(3px);
+    text-decoration: underline;
+  }
+
+  .editorial-cta-secondary {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .editorial-cta-secondary:hover {
+    color: var(--color-text-strong);
+  }
+
+  /* 02 / 对比表格 */
+  .table-responsive-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  .editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    text-align: left;
+  }
+
+  .editorial-table th,
+  .editorial-table td {
+    padding: 0.95em 1.1em;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .editorial-table th {
+    background: var(--color-surface-elevated);
+    font-weight: 700;
+    color: var(--color-text-strong);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .td-brand {
+    white-space: nowrap;
+  }
+
+  .td-price {
+    font-weight: 700;
+    color: var(--color-text-strong);
+    white-space: nowrap;
+  }
+
+  .td-type-pill {
+    font-size: 0.78em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    color: var(--color-text-secondary);
+  }
+
+  .td-pos-tag {
+    font-size: 0.85em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .table-text-link {
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .table-text-link:hover {
+    text-decoration: underline;
+  }
+
+  /* 03 / 场景指南网格 */
+  .scenarios-editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2em;
+  }
+
+  .scenario-item {
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 12px;
+    padding: 1.4em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scenario-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text-strong);
+    margin: 0 0 0.4em 0;
+  }
+
+  .scenario-desc {
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0 0 1em 0;
+  }
+
+  .scenario-footer {
+    font-size: 0.82rem;
+    margin-top: auto;
+  }
+
+  .recom-label {
+    color: var(--color-text-tertiary);
+  }
+
+  .recom-text {
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  /* 04 / 知识库入口 */
+  .kb-editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2em;
+  }
+
+  .kb-editorial-card {
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 12px;
+    padding: 1.4em;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .kb-editorial-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+
+  .kb-topic-tag {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5em;
+  }
+
+  .kb-item-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-strong);
+    margin: 0 0 0.4em 0;
+    line-height: 1.4;
+  }
+
+  .kb-item-desc {
+    font-size: 0.84rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0 0 1em 0;
+  }
+
+  .kb-arrow-cta {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: auto;
+  }
+
+  .kb-bottom-cta {
+    margin-top: 1.8em;
+    text-align: center;
+  }
+
+  .editorial-hub-link {
+    display: inline-block;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--color-text-strong);
+    padding: 0.7em 1.6em;
+    border-radius: 8px;
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .editorial-hub-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  /* 05 / FAQ */
+  .faq-editorial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+  }
+
+  .faq-editorial-item {
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 10px;
+    padding: 1.1em 1.3em;
+  }
+
+  .faq-editorial-q {
+    font-weight: 700;
+    font-size: 0.96rem;
+    color: var(--color-text-strong);
+    cursor: pointer;
+  }
+
+  .faq-editorial-a {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin: 0.6em 0 0 0;
+  }
+
+  /* 移动端排版适配 */
+  @media (max-width: 860px) {
+    .editorial-row-item {
+      grid-template-columns: 1fr;
+      gap: 0.8em;
+      padding: 22px 0;
+    }
+
+    .editorial-actions-col {
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 1.2em;
+      margin-top: 0.4em;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .editorial-home-container {
+      padding: 1.25em;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+  }
+</style>

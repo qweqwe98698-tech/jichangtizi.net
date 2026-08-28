@@ -66,17 +66,20 @@ const publishedTimeISO = normalizeDate(publishedTime);
 const modifiedTimeISO = normalizeDate(modifiedTime);
 const schemaList = !schema ? [] : Array.isArray(schema) ? schema : [schema];
 const normalizedTitle = title.trim();
-const normalizedTitleSuffix = siteTitleSuffix.trim();
+const normalizedBrand = siteTitle.trim();
 const fullTitle =
-	normalizedTitleSuffix && !normalizedTitle.endsWith(normalizedTitleSuffix)
-		? `${normalizedTitle} | ${normalizedTitleSuffix}`
-		: normalizedTitle;
+	normalizedTitle === normalizedBrand
+		? `${normalizedBrand} - 2026 稳定机场推荐与梯子评测导航`
+		: normalizedTitle.endsWith(normalizedBrand)
+			? normalizedTitle
+			: `${normalizedTitle} | ${normalizedBrand}`;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" transition:persist />
 <meta name="viewport" content="width=device-width,initial-scale=1" transition:persist />
 <link rel="icon" href={faviconIco} sizes="any" transition:persist />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" transition:persist />
 <link rel="sitemap" href="/sitemap-index.xml" transition:persist />
 <link
 	rel="alternate"

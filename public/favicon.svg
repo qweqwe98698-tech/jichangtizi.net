@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="fav-bg-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="60%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="fav-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0e7ff" />
+    </linearGradient>
+    <linearGradient id="fav-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+    <linearGradient id="fav-bottom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="url(#fav-bg-blue)" />
+  <circle cx="24" cy="24" r="16" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1.2" stroke-dasharray="3 2" />
+  <ellipse cx="24" cy="24" rx="16" ry="6.5" fill="none" stroke="rgba(255, 255, 255, 0.45)" stroke-width="1.2" transform="rotate(-25 24 24)" />
+  <circle cx="10" cy="18" r="2" fill="#ffffff" opacity="0.95" />
+  <circle cx="38" cy="30" r="2" fill="#ffffff" opacity="0.95" />
+  <circle cx="33" cy="14" r="1.5" fill="#67e8f9" opacity="0.95" />
+  <g transform="translate(1, 0)">
+    <polygon points="36,12 14,24 23,27" fill="url(#fav-left)" />
+    <polygon points="36,12 23,27 26,36" fill="url(#fav-right)" />
+    <polygon points="23,27 26,36 27,29" fill="url(#fav-bottom)" />
+  </g>
+  <path d="M 38 10 L 41 7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.95" />
+</svg>

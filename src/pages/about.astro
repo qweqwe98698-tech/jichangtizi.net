@@ -1,365 +1,776 @@
 ---
-import { Image } from 'astro:assets';
 import ContentCard from '../components/ContentCard.astro';
 import HeroHeader from '../components/HeroHeader.astro';
 import PageShell from '../layouts/PageShell.astro';
-import { heroConfig, profileConfig, siteTitle } from '../config';
-import { buildSameAsLinks, getRenderableSocials, resolveSocialUrl } from '../lib/profile/social';
+import { heroConfig, siteTitle, siteUrl } from '../config';
 
-const profile = profileConfig;
 const aboutHero = heroConfig.about;
-const siteURL = Astro.site ?? Astro.url;
-const profileInitial = profile.name.trim().charAt(0).toUpperCase() || 'U';
-const socials = getRenderableSocials(profile.socials);
-const sameAs = buildSameAsLinks(profile);
-const profileAvatar = profile.avatar;
-const profileAvatarSrc = typeof profileAvatar === 'string' ? profileAvatar : profileAvatar?.src;
+const canonicalUrl = new URL('/about/', siteUrl).toString();
 
-const personSchema = {
+// Schema.org 结构化数据 (AboutPage + Organization + BreadcrumbList)
+const aboutSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': new URL('/about/#person', siteURL).toString(),
-  name: profile.name,
-  description: profile.bio,
-  jobTitle: profile.title,
-  url: new URL('/about/', siteURL).toString(),
-  ...(profileAvatarSrc ? { image: new URL(profileAvatarSrc, siteURL).toString() } : {}),
-  ...(profile.location ? { homeLocation: { '@type': 'Place', name: profile.location } } : {}),
-  ...(sameAs.length > 0 ? { sameAs } : {}),
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: `关于我们 · ${siteTitle}`,
+      description: '机场梯子（jichangtizi.net）专注机场推荐、品牌评测、Clash / Mihomo 与网络工具使用指南。建立真实、客观、持续更新的中文网络工具知识库。',
+      inLanguage: 'zh-CN',
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: siteUrl,
+        name: siteTitle,
+      },
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '首页',
+            item: siteUrl,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: '关于我们',
+            item: canonicalUrl,
+          },
+        ],
+      },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: '机场梯子编辑部',
+      alternateName: 'jichangtizi.net',
+      url: siteUrl,
+      email: 'contact@jichangtizi.net',
+      description: '机场梯子（jichangtizi.net）专注机场推荐、品牌评测、客户端教程、节点订阅、线路协议和常见网络问题。',
+      knowsAbout: [
+        '机场推荐',
+        '网络代理与专线评测',
+        'Clash 配置与分流规则',
+        'Mihomo 内核',
+        'IEPL / IPLC 内网专线',
+        '网络协议原理',
+      ],
+    },
+  ],
 };
 ---
 
 <PageShell
-  title={`About | ${siteTitle}`}
-  description="个人简介 / Profile"
-  schema={personSchema}
+  title={`关于我们 · ${siteTitle}`}
+  description="机场梯子（jichangtizi.net）专注机场推荐、品牌评测、Clash / Mihomo 与网络工具使用指南。建立真实、客观、持续更新的中文网络工具知识库。"
+  canonical={canonicalUrl}
+  schema={aboutSchema}
   transparentHeader={true}
   pageId="about"
 >
-    <style>
-      .stats-wrapper {
-        position: relative;
-        min-height: 50vh;
-        background-color: var(--color-bg);
-        transform: translateY(88px);
-      }
-
-      .about-container {
-        background: transparent;
-        transform: translateY(-88px);
-      }
-
-      .section-header {
-        display: flex;
-        align-items: baseline;
-        gap: 0.5em;
-        margin-bottom: 0.5em;
-      }
-
-      .section-number {
-        font-size: 0.9em;
-        color: var(--color-text-muted);
-        font-weight: 500;
-      }
-
-      .profile-card {
-        position: relative;
-        display: grid;
-        grid-template-columns: 240px minmax(0, 1fr);
-        gap: 2em;
-        padding: 2.2em;
-        background: var(--color-surface);
-        border: 1px solid color-mix(in srgb, var(--color-border) 78%, transparent);
-        border-radius: 18px;
-        box-shadow: var(--shadow-card);
-        overflow: hidden;
-      }
-
-      .profile-card::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background: linear-gradient(
-          135deg,
-          rgba(var(--accent-rgb), 0.08) 0%,
-          transparent 45%,
-          rgba(var(--shadow-color), 0.03) 100%
-        );
-      }
-
-      .profile-media {
-        position: relative;
-        z-index: 1;
-      }
-
-      .avatar {
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        object-fit: cover;
-        display: block;
-        border: 1px solid color-mix(in srgb, var(--color-border) 74%, transparent);
-        box-shadow:
-          0 10px 18px rgba(var(--shadow-color), 0.2),
-          0 24px 42px rgba(var(--shadow-color), 0.22),
-          inset 0 1px 0 rgba(255, 255, 255, 0.35);
-      }
-
-      .avatar-placeholder {
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--accent), var(--color-gradient-start));
-        color: white;
-        display: grid;
-        place-items: center;
-        font-size: 4rem;
-        font-weight: 700;
-        box-shadow:
-          0 10px 18px rgba(var(--shadow-color), 0.2),
-          0 24px 42px rgba(var(--shadow-color), 0.22),
-          inset 0 1px 0 rgba(255, 255, 255, 0.35);
-      }
-
-      .profile-content {
-        position: relative;
-        z-index: 1;
-      }
-
-      .profile-name {
-        margin: 0;
-        font-size: clamp(1.8rem, 2.5vw, 2.3rem);
-        color: var(--color-text-strong);
-        line-height: 1.2;
-      }
-
-      .profile-title {
-        margin-top: 0.4em;
-        color: var(--accent);
-        font-weight: 600;
-        letter-spacing: 0.2px;
-      }
-
-      .profile-bio {
-        margin-top: 1em;
-        margin-bottom: 1.4em;
-        color: var(--color-text-secondary);
-        line-height: 1.75;
-        max-width: 70ch;
-      }
-
-      .meta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.7em;
-        margin-bottom: 1.5em;
-      }
-
-      .meta-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45em;
-        padding: 0.45em 0.85em;
-        border-radius: 999px;
-        font-size: 0.88em;
-        color: var(--color-text-secondary);
-        background: color-mix(in srgb, var(--color-surface-elevated) 86%, transparent);
-        border: 1px solid color-mix(in srgb, var(--color-border) 85%, transparent);
-      }
-
-      .meta-chip svg {
-        width: 14px;
-        height: 14px;
-      }
-
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.7em;
-      }
-
-      .social-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45em;
-        padding: 0.62em 0.9em;
-        border-radius: 12px;
-        text-decoration: none;
-        color: var(--color-text);
-        background: color-mix(in srgb, var(--color-surface) 82%, transparent);
-        border: 1px solid color-mix(in srgb, var(--color-border) 82%, transparent);
-        transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease,
-          box-shadow 0.25s ease;
-      }
-
-      .social-link svg {
-        width: 18px;
-        height: 18px;
-      }
-
-      .social-link:hover {
-        transform: translateY(-2px);
-        color: var(--accent);
-        border-color: color-mix(in srgb, var(--accent) 28%, var(--color-border));
-        box-shadow: 0 8px 18px rgba(var(--accent-rgb), 0.12);
-      }
-
-      @media (max-width: 980px) {
-        .profile-card {
-          grid-template-columns: 1fr;
-          gap: 1.4em;
-          padding: 1.6em;
-        }
-
-        .profile-media {
-          display: flex;
-          justify-content: center;
-        }
-
-        .avatar,
-        .avatar-placeholder {
-          width: min(220px, 58vw);
-          height: min(220px, 58vw);
-        }
-      }
-
-      @media (max-width: 720px) {
-        .profile-card {
-          border-radius: 0;
-        }
-
-        .hero-title {
-          font-size: 1.5em;
-        }
-
-        .profile-name {
-          font-size: 1.75rem;
-        }
-
-        .profile-title,
-        .profile-bio,
-        .meta-row,
-        .social-row {
-          justify-content: center;
-          text-align: center;
-        }
-      }
-    </style>
-
+  <!-- 顶部 Hero 巨幕 (森林背景 + 标语说明) -->
   <HeroHeader
     text={aboutHero.text}
     subtitle={aboutHero.subtitle}
     backgroundImage={aboutHero.backgroundImage}
     compact={true}
-  />
+  >
+    <p class="hero-description-note">
+      帮你看懂机场、选对工具、解决客户端与订阅使用问题。
+    </p>
+  </HeroHeader>
 
   <div class="stats-wrapper">
-    <ContentCard id="stats-card">
+    <ContentCard id="stats-card" floating={true} class="about-card-wrapper">
       <div class="about-container">
-        <div class="section-header">
-          <span class="section-number">01</span>
-        </div>
-        <article class="profile-card">
-          <div class="profile-media">
-            {profileAvatar ? (
-              typeof profileAvatar === 'string' ? (
-                <img
-                  class="avatar"
-                  src={profileAvatar}
-                  alt={profile.name}
-                  width="440"
-                  height="440"
-                  loading="eager"
-                  fetchpriority="high"
-                />
-              ) : (
-                <Image
-                  class="avatar"
-                  src={profileAvatar}
-                  alt={profile.name}
-                  width={440}
-                  height={440}
-                  fit="cover"
-                  format="webp"
-                  quality={80}
-                  loading="eager"
-                  fetchpriority="high"
-                />
-              )
-            ) : (
-              <div class="avatar-placeholder" aria-label={profile.name}>{profileInitial}</div>
-            )}
+        
+        <!-- 01 / ABOUT 主卡片 -->
+        <section class="about-main-section">
+          <div class="section-badge-row">
+            <span class="section-tag">01 / ABOUT</span>
           </div>
 
-          <div class="profile-content">
-            <h3 class="profile-name">{profile.name}</h3>
-            <div class="profile-title">{profile.title}</div>
-            <p class="profile-bio">{profile.bio}</p>
+          <article class="brand-profile-card">
+            <!-- 品牌专属矢量头像 (纸飞机 + 云层 + 网络节点 + 极简塔台) -->
+            <div class="brand-avatar-box">
+              <svg class="brand-avatar-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="机场梯子品牌徽标">
+                <defs>
+                  <linearGradient id="avatarBg" x1="0" y1="0" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#1b382b" />
+                    <stop offset="50%" stop-color="#142c22" />
+                    <stop offset="100%" stop-color="#0e1f18" />
+                  </linearGradient>
+                  <linearGradient id="planeGrad" x1="60" y1="50" x2="190" y2="170" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#e8ece9" />
+                  </linearGradient>
+                  <linearGradient id="cloudGrad" x1="0" y1="0" x2="200" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+                    <stop offset="100%" stop-color="rgba(255, 255, 255, 0.03)" />
+                  </linearGradient>
+                </defs>
 
-            <div class="meta-row">
-              {profile.location && (
-                <span class="meta-chip">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                  {profile.location}
-                </span>
-              )}
-              {profile.email && (
-                <a class="meta-chip" href={`mailto:${profile.email}`}>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                  {profile.email}
-                </a>
-              )}
+                <!-- 背景深绿卡片圆角 -->
+                <rect width="240" height="240" rx="36" fill="url(#avatarBg)" />
+                <rect x="1" y="1" width="238" height="238" rx="35" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+
+                <!-- 背景网络拓扑连线与节点坐标 -->
+                <g class="network-nodes" stroke="rgba(148, 163, 184, 0.25)" stroke-width="1.2" stroke-dasharray="3 3">
+                  <line x1="40" y1="60" x2="90" y2="110" />
+                  <line x1="90" y1="110" x2="190" y2="80" />
+                  <line x1="90" y1="110" x2="160" y2="180" />
+                  <line x1="50" y1="170" x2="160" y2="180" />
+                </g>
+                <circle cx="40" cy="60" r="3" fill="#6ee7b7" />
+                <circle cx="190" cy="80" r="3.5" fill="#93c5fd" />
+                <circle cx="50" cy="170" r="3" fill="#a7f3d0" />
+                <circle cx="160" cy="180" r="3" fill="#6ee7b7" />
+
+                <!-- 极简机场塔台剪影 (背景层) -->
+                <path d="M175 195 V145 L180 135 H195 L200 145 V195 H175Z" fill="rgba(255, 255, 255, 0.08)" />
+                <line x1="187.5" y1="135" x2="187.5" y2="125" stroke="rgba(110, 231, 183, 0.7)" stroke-width="1.5" />
+                <circle cx="187.5" cy="123" r="2" fill="#6ee7b7" />
+
+                <!-- 柔和云层线条 -->
+                <path d="M25 185 C35 165, 65 165, 80 185 C95 170, 130 170, 145 185 C160 175, 195 175, 215 185 H25Z" fill="url(#cloudGrad)" />
+
+                <!-- 航线轨迹曲线 -->
+                <path d="M45 165 Q100 140, 135 95" stroke="#34d399" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85" />
+                <path d="M45 165 Q100 140, 135 95" stroke="#a7f3d0" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.25" filter="blur(2px)" />
+
+                <!-- 核心主角：现代极简纸飞机 -->
+                <g transform="translate(20, -5)">
+                  <!-- 纸飞机阴影 -->
+                  <path d="M125 98 L85 135 L165 72 Z" fill="rgba(0, 0, 0, 0.3)" />
+                  <!-- 纸飞机机翼左翼 -->
+                  <path d="M125 95 L65 125 L160 70 Z" fill="url(#planeGrad)" />
+                  <!-- 纸飞机中折面 -->
+                  <path d="M125 95 L160 70 L95 138 Z" fill="#d1d9d4" />
+                  <!-- 纸飞机机翼右翼 -->
+                  <path d="M125 95 L95 138 L145 128 Z" fill="#b8c5be" />
+                  <!-- 飞机尖端微光 -->
+                  <circle cx="160" cy="70" r="2.5" fill="#6ee7b7" />
+                </g>
+              </svg>
             </div>
 
-            {socials.length > 0 && (
-              <div class="social-row">
-                {socials.map((social) => (
-                  <a
-                    href={resolveSocialUrl(social.key, social.url)}
-                    target={social.key === 'email' ? undefined : '_blank'}
-                    rel={social.key === 'email' ? undefined : 'noreferrer'}
-                    class="social-link"
-                    title={social.label}
-                  >
-                    {social.key === 'github' && (
-                      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                      </svg>
-                    )}
-                    {social.key === 'x' && (
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M18.901 1.154h3.68l-8.04 9.19 9.458 12.502h-7.406l-5.8-7.584-6.633 7.584H.478l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932z"></path>
-                      </svg>
-                    )}
-                    {social.key === 'email' && (
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                      </svg>
-                    )}
-                    {social.key === 'website' && (
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                      </svg>
-                    )}
-                    <span>{social.label}</span>
-                  </a>
-                ))}
+            <!-- 编辑部核心信息 -->
+            <div class="brand-profile-content">
+              <h1 class="brand-title">机场梯子编辑部</h1>
+              <div class="brand-identity-badge">
+                机场评测 · 网络工具 · Clash / Mihomo 内容团队
               </div>
-            )}
+
+              <p class="brand-bio-text">
+                机场梯子（jichangtizi.net）专注机场推荐、品牌评测、客户端教程、节点订阅、线路协议和常见网络问题。我们持续整理和更新相关资料，希望帮助用户更容易理解机场、客户端与网络工具之间的区别。
+              </p>
+
+              <!-- 信息标签 -->
+              <div class="meta-tag-row">
+                <span class="meta-tag-pill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                  </svg>
+                  中文网络工具指南
+                </span>
+                <a href="mailto:contact@jichangtizi.net" class="meta-tag-pill email-pill" title="联系编辑部">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  contact@jichangtizi.net
+                </a>
+              </div>
+
+              <!-- 内部 CTA 导航按钮 -->
+              <div class="cta-actions-row">
+                <a href="/" class="cta-btn primary-cta">
+                  <span>机场推荐</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="/blog/" class="cta-btn secondary-cta">
+                  <span>Clash 教程</span>
+                </a>
+                <a href="/blog/" class="cta-btn secondary-cta">
+                  <span>风险数据库</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <div class="about-divider"></div>
+
+        <!-- 02 / 我们关注什么 -->
+        <section class="about-sub-section">
+          <div class="section-badge-row">
+            <span class="section-tag">02 / 我们关注什么</span>
           </div>
-        </article>
+          <h2 class="sub-section-title">六大专业关注方向</h2>
+          <p class="sub-section-intro">围绕网络代理生态链，深入梳理每个环节的核心痛点与技术逻辑。</p>
+
+          <div class="focus-grid">
+            <div class="focus-card">
+              <div class="focus-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <h3 class="focus-card-title">机场推荐</h3>
+              <p class="focus-card-desc">严选长期稳定运营、线路冗余充足、晚高峰具备真实承载力的优质节点服务商。</p>
+            </div>
+
+            <div class="focus-card">
+              <div class="focus-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h3 class="focus-card-title">机场评测</h3>
+              <p class="focus-card-desc">多地宽带实测、延迟抖动监测、4K/8K 跑分与 ChatGPT / 流媒体解锁能力真实遥测。</p>
+            </div>
+
+            <div class="focus-card">
+              <div class="focus-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="focus-card-title">Clash / Mihomo</h3>
+              <p class="focus-card-desc">聚焦 Clash Verge Rev、Mihomo Party 等现代客户端的配置调优与智能分流规则集。</p>
+            </div>
+
+            <div class="focus-card">
+              <div class="focus-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="focus-card-title">节点与订阅</h3>
+              <p class="focus-card-desc">订阅格式解析、节点全红超时排查、自动化更新机制与客户端导入疑难解答。</p>
+            </div>
+
+            <div class="focus-card">
+              <div class="focus-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="focus-card-title">线路与协议</h3>
+              <p class="focus-card-desc">通俗解读 IEPL 专线、BGP 中转、Hysteria 2、VLESS-Reality 等底层网络协议差异。</p>
+            </div>
+
+            <div class="focus-card">
+              <div class="focus-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                  <line x1="12" y1="9" x2="12" y2="13"></line>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <h3 class="focus-card-title">风险事件</h3>
+              <p class="focus-card-desc">整理机场跑路前兆、失联预警、超售诈骗防范与用户资金安全避坑档案。</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="about-divider"></div>
+
+        <!-- 03 / 我们如何整理内容 -->
+        <section class="about-sub-section">
+          <div class="section-badge-row">
+            <span class="section-tag">03 / 我们如何整理内容</span>
+          </div>
+          <h2 class="sub-section-title">内容整理与审核四项原则</h2>
+          <p class="sub-section-intro">秉持严谨求实态度，确保输出的每份数据与教程经得起时间检验。</p>
+
+          <div class="methods-grid">
+            <div class="method-card">
+              <div class="method-num">01</div>
+              <h3 class="method-title">资料核对</h3>
+              <p class="method-desc">多渠道交叉验证节点物理链路、机房落地 ASN 及运营历史，杜绝未经实测的虚假宣传。</p>
+            </div>
+
+            <div class="method-card">
+              <div class="method-num">02</div>
+              <h3 class="method-title">持续更新</h3>
+              <p class="method-desc">紧跟客户端版本演进与网络环境变动，定期回溯复测所有推荐节点，标注最后实测时间。</p>
+            </div>
+
+            <div class="method-card">
+              <div class="method-num">03</div>
+              <h3 class="method-title">风险标记</h3>
+              <p class="method-desc">对疑似超售拥堵、突发骨折促销或客服响应迟缓的品牌予以显著预警，保障用户知情权。</p>
+            </div>
+
+            <div class="method-card">
+              <div class="method-num">04</div>
+              <h3 class="method-title">避免绝对结论</h3>
+              <p class="method-desc">各地运营商与本地网络千差万别，不存在绝对完美的产品，坚持客观呈现优劣与适用人群。</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="about-divider"></div>
+
+        <!-- 04 / 热门指南 -->
+        <section class="about-sub-section">
+          <div class="section-badge-row">
+            <span class="section-tag">04 / 热门指南</span>
+          </div>
+          <h2 class="sub-section-title">核心导航与知识库入口</h2>
+          <p class="sub-section-intro">快速直达精选评测、客户端配置手册与风险预警专题。</p>
+
+          <div class="guides-grid">
+            <a href="/" class="guide-item-link">
+              <span class="guide-item-text">2026机场推荐</span>
+              <span class="guide-arrow">↗</span>
+            </a>
+            <a href="/" class="guide-item-link">
+              <span class="guide-item-text">稳定机场推荐</span>
+              <span class="guide-arrow">↗</span>
+            </a>
+            <a href="/" class="guide-item-link">
+              <span class="guide-item-text">性价比机场推荐</span>
+              <span class="guide-arrow">↗</span>
+            </a>
+            <a href="/blog/" class="guide-item-link">
+              <span class="guide-item-text">Clash使用教程</span>
+              <span class="guide-arrow">↗</span>
+            </a>
+            <a href="/blog/" class="guide-item-link">
+              <span class="guide-item-text">Clash Verge Rev教程</span>
+              <span class="guide-arrow">↗</span>
+            </a>
+            <a href="/blog/" class="guide-item-link">
+              <span class="guide-item-text">Mihomo教程</span>
+              <span class="guide-arrow">↗</span>
+            </a>
+            <a href="/blog/" class="guide-item-link">
+              <span class="guide-item-text">机场订阅怎么用</span>
+              <span class="guide-arrow">↗</span>
+            </a>
+            <a href="/blog/" class="guide-item-link">
+              <span class="guide-item-text">机场风险数据库</span>
+              <span class="guide-arrow">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <div class="about-divider"></div>
+
+        <!-- 05 / 关于本站 -->
+        <section class="about-sub-section">
+          <div class="section-badge-row">
+            <span class="section-tag">05 / 关于本站</span>
+          </div>
+          
+          <div class="manifesto-box">
+            <p class="manifesto-text">
+              “机场梯子不是单纯的机场排行榜，而是围绕机场选择、客户端使用、节点订阅、线路协议和风险信息建立的中文网络工具知识库。”
+            </p>
+          </div>
+        </section>
+
       </div>
     </ContentCard>
   </div>
-
 </PageShell>
+
+<style>
+  /* 整体容器与卡片浮动 */
+  .stats-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .about-container {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    padding: clamp(1.8em, 4vw, 3em);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  /* Hero 额外说明文案 */
+  .hero-description-note {
+    font-size: 1.05em;
+    color: rgba(255, 255, 255, 0.88);
+    margin-top: 0.6em;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+  }
+
+  /* 章节小标题徽章 */
+  .section-badge-row {
+    margin-bottom: 0.75em;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 0.2em 0.6em;
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+
+  .sub-section-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-text-strong);
+    margin: 0 0 0.3em 0;
+    letter-spacing: -0.01em;
+  }
+
+  .sub-section-intro {
+    font-size: 0.95em;
+    color: var(--color-text-secondary);
+    margin: 0 0 1.8em 0;
+    line-height: 1.6;
+  }
+
+  .about-divider {
+    height: 1px;
+    background: var(--color-border-subtle);
+    margin: 3.2em 0 2.6em;
+  }
+
+  /* 01 / 主卡片布局 */
+  .brand-profile-card {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 2.2em;
+    align-items: center;
+    padding: 1.8em;
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 18px;
+    margin-top: 0.6em;
+  }
+
+  .brand-avatar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brand-avatar-svg {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+  }
+
+  .brand-avatar-svg:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .brand-profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+  }
+
+  .brand-title {
+    font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+    font-weight: 800;
+    color: var(--color-text-strong);
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-identity-badge {
+    font-size: 0.92em;
+    font-weight: 600;
+    color: #1e704e;
+    letter-spacing: 0.2px;
+  }
+
+  :global([data-theme='dark']) .brand-identity-badge {
+    color: #4ade80;
+  }
+
+  .brand-bio-text {
+    font-size: 0.96em;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    margin: 0.4em 0 0.8em 0;
+  }
+
+  .meta-tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    margin-bottom: 0.8em;
+  }
+
+  .meta-tag-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.35em 0.8em;
+    border-radius: 999px;
+    font-size: 0.84em;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+  }
+
+  .email-pill {
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .email-pill:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .cta-actions-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+    margin-top: 0.4em;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.55em 1.25em;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .primary-cta {
+    background: var(--accent);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+
+  .primary-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+
+  .secondary-cta {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+
+  .secondary-cta:hover {
+    background: var(--color-tag-bg-hover);
+    transform: translateY(-1px);
+  }
+
+  /* 02 / 六大关注方向网格 */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25em;
+  }
+
+  .focus-card {
+    padding: 1.5em;
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 14px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .focus-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--color-border-subtle));
+  }
+
+  .focus-icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+    margin-bottom: 0.85em;
+  }
+
+  .focus-card-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--color-text-strong);
+    margin: 0 0 0.4em 0;
+  }
+
+  .focus-card-desc {
+    font-size: 0.88em;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* 03 / 整理原则网格 */
+  .methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25em;
+  }
+
+  .method-card {
+    padding: 1.5em;
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 14px;
+  }
+
+  .method-num {
+    font-size: 1.4em;
+    font-weight: 800;
+    color: var(--accent);
+    opacity: 0.7;
+    margin-bottom: 0.3em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .method-title {
+    font-size: 1.05em;
+    font-weight: 700;
+    color: var(--color-text-strong);
+    margin: 0 0 0.4em 0;
+  }
+
+  .method-desc {
+    font-size: 0.88em;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* 04 / 热门指南入口 */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9em;
+  }
+
+  .guide-item-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.95em 1.2em;
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.92em;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .guide-item-link:hover {
+    background: var(--color-surface);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .guide-arrow {
+    font-size: 1.1em;
+    color: var(--color-text-muted);
+    transition: transform 0.2s;
+  }
+
+  .guide-item-link:hover .guide-arrow {
+    transform: translate(2px, -2px);
+    color: var(--accent);
+  }
+
+  /* 05 / 品牌宣言卡片 */
+  .manifesto-box {
+    margin-top: 0.8em;
+    padding: 2.2em;
+    border-radius: 16px;
+    background: var(--color-surface-elevated);
+    border-left: 4px solid var(--accent);
+    border-top: 1px solid var(--color-border-subtle);
+    border-right: 1px solid var(--color-border-subtle);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .manifesto-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--color-text-strong);
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.2px;
+  }
+
+  /* 移动端适配 */
+  @media (max-width: 860px) {
+    .brand-profile-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 1.5em;
+    }
+
+    .brand-avatar-box {
+      margin-bottom: 0.5em;
+    }
+
+    .brand-avatar-svg {
+      width: 150px;
+      height: 150px;
+    }
+
+    .meta-tag-row,
+    .cta-actions-row {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .about-container {
+      padding: 1.25em;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+
+    .sub-section-title {
+      font-size: 1.3em;
+    }
+
+    .guides-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

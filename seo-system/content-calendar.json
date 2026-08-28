@@ -1,0 +1,84 @@
+{
+  "$schema": "https://jichangtizi.net/schemas/seo-content-calendar.json",
+  "version": "1.0.0",
+  "updated_at": "2026-08-28T18:20:00.000Z",
+  "pipeline_summary": {
+    "total_published": 28,
+    "total_planned": 12,
+    "current_stage": "Phase 2: 1-to-1 Brand Comparison & Long-tail Intent Capture"
+  },
+  "content_queue": [
+    {
+      "queue_id": "queue-001",
+      "targetKeyword": "龙猫云和飞猫云哪个好",
+      "searchIntent": "commercial_investigation",
+      "proposedUrl": "/compare/longmao-vs-flycat/",
+      "cluster": "LongMaoCloud",
+      "priority": "P1 (A级)",
+      "targetWordCount": "4800-6000",
+      "coreFocus": "小流量年付折算、低预算轻度查资料、双向专线与适合人群对比",
+      "conversionTarget": "飞猫云 AFF (8折码 flycat888) / 微风网络",
+      "status": "next_in_line"
+    },
+    {
+      "queue_id": "queue-002",
+      "targetKeyword": "龙猫云和微风网络哪个好",
+      "searchIntent": "commercial_investigation",
+      "proposedUrl": "/compare/longmao-vs-weifeng/",
+      "cluster": "LongMaoCloud",
+      "priority": "P1 (A级)",
+      "targetWordCount": "4800-6000",
+      "coreFocus": "约7元/月小流量、自研客户端、轻度办公与中端平价对比",
+      "conversionTarget": "微风网络 AFF (9折码 flat888)",
+      "status": "planned"
+    },
+    {
+      "queue_id": "queue-003",
+      "targetKeyword": "光速云和微风网络哪个好",
+      "searchIntent": "commercial_investigation",
+      "proposedUrl": "/compare/guangsu-vs-weifeng/",
+      "cluster": "Core-Airports-Ranking",
+      "priority": "P1 (A级)",
+      "targetWordCount": "4800-6000",
+      "coreFocus": "高端 IPLC 全球物理专线 (大流量/AI) vs 平价 IEPL 小流量专线 (7元/月)",
+      "conversionTarget": "光速云 (AMM) / 微风网络 (flat888)",
+      "status": "planned"
+    },
+    {
+      "queue_id": "queue-004",
+      "targetKeyword": "便宜机场推荐月付",
+      "searchIntent": "commercial",
+      "proposedUrl": "/recommend/cheap-airports/",
+      "cluster": "Core-Airports-Ranking",
+      "priority": "P0 (A级)",
+      "targetWordCount": "5000-6500",
+      "coreFocus": "学生党、低预算、真实月付 < 20 元精选机场横评",
+      "conversionTarget": "微风网络 / 唯兔云 / 飞猫云",
+      "status": "planned"
+    },
+    {
+      "queue_id": "queue-005",
+      "targetKeyword": "不限时按量计费备用机场",
+      "searchIntent": "commercial",
+      "proposedUrl": "/recommend/pay-as-you-go-airports/",
+      "cluster": "Core-Airports-Ranking",
+      "priority": "P0 (A级)",
+      "targetWordCount": "4800-6000",
+      "coreFocus": "0 月租、流量永不过期、防断网第二备用通道",
+      "conversionTarget": "星岛梦 (9折码 nmw888)",
+      "status": "planned"
+    },
+    {
+      "queue_id": "queue-006",
+      "targetKeyword": "ChatGPT专用专线机场推荐",
+      "searchIntent": "commercial",
+      "proposedUrl": "/recommend/chatgpt-airports/",
+      "cluster": "Core-Airports-Ranking",
+      "priority": "P0 (A级)",
+      "targetWordCount": "5000-6500",
+      "coreFocus": "原生住宅 IP、稳定不过期、长连接不降级、Claude 3.5 解锁实测",
+      "conversionTarget": "光速云 (8折码 AMM) / 速界",
+      "status": "planned"
+    }
+  ]
+}

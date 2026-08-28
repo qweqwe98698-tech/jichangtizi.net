@@ -42,7 +42,7 @@ const TitleTag = titleTag;
 
 <article class={articleClass}>
 	<TitleTag class={titleClass}>
-		<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+		<a href={`/${post.id}/`}>{post.data.title}</a>
 		<DraftBadge draft={post.data.draft} />
 	</TitleTag>
 	{showExcerpt && excerpt && <p class={excerptClass}>{excerpt}</p>}

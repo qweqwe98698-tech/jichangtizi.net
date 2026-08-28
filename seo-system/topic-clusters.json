@@ -1,0 +1,158 @@
+{
+  "$schema": "https://jichangtizi.net/schemas/seo-topic-clusters.json",
+  "version": "1.0.0",
+  "updated_at": "2026-08-28T18:20:00.000Z",
+  "total_clusters": 6,
+  "clusters": [
+    {
+      "id": "cluster-airports",
+      "name": "Core-Airports-Ranking",
+      "description": "全站商业核心入口：年度稳定机场推荐大榜、高性价比平价机场与场景选型",
+      "pillarUrl": "/recommend/best-airports/",
+      "hubs": [
+        "/recommend/cheap-airports/",
+        "/recommend/chatgpt-airports/"
+      ],
+      "spokes": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/reviews/longmao-cloud/",
+        "/compare/longmao-cloud-alternatives/",
+        "/compare/longmao-vs-guangsu/"
+      ],
+      "coreKeywords": [
+        "2026机场推荐",
+        "稳定机场排行榜",
+        "便宜机场推荐",
+        "ChatGPT专用机场",
+        "机场替代推荐"
+      ],
+      "conversionStrategy": "通过天梯榜与多场景横评，直连光速云、微风网络、飞猫云与星岛梦官网收银台"
+    },
+    {
+      "id": "cluster-longmao",
+      "name": "LongMaoCloud-Entity",
+      "description": "龙猫云品牌全维度垄断矩阵：评测、决策、价格、节点、线路、客户端、排障、安全、状态、替代与1对1对比",
+      "pillarUrl": "/reviews/longmao-cloud/",
+      "hubs": [
+        "/reviews/longmao-cloud/buying-guide/",
+        "/reviews/longmao-cloud/pricing/",
+        "/compare/longmao-cloud-alternatives/"
+      ],
+      "spokes": [
+        "/reviews/longmao-cloud/nodes/",
+        "/reviews/longmao-cloud/lines/",
+        "/compare/longmao-vs-guangsu/",
+        "/tutorials/clash/longmao-cloud/",
+        "/tutorials/shadowrocket/longmao-cloud/",
+        "/issues/longmao-cloud-connected-no-internet/",
+        "/issues/longmao-cloud-node-timeout/",
+        "/issues/longmao-cloud-slow-speed/",
+        "/risk/longmao-cloud-security/",
+        "/risk/longmao-cloud-status/"
+      ],
+      "coreKeywords": [
+        "龙猫云机场怎么样",
+        "龙猫云值得买吗",
+        "龙猫云套餐多少钱",
+        "龙猫云节点有哪些",
+        "龙猫云是什么线路",
+        "龙猫云替代机场",
+        "龙猫云和光速云哪个好",
+        "龙猫云有节点但无法上网",
+        "龙猫云节点Timeout",
+        "龙猫云速度慢",
+        "龙猫云安全吗",
+        "龙猫云跑路了吗"
+      ],
+      "conversionStrategy": "通过中立排查与替代横评，将产生转移需求的用户自然引流至光速云与全景推荐大榜"
+    },
+    {
+      "id": "cluster-clash",
+      "name": "Clash-Tutorials-And-Ecosystem",
+      "description": "Clash 与客户端工具生态集群：概念原理、客户端安装、订阅导入、TUN 模式与内核演进",
+      "pillarUrl": "/wiki/what-is-clash/",
+      "hubs": [
+        "/tutorials/clash-verge-rev/",
+        "/wiki/mihomo-vs-clash/"
+      ],
+      "spokes": [
+        "/tutorials/clash-subscription-import/",
+        "/tutorials/clash/longmao-cloud/",
+        "/tutorials/shadowrocket/longmao-cloud/",
+        "/issues/clash-connected-no-internet/",
+        "/wiki/clash-tun-mode-vs-system-proxy/"
+      ],
+      "coreKeywords": [
+        "Clash是什么",
+        "Clash Verge Rev教程",
+        "Clash怎么导入订阅",
+        "Mihomo和Clash区别",
+        "Clash TUN模式",
+        "Clash有节点无法上网"
+      ],
+      "conversionStrategy": "在教程配置与排障底部插入精选专线订阅推荐，引导新手购买即用型机场"
+    },
+    {
+      "id": "cluster-protocols",
+      "name": "Protocols-And-Lines",
+      "description": "底层专线与代理协议科普：IEPL、IPLC、中转直连、VLESS、Trojan、Hysteria 2 原理",
+      "pillarUrl": "/protocols/iepl-vs-iplc-transit/",
+      "hubs": [
+        "/protocols/vless-trojan-hysteria2/"
+      ],
+      "spokes": [
+        "/reviews/longmao-cloud/lines/",
+        "/issues/low-ping-slow-speed-reasons/"
+      ],
+      "coreKeywords": [
+        "IEPL和IPLC区别",
+        "机场专线原理",
+        "VLESS和Trojan对比",
+        "Hysteria 2协议",
+        "低延迟但速度慢原因"
+      ],
+      "conversionStrategy": "科普专线与协议优势，引导用户选择具备 IPLC 物理专线与 VLESS 协议的光速云"
+    },
+    {
+      "id": "cluster-troubleshooting",
+      "name": "Network-Troubleshooting",
+      "description": "高搜索意图故障诊断库：有节点上不了网、Timeout、测速卡顿、系统时间不同步",
+      "pillarUrl": "/issues/clash-connected-no-internet/",
+      "hubs": [
+        "/issues/longmao-cloud-connected-no-internet/",
+        "/issues/longmao-cloud-node-timeout/"
+      ],
+      "spokes": [
+        "/issues/longmao-cloud-slow-speed/",
+        "/issues/low-ping-slow-speed-reasons/"
+      ],
+      "coreKeywords": [
+        "有节点上不了网",
+        "连接超时Timeout",
+        "节点全部爆红",
+        "晚高峰卡顿排查",
+        "系统代理打不开网页"
+      ],
+      "conversionStrategy": "排障无效后提供双保险备用专线与替代机场解决方案"
+    },
+    {
+      "id": "cluster-risk",
+      "name": "Risk-Database",
+      "description": "行业安全与防坑数据库：跑路前兆识别、安全隐私分析、服务状态核验",
+      "pillarUrl": "/risk/airport-running-away-warning-signs/",
+      "hubs": [
+        "/risk/longmao-cloud-security/",
+        "/risk/longmao-cloud-status/"
+      ],
+      "spokes": [],
+      "coreKeywords": [
+        "机场跑路前兆",
+        "机场防坑指南",
+        "机场安全与隐私",
+        "机场服务状态判断"
+      ],
+      "conversionStrategy": "强化长期运营老牌资质，推荐 2020 年运营且具备品牌背书的光速云与星岛梦"
+    }
+  ]
+}
