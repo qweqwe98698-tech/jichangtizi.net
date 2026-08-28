@@ -878,6 +878,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "小火箭节点超时排查与专线选型 (光速云 / 微风网络 / 星岛梦备用)"
+    },
+    {
+      "id": "kw-047",
+      "keyword": "Shadowrocket有节点无法上网",
+      "intent": "informational_investigation",
+      "pageType": "issue",
+      "url": "/issues/shadowrocket-connected-no-internet/",
+      "category": "问题解决",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "小火箭有节点没网排查与专线选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
