@@ -562,6 +562,27 @@
         "/risk/airport-running-away-warning-signs/"
       ],
       "conversionTarget": "全场景付费选型 (光速云 / 微风 / 唯兔云 / 星岛梦)"
+    },
+    {
+      "url": "/recommend/mobile-tizi/",
+      "h1": "手机梯子哪个好？Android、iPhone梯子工具与新手使用指南",
+      "keyword": "手机梯子哪个好",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/recommend/best-tizi/",
+      "childUrls": [
+        "/tutorials/shadowrocket/longmao-cloud/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/issues/clash-connected-no-internet/"
+      ],
+      "lateralUrls": [
+        "/recommend/paid-tizi/",
+        "/wiki/free-tizi/",
+        "/wiki/what-is-tizi/"
+      ],
+      "conversionTarget": "移动端专线选型 (光速云 / 微风 / 唯兔云 / 小火箭)"
     }
   ]
 }
