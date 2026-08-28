@@ -667,6 +667,26 @@
         "/recommend/pc-tizi/"
       ],
       "conversionTarget": "Clash/Mihomo专线配置与选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/clash-node-timeout/",
+      "h1": "Clash节点 Timeout 怎么办？连接超时、全部节点红色与网络异常完整排查",
+      "keyword": "Clash节点Timeout",
+      "intent": "informational_investigation",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/clash-tizi/",
+      "childUrls": [
+        "/issues/clash-connected-no-internet/",
+        "/tutorials/clash-subscription-import/",
+        "/issues/low-ping-slow-speed-reasons/"
+      ],
+      "lateralUrls": [
+        "/issues/clash-connected-no-internet/",
+        "/tutorials/clash-tizi/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "conversionTarget": "Clash节点超时排查与专线选型 (光速云 / 微风网络 / 星岛梦备用)"
     }
   ]
 }
