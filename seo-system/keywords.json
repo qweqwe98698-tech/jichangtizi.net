@@ -973,6 +973,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "小火箭节点选择与多地区专线选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-052",
+      "keyword": "V2Ray梯子",
+      "intent": "informational_investigation",
+      "pageType": "tutorial",
+      "url": "/tutorials/v2ray-tizi/",
+      "category": "教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "V2Ray生态客户端配置与专线选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
