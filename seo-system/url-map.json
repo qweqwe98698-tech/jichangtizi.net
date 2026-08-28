@@ -521,6 +521,26 @@
         "/risk/airport-running-away-warning-signs/"
       ],
       "conversionTarget": "2026梯子推荐 / 新手入门配置"
+    },
+    {
+      "url": "/wiki/free-tizi/",
+      "h1": "免费梯子哪个好？2026免费梯子工具、安全风险与使用限制分析",
+      "keyword": "免费梯子哪个好",
+      "intent": "commercial_investigation",
+      "pageType": "wiki",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/wiki/what-is-tizi/",
+      "childUrls": [
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-tizi/",
+        "/wiki/airport-vs-vpn-difference/"
+      ],
+      "lateralUrls": [
+        "/recommend/which-tizi-is-best/",
+        "/risk/airport-running-away-warning-signs/",
+        "/issues/longmao-cloud-slow-speed/"
+      ],
+      "conversionTarget": "低价平价专线 (微风网络 / 飞猫云 / 唯兔云)"
     }
   ]
 }

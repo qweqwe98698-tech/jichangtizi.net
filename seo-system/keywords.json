@@ -650,6 +650,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "2026梯子推荐 / 新手入门配置"
+    },
+    {
+      "id": "kw-035",
+      "keyword": "免费梯子哪个好",
+      "intent": "commercial_investigation",
+      "pageType": "wiki",
+      "url": "/wiki/free-tizi/",
+      "category": "科普",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 23,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 96,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "低价平价专线 (微风网络 / 飞猫云 / 唯兔云)"
     }
   ]
 }
