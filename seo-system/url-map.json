@@ -479,6 +479,27 @@
         "/risk/airport-running-away-warning-signs/"
       ],
       "conversionTarget": "光速云 / 微风网络 / 飞猫云 / 星岛梦"
+    },
+    {
+      "url": "/recommend/which-tizi-is-best/",
+      "h1": "梯子哪个好用？稳定性、速度、价格、节点与客户端完整选择指南",
+      "keyword": "梯子哪个好用",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/recommend/best-tizi/",
+      "childUrls": [
+        "/recommend/best-airports/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/tutorials/clash-verge-rev/"
+      ],
+      "lateralUrls": [
+        "/recommend/best-tizi/",
+        "/issues/low-ping-slow-speed-reasons/",
+        "/protocols/iepl-vs-iplc-transit/"
+      ],
+      "conversionTarget": "场景化精准选型 (光速云 / 微风 / 唯兔云)"
     }
   ]
 }
