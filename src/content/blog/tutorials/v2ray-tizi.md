@@ -513,6 +513,7 @@ graph LR
 ---
 
 ### 📚 延伸进阶阅读与选型专栏
+- 💻 **Windows 客户端教程**：[《v2rayN怎么用？Windows下载安装、订阅、节点、系统代理与TUN完整教程》](/tutorials/v2rayn-windows/)
 - 💻 **电脑端梯子总指南**：[《电脑梯子怎么用？Windows/Mac客户端、订阅导入与防断流配置教程》](/recommend/pc-tizi/)
 - 📱 **小火箭超级Pillar**：[《Shadowrocket怎么用？小火箭订阅、节点、规则与iPhone完整配置教程》](/tutorials/shadowrocket-tizi/)
 - 🚀 **Clash 超级Pillar**：[《Clash梯子怎么用？Clash Verge Rev、Mihomo、订阅与节点完整教程》](/tutorials/clash-tizi/)
