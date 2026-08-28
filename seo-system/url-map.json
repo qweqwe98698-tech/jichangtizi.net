@@ -541,6 +541,27 @@
         "/issues/longmao-cloud-slow-speed/"
       ],
       "conversionTarget": "低价平价专线 (微风网络 / 飞猫云 / 唯兔云)"
+    },
+    {
+      "url": "/recommend/paid-tizi/",
+      "h1": "付费梯子哪个好？月付、年付、低价与高性价比方案怎么选",
+      "keyword": "付费梯子哪个好",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/recommend/best-tizi/",
+      "childUrls": [
+        "/recommend/best-airports/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/which-tizi-is-best/"
+      ],
+      "lateralUrls": [
+        "/wiki/free-tizi/",
+        "/recommend/best-tizi/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "conversionTarget": "全场景付费选型 (光速云 / 微风 / 唯兔云 / 星岛梦)"
     }
   ]
 }

@@ -669,6 +669,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "低价平价专线 (微风网络 / 飞猫云 / 唯兔云)"
+    },
+    {
+      "id": "kw-036",
+      "keyword": "付费梯子哪个好",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "url": "/recommend/paid-tizi/",
+      "category": "商业推荐",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全场景付费选型 (光速云 / 微风 / 唯兔云 / 星岛梦)"
     }
   ]
 }
