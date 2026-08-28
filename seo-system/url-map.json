@@ -625,6 +625,27 @@
         "/recommend/paid-tizi/"
       ],
       "conversionTarget": "iPhone小火箭专线配置与选型 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/recommend/pc-tizi/",
+      "h1": "电脑梯子哪个好？Windows 10/11、Mac梯子工具与客户端完整指南",
+      "keyword": "电脑梯子哪个好",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/recommend/best-tizi/",
+      "childUrls": [
+        "/tutorials/clash-verge-rev/",
+        "/tutorials/clash-subscription-import/",
+        "/issues/clash-connected-no-internet/",
+        "/issues/low-ping-slow-speed-reasons/"
+      ],
+      "lateralUrls": [
+        "/recommend/mobile-tizi/",
+        "/recommend/paid-tizi/",
+        "/recommend/which-tizi-is-best/"
+      ],
+      "conversionTarget": "桌面端专线选型与配置 (光速云 / 微风网络 / 唯兔云 / Clash Verge)"
     }
   ]
 }
