@@ -593,6 +593,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "龙猫云替代机场 / 备用通道"
+    },
+    {
+      "id": "kw-032",
+      "keyword": "2026梯子推荐",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "url": "/recommend/best-tizi/",
+      "category": "商业推荐",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 99,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "光速云 / 微风网络 / 飞猫云 / 星岛梦"
     }
   ]
 }

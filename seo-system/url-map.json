@@ -457,6 +457,28 @@
         "/issues/longmao-cloud-connected-no-internet/"
       ],
       "conversionTarget": "龙猫云替代机场 / 备用通道"
+    },
+    {
+      "url": "/recommend/best-tizi/",
+      "h1": "2026梯子推荐：稳定、速度、价格、安全与不同使用场景怎么选",
+      "keyword": "2026梯子推荐",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/",
+      "childUrls": [
+        "/recommend/best-airports/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/tutorials/clash-verge-rev/",
+        "/issues/clash-connected-no-internet/"
+      ],
+      "lateralUrls": [
+        "/protocols/iepl-vs-iplc-transit/",
+        "/wiki/what-is-clash/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "conversionTarget": "光速云 / 微风网络 / 飞猫云 / 星岛梦"
     }
   ]
 }
