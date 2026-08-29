@@ -1087,6 +1087,26 @@
         "/tutorials/v2rayn-routing/"
       ],
       "conversionTarget": "v2rayN规则失效与分流排障 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/v2rayn-disconnect/",
+      "h1": "v2rayN经常断线怎么办？节点断流、Core重连、Windows网络与睡眠唤醒完整排查",
+      "keyword": "v2rayN经常断线",
+      "intent": "informational_investigation",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayn-windows/",
+      "childUrls": [
+        "/issues/v2rayn-node-timeout/",
+        "/issues/v2rayn-slow-speed/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayn-connected-no-internet/",
+        "/issues/v2rayn-slow-speed/",
+        "/tutorials/v2rayn-windows/"
+      ],
+      "conversionTarget": "v2rayN断流频繁掉线排障与抗拥塞专线选型 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
