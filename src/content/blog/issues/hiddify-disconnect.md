@@ -247,7 +247,7 @@ graph TD
 **答**：**这是 Telegram 应用自身后台的长连接假死。** Hiddify 代理隧道本身完全正常，在多任务后台划掉 Telegram 并重新打开即可秒连。
 
 ### Q11：掉线问题已经解决，但接下来 DNS 该如何科学设置才能防泄露与秒解析？
-**答**：建议接下来关注本站即将推出的《Hiddify DNS怎么设置？Private DNS、IPv6、FakeIP与域名解析完整指南》，或者先阅读 [《sing-box DNS怎么设置？DNS规则、Private DNS、IPv6、FakeIP与域名解析完整指南》](/tutorials/sing-box-dns/)，系统掌握域名调度。
+**答**：建议接下来阅读 [《Hiddify DNS怎么设置？Private DNS、IPv6、FakeIP与域名解析完整指南》](/tutorials/hiddify-dns/)，系统掌握域名调度。
 
 ---
 

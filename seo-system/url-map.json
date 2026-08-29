@@ -1716,6 +1716,27 @@
         "/issues/v2rayn-disconnect/"
       ],
       "conversionTarget": "全天候长连接不掉线IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/hiddify-dns/",
+      "h1": "Hiddify DNS怎么设置？Private DNS、IPv6、FakeIP与域名解析完整指南",
+      "keyword": "Hiddify DNS",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/hiddify-android/",
+      "childUrls": [
+        "/tutorials/hiddify-android/",
+        "/tutorials/sing-box-dns/",
+        "/tutorials/v2rayng-dns/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/sing-box-dns/",
+        "/tutorials/v2rayng-dns/",
+        "/tutorials/v2rayn-dns/"
+      ],
+      "conversionTarget": "纯净零污染防泄漏IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

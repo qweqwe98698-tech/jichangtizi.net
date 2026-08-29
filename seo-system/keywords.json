@@ -1771,6 +1771,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "全天候长连接不掉线IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-094",
+      "keyword": "Hiddify DNS",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "url": "/tutorials/hiddify-dns/",
+      "category": "客户端教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "纯净零污染防泄漏IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
