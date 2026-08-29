@@ -263,7 +263,7 @@ graph TD
 **答**：**可以。** Hiddify 已上架非国区 App Store，iOS 用户可切换外区 Apple ID 后直接搜索下载使用。
 
 ### Q11：下一步应该如何上手使用 Hiddify？
-**答**：建议接下来关注本站即将推出的《Hiddify Android怎么用？下载安装、订阅、节点、VPN权限与完整配置教程》，或者先阅读 [《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)，掌握底层内核操作。
+**答**：建议接下来阅读 [《Hiddify Android怎么用？下载安装、订阅、节点、VPN权限与完整配置教程》](/tutorials/hiddify-android/)，系统上手全套操作。
 
 ---
 
@@ -282,7 +282,7 @@ graph TD
 ---
 
 ### 📚 相关专题延伸阅读
-- 📱 **sing-box Android 教程**：[《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)
+- 📱 **Hiddify Android 教程**：[《Hiddify Android怎么用？下载安装、订阅、节点、VPN权限与完整配置教程》](/tutorials/hiddify-android/)
 - 🏛️ **sing-box 概念总览**：[《sing-box是什么？和V2Ray、Xray、Clash有什么区别？》](/wiki/what-is-sing-box/)
 - 🤖 **V2Ray 与 Xray 对比**：[《V2Ray和Xray有什么区别？生态演进与协议对比》](/wiki/v2ray-vs-xray/)
 - 🧭 **Clash 生态解析**：[《Clash是什么？内核演进与客户端全景指南》](/wiki/what-is-clash/)

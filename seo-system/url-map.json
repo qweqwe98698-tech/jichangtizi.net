@@ -1611,6 +1611,27 @@
         "/wiki/what-is-tizi/"
       ],
       "conversionTarget": "全协议兼容与全平台通用IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/hiddify-android/",
+      "h1": "Hiddify Android怎么用？下载安装、订阅、节点、VPN权限与完整配置教程",
+      "keyword": "Hiddify Android",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/wiki/what-is-hiddify/",
+      "childUrls": [
+        "/wiki/what-is-hiddify/",
+        "/tutorials/sing-box-android/",
+        "/tutorials/v2rayng-android/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/sing-box-android/",
+        "/tutorials/v2rayng-android/",
+        "/tutorials/clash-tizi/"
+      ],
+      "conversionTarget": "Android一键导入与全协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
