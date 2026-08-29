@@ -1227,6 +1227,26 @@
         "/tutorials/v2ray-tizi/"
       ],
       "conversionTarget": "V2Ray节点地区与全线IEPL抗拥塞专线推荐 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/v2rayng-android/",
+      "h1": "v2rayNG怎么用？Android下载安装、订阅、节点、VPN权限与完整配置教程",
+      "keyword": "v2rayNG怎么用",
+      "intent": "how_to",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/android-tizi/",
+      "childUrls": [
+        "/tutorials/v2ray-node-selection/",
+        "/tutorials/v2rayn-windows/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/android-tizi/",
+        "/tutorials/v2ray-tizi/",
+        "/tutorials/shadowrocket-tizi/"
+      ],
+      "conversionTarget": "Android端v2rayNG无感一键订阅高速专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

@@ -1315,6 +1315,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "V2Ray节点地区与全线IEPL抗拥塞专线推荐 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-070",
+      "keyword": "v2rayNG怎么用",
+      "intent": "how_to",
+      "pageType": "tutorial",
+      "url": "/tutorials/v2rayng-android/",
+      "category": "客户端教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "Android端v2rayNG无感一键订阅高速专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
