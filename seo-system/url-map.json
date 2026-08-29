@@ -1367,6 +1367,26 @@
         "/issues/v2rayng-disconnect/"
       ],
       "conversionTarget": "Android端智能防污染与纯净Anycast解析IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/v2rayng-routing/",
+      "h1": "v2rayNG Routing怎么设置？分应用、Direct、Proxy、Block与Android分流完整教程",
+      "keyword": "v2rayNG Routing",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayng-android/",
+      "childUrls": [
+        "/tutorials/v2rayng-android/",
+        "/tutorials/v2rayng-dns/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/v2rayn-routing/",
+        "/tutorials/shadowrocket-rules/",
+        "/issues/v2rayn-routing-rules/"
+      ],
+      "conversionTarget": "Android端智能分流与原生住宅IP专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
