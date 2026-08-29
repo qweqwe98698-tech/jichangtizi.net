@@ -2076,6 +2076,29 @@
         "/protocols/iepl-vs-iplc-transit/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/cheap-airport/",
+      "h1": "便宜机场推荐怎么选？10元、15元、20元、30元套餐与低价机场风险完整分析",
+      "keyword": "便宜机场推荐",
+      "intent": "commercial",
+      "pageType": "recommend",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/reviews/weifeng-cloud/",
+        "/reviews/guangsu-cloud/",
+        "/recommend/best-airports/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/recommend/best-airports/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
