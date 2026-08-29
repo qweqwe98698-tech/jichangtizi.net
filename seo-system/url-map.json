@@ -1187,6 +1187,26 @@
         "/tutorials/v2ray-tizi/"
       ],
       "conversionTarget": "V2Ray与Xray生态认知与全内核自适应专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/protocols/vmess-protocol/",
+      "h1": "VMess是什么？VMess节点、UUID、TLS与VLESS区别完整指南",
+      "keyword": "VMess是什么",
+      "intent": "informational_investigation",
+      "pageType": "protocol",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2ray-tizi/",
+      "childUrls": [
+        "/protocols/vless-vs-vmess/",
+        "/tutorials/v2rayn-windows/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/protocols/vless-vs-vmess/",
+        "/wiki/v2ray-vs-xray/",
+        "/tutorials/v2ray-tizi/"
+      ],
+      "conversionTarget": "VMess节点配置解析与全协议高速专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

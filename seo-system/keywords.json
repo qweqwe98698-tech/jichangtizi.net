@@ -1277,6 +1277,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "V2Ray与Xray生态认知与全内核自适应专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-068",
+      "keyword": "VMess是什么",
+      "intent": "informational_investigation",
+      "pageType": "protocol",
+      "url": "/protocols/vmess-protocol/",
+      "category": "协议对比",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "VMess节点配置解析与全协议高速专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
