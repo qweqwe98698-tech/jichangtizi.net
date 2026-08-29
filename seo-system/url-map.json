@@ -1758,6 +1758,27 @@
         "/tutorials/v2rayn-routing/"
       ],
       "conversionTarget": "智能精准分流与多协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/hiddify-config-error/",
+      "h1": "Hiddify打不开/配置报错怎么办？Core启动失败、版本兼容、Profile错误与Android运行环境完整排查",
+      "keyword": "Hiddify配置报错",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/hiddify-android/",
+      "childUrls": [
+        "/tutorials/hiddify-android/",
+        "/tutorials/hiddify-routing/",
+        "/issues/sing-box-config-error/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/sing-box-config-error/",
+        "/issues/v2rayng-startup-error/",
+        "/issues/v2rayn-startup-error/"
+      ],
+      "conversionTarget": "标准多客户端自适应Schema兼容专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

@@ -268,7 +268,7 @@ Hiddify 底层的 sing-box Core 严格遵循 **从上到下、首条命中即终
 **答**：**看日志确认 App 是否进 Core ➔ 确认目标域名/IP ➔ 查看命中的具体规则 ➔ 确认执行的 Action 与 Outbound ➔ 验证真实出口 IP。**
 
 ### Q11：Hiddify 客户端报错或启动失败闪退该怎么排查？
-**答**：建议接下来关注本站即将推出的《Hiddify打不开/配置报错怎么办？Core启动失败、版本兼容、Profile错误与Android运行环境完整排查》，或者先阅读 [《sing-box配置报错怎么办？JSON、Schema、字段版本、Deprecated与配置迁移完整排查》](/issues/sing-box-config-error/)，系统攻坚底层崩溃与配置迁移。
+**答**：建议接下来阅读 [《Hiddify打不开/配置报错怎么办？Core启动失败、版本兼容、Profile错误与Android运行环境完整排查》](/issues/hiddify-config-error/)，系统攻坚底层崩溃与配置迁移。
 
 ---
 
