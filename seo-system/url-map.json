@@ -1590,6 +1590,27 @@
         "/issues/v2rayn-port-conflict/"
       ],
       "conversionTarget": "标准Schema兼容订阅与IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/wiki/what-is-hiddify/",
+      "h1": "Hiddify是什么？Hiddify Next、sing-box、V2Ray、Xray与Clash有什么区别？",
+      "keyword": "Hiddify是什么",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/recommend/best-tizi/",
+      "childUrls": [
+        "/wiki/what-is-sing-box/",
+        "/wiki/what-is-clash/",
+        "/wiki/v2ray-vs-xray/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/wiki/what-is-sing-box/",
+        "/wiki/what-is-clash/",
+        "/wiki/what-is-tizi/"
+      ],
+      "conversionTarget": "全协议兼容与全平台通用IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

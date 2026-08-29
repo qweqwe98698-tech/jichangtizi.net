@@ -1657,6 +1657,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "标准Schema兼容订阅与IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-088",
+      "keyword": "Hiddify是什么",
+      "intent": "informational",
+      "pageType": "wiki",
+      "url": "/wiki/what-is-hiddify/",
+      "category": "科普认知",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全协议兼容与全平台通用IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
