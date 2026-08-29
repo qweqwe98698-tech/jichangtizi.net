@@ -2032,6 +2032,28 @@
         "/tutorials/v2rayng-android/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/airport-ranking/",
+      "h1": "2026机场排行榜：稳定、便宜、专线、高性价比机场综合排名与选择指南",
+      "keyword": "2026机场排行榜",
+      "intent": "commercial",
+      "pageType": "recommend",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/",
+      "childUrls": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/risk/airport-running-away-warning-signs/",
+        "/wiki/airport-vs-vpn-difference/"
+      ],
+      "lateralUrls": [
+        "/recommend/best-airports/",
+        "/recommend/best-tizi/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
