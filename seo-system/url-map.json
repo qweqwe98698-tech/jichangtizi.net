@@ -2099,6 +2099,31 @@
         "/recommend/best-airports/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/best-value-airport/",
+      "h1": "高性价比机场怎么判断？价格、流量、线路、倍率、节点与使用价值完整计算指南",
+      "keyword": "高性价比机场推荐",
+      "intent": "commercial",
+      "pageType": "recommend",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/cheap-airport/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/cheap-airport/",
+        "/recommend/best-airports/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
