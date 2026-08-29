@@ -2730,6 +2730,62 @@
         "/recommend/best-airports/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/gaming-airport/",
+      "h1": "游戏机场推荐怎么选？低延迟、Jitter、丢包、香港日本新加坡节点与晚高峰完整指南",
+      "keyword": "游戏机场推荐",
+      "intent": "commercial",
+      "pageType": "recommend",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/discord-airport/",
+        "/reddit-airport/",
+        "/facebook-airport/",
+        "/instagram-airport/",
+        "/x-twitter-airport/",
+        "/telegram-airport/",
+        "/tiktok-airport/",
+        "/streaming-airport/",
+        "/netflix-airport/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/airport-ranking/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/native-ip-airport/",
+        "/stable-airport/",
+        "/best-value-airport/",
+        "/cheap-airport/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/discord-airport/",
+        "/reddit-airport/",
+        "/facebook-airport/",
+        "/instagram-airport/",
+        "/x-twitter-airport/",
+        "/telegram-airport/",
+        "/tiktok-airport/",
+        "/streaming-airport/",
+        "/netflix-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/native-ip-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/best-value-airport/",
+        "/recommend/best-airports/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
