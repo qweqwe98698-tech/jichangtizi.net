@@ -264,7 +264,7 @@ graph TD
 **答**：**先恢复 Hiddify 默认 DNS ➔ 关闭 Chrome 安全 DNS ➔ 排查目标域名是否产生查询 ➔ 查看日志确认返回 A/AAAA/FakeIP 还是 Timeout。**
 
 ### Q11：DNS 设置好后，接下来如何精细化配置 Routing 规则实现智能分流？
-**答**：建议接下来关注本站即将推出的《Hiddify Routing怎么设置？Direct、Proxy、分应用、规则与流量分流完整教程》，或者先阅读 [《sing-box Route怎么设置？Direct、Proxy、Block、Rule Set与分流完整教程》](/tutorials/sing-box-routing/)，掌握流量分流实战。
+**答**：建议接下来阅读 [《Hiddify Routing怎么设置？Direct、Proxy、分应用、规则与流量分流完整教程》](/tutorials/hiddify-routing/)，掌握流量分流实战。
 
 ---
 

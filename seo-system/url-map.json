@@ -1737,6 +1737,27 @@
         "/tutorials/v2rayn-dns/"
       ],
       "conversionTarget": "纯净零污染防泄漏IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/hiddify-routing/",
+      "h1": "Hiddify Routing怎么设置？Direct、Proxy、分应用、规则与流量分流完整教程",
+      "keyword": "Hiddify Routing",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/hiddify-android/",
+      "childUrls": [
+        "/tutorials/hiddify-android/",
+        "/tutorials/hiddify-dns/",
+        "/tutorials/sing-box-routing/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/sing-box-routing/",
+        "/tutorials/v2rayng-routing/",
+        "/tutorials/v2rayn-routing/"
+      ],
+      "conversionTarget": "智能精准分流与多协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
