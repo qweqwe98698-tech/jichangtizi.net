@@ -258,7 +258,7 @@ graph TD
 **答**：**立即登录机场后台点击【重置订阅信息】。** 重置后旧链接与 Token 瞬间失效，重新复制新生成的订阅链接导入 NekoBox 即可。
 
 ### Q11：订阅导入成功且节点都在，但连接后全部超时该怎么办？
-**答**：建议接下来关注本站即将推出的《NekoBox节点Timeout怎么办？Android节点全部超时、Core、Wi-Fi/5G与服务器完整排查》，系统攻坚节点连接层故障。
+**答**：建议接下来阅读 [《NekoBox节点Timeout怎么办？Android节点全部超时、Core、Wi-Fi/5G与服务器完整排查》](/issues/nekobox-node-timeout/)，系统攻坚节点连接层故障。
 
 ---
 

@@ -1842,6 +1842,27 @@
         "/tutorials/v2rayng-subscription/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/nekobox-node-timeout/",
+      "h1": "NekoBox节点Timeout怎么办？Android节点全部超时、Core、Wi-Fi/5G与服务器完整排查",
+      "keyword": "NekoBox节点Timeout",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/nekobox-android/",
+      "childUrls": [
+        "/tutorials/nekobox-android/",
+        "/tutorials/nekobox-subscription/",
+        "/issues/v2rayng-node-timeout/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayng-node-timeout/",
+        "/issues/v2rayn-node-timeout/",
+        "/issues/clash-node-timeout/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
