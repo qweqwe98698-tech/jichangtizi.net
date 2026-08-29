@@ -1296,6 +1296,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "VMess节点配置解析与全协议高速专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-069",
+      "keyword": "V2Ray节点怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "tutorial",
+      "url": "/tutorials/v2ray-node-selection/",
+      "category": "教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "V2Ray节点地区与全线IEPL抗拥塞专线推荐 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
