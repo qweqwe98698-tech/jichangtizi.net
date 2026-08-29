@@ -289,7 +289,7 @@ graph TD
 **答**：**建议设置为 12 小时至 24 小时更新一次。** 既能保证及时获取最新的节点变化，又不会因频繁请求浪费电量或触发服务器防刷机制。
 
 ### Q15：遇到订阅更新成功但就是连不上网，下一步该看哪篇教程？
-**答**：建议接下来关注本站即将推出的《sing-box有节点但无法上网怎么办？TUN、DNS、Route与Android网络完整排查》，或者先阅读主教程 [《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)，深入排查流量接管与分流故障。
+**答**：建议接下来阅读 [《sing-box有节点但无法上网怎么办？TUN、DNS、Route与Android网络完整排查》](/issues/sing-box-connected-no-internet/)，深入排查流量接管与分流故障。
 
 ---
 

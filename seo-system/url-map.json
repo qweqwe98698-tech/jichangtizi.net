@@ -1467,6 +1467,26 @@
         "/tutorials/shadowrocket-subscription-import/"
       ],
       "conversionTarget": "标准sing-box JSON订阅与防404专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/sing-box-connected-no-internet/",
+      "h1": "sing-box有节点但无法上网怎么办？TUN、DNS、Route与Android网络完整排查",
+      "keyword": "sing-box有节点但无法上网",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/sing-box-android/",
+      "childUrls": [
+        "/tutorials/sing-box-android/",
+        "/tutorials/sing-box-subscription/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayng-connected-no-internet/",
+        "/issues/clash-connected-no-internet/",
+        "/issues/v2rayn-connected-no-internet/"
+      ],
+      "conversionTarget": "Android端TUN原生接管与住宅纯净IP专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

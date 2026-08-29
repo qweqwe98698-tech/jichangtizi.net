@@ -1543,6 +1543,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "标准sing-box JSON订阅与防404专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-082",
+      "keyword": "sing-box有节点但无法上网",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "url": "/issues/sing-box-connected-no-internet/",
+      "category": "问题解决",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "Android端TUN原生接管与住宅纯净IP专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
