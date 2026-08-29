@@ -1127,6 +1127,26 @@
         "/tutorials/v2rayn-windows/"
       ],
       "conversionTarget": "v2rayN端口冲突与Core监听排障 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/v2rayn-startup-error/",
+      "h1": "v2rayN打不开怎么办？Windows启动失败、Core错误、配置损坏与运行环境完整排查",
+      "keyword": "v2rayN打不开",
+      "intent": "informational_investigation",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayn-windows/",
+      "childUrls": [
+        "/issues/v2rayn-port-conflict/",
+        "/issues/v2rayn-system-proxy/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayn-port-conflict/",
+        "/issues/v2rayn-disconnect/",
+        "/tutorials/v2rayn-windows/"
+      ],
+      "conversionTarget": "v2rayN启动失败与配置损坏修复 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

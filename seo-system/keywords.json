@@ -1220,6 +1220,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "v2rayN端口冲突与Core监听排障 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-065",
+      "keyword": "v2rayN打不开",
+      "intent": "informational_investigation",
+      "pageType": "issue",
+      "url": "/issues/v2rayn-startup-error/",
+      "category": "问题解决",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "v2rayN启动失败与配置损坏修复 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
