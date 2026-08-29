@@ -1905,6 +1905,27 @@
         "/issues/v2rayng-slow-speed/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/nekobox-disconnect/",
+      "h1": "NekoBox经常掉线怎么办？Android后台、电池优化、锁屏与Wi-Fi/5G切换完整排查",
+      "keyword": "NekoBox经常掉线",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/nekobox-android/",
+      "childUrls": [
+        "/tutorials/nekobox-android/",
+        "/issues/nekobox-slow-speed/",
+        "/issues/hiddify-disconnect/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/hiddify-disconnect/",
+        "/issues/sing-box-disconnect/",
+        "/issues/v2rayng-disconnect/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
