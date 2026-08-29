@@ -243,7 +243,7 @@ graph TD
 **答**：**这是普通直连线路公网拥塞的典型现象。** 建议升级选用具备全线内网 IEPL 专线保障的高 SLA 服务商以彻底规避晚高峰丢包。
 
 ### Q11：节点连接成功且延迟正常，但打开海外网页依然打不开怎么办？
-**答**：建议接下来关注本站即将推出的《NekoBox有节点但无法上网怎么办？VPN、TUN、DNS、Routing与Android网络完整排查》，系统攻坚连接后无网故障。
+**答**：建议接下来阅读 [《NekoBox有节点但无法上网怎么办？VPN、TUN、DNS、Routing与Android网络完整排查》](/issues/nekobox-connected-no-internet/)，系统攻坚连接后无网故障。
 
 ---
 
