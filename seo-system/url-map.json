@@ -1800,6 +1800,27 @@
         "/wiki/v2ray-vs-xray/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/nekobox-android/",
+      "h1": "NekoBox Android怎么用？下载安装、订阅、节点、VPN权限与完整配置教程",
+      "keyword": "NekoBox Android",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/wiki/what-is-nekobox/",
+      "childUrls": [
+        "/wiki/what-is-nekobox/",
+        "/tutorials/hiddify-android/",
+        "/tutorials/v2rayng-android/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/hiddify-android/",
+        "/tutorials/sing-box-android/",
+        "/tutorials/v2rayng-android/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

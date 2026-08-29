@@ -271,7 +271,7 @@ graph TD
 **答**：**务必仅从官方 GitHub Releases 页面下载。** 避免从未经认证的第三方 APK 镜像站或不明来源的群组中获取，以防安装包被植入后门。
 
 ### Q11：NekoBox 在日常使用中该如何快速配置上手？
-**答**：建议接下来关注本站即将推出的《NekoBox Android怎么用？下载安装、订阅、节点、VPN权限与完整配置教程》，或者先阅读 [《Hiddify Android怎么用？下载安装、订阅、节点、VPN权限与完整配置教程》](/tutorials/hiddify-android/)，掌握客户端标准配置步骤。
+**答**：建议接下来阅读 [《NekoBox Android怎么用？下载安装、订阅、节点、VPN权限与完整配置教程》](/tutorials/nekobox-android/)，掌握从安装到连接的完整实操步骤。
 
 ---
 
