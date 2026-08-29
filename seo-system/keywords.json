@@ -2550,6 +2550,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-135",
+      "keyword": "游戏节点怎么测速",
+      "intent": "informational",
+      "pageType": "methodology",
+      "url": "/gaming-node-test/",
+      "category": "测评指南",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 22,
+      "difficultyScore": 12,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 94,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

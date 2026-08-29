@@ -3039,6 +3039,57 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/gaming-node-test/",
+      "h1": "游戏节点怎么测速？Game RTT、Jitter、Packet Loss、P95与晚高峰标准测试方法",
+      "keyword": "游戏节点怎么测速",
+      "intent": "informational",
+      "pageType": "methodology",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/gaming-airport/",
+      "childUrls": [
+        "/gaming-airport/",
+        "/gaming-high-ping/",
+        "/gaming-jitter-high/",
+        "/gaming-packet-loss/",
+        "/gaming-peak-hour/",
+        "/gaming-not-proxied/",
+        "/mobile-gaming-cellular-latency/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/discord-airport/",
+        "/airport-ranking/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/tutorials/clash-verge-rev/",
+        "/tutorials/v2rayng-android/",
+        "/tutorials/shadowrocket-tizi/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/gaming-airport/",
+        "/gaming-high-ping/",
+        "/gaming-jitter-high/",
+        "/gaming-packet-loss/",
+        "/gaming-peak-hour/",
+        "/gaming-not-proxied/",
+        "/mobile-gaming-cellular-latency/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/discord-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
