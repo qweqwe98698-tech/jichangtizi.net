@@ -2991,6 +2991,54 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/mobile-gaming-cellular-latency/",
+      "h1": "手游Wi-Fi不卡但4G/5G延迟高怎么办？移动网络、IPv6、节点与运营商线路完整排查",
+      "keyword": "手游Wi-Fi不卡但4G/5G延迟高怎么办",
+      "intent": "informational",
+      "pageType": "troubleshooting",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/gaming-high-ping/",
+      "childUrls": [
+        "/gaming-high-ping/",
+        "/gaming-jitter-high/",
+        "/gaming-packet-loss/",
+        "/gaming-peak-hour/",
+        "/gaming-not-proxied/",
+        "/gaming-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/discord-airport/",
+        "/airport-ranking/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/tutorials/v2rayng-android/",
+        "/tutorials/shadowrocket-tizi/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/gaming-high-ping/",
+        "/gaming-jitter-high/",
+        "/gaming-packet-loss/",
+        "/gaming-peak-hour/",
+        "/gaming-not-proxied/",
+        "/gaming-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/discord-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
