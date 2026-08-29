@@ -2182,6 +2182,38 @@
         "/recommend/best-airports/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/iplc-airport/",
+      "h1": "IPLC机场推荐怎么选？国际专线、入口、晚高峰、稳定性与适合人群完整指南",
+      "keyword": "IPLC机场推荐",
+      "intent": "commercial",
+      "pageType": "recommend",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/dedicated-line-airport/",
+      "childUrls": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/airport-ranking/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/stable-airport/",
+        "/best-value-airport/",
+        "/cheap-airport/",
+        "/protocols/iepl-vs-iplc-transit/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/iepl-airport/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/best-value-airport/",
+        "/protocols/iepl-vs-iplc-transit/",
+        "/recommend/best-airports/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
