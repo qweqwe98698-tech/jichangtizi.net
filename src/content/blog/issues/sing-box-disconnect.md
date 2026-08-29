@@ -286,7 +286,7 @@ graph TD
 **答**：**通常不需要。** Private DNS 与长连接中断无直接因果关系，乱关可能引发国内网站解析异常。
 
 ### Q15：排查完掉线依然对 DNS 规则有疑问，下一步该看哪篇教程？
-**答**：建议接下来关注本站即将推出的《sing-box DNS怎么设置？DNS规则、IPv6与域名解析完整指南》，或者先阅读主教程 [《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)，系统掌握分流与解析调优。
+**答**：建议接下来阅读 [《sing-box DNS怎么设置？DNS规则、IPv6与域名解析完整指南》](/tutorials/sing-box-dns/)，系统掌握分流与解析调优。
 
 ---
 

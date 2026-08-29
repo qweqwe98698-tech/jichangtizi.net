@@ -1600,6 +1600,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Android端无限制后台保活与IEPL抗丢包专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-085",
+      "keyword": "sing-box DNS",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "url": "/tutorials/sing-box-dns/",
+      "category": "客户端教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "标准DNS分流与住宅双栈纯净IP专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

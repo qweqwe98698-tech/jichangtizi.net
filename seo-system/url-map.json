@@ -1528,6 +1528,26 @@
         "/issues/clash-node-timeout/"
       ],
       "conversionTarget": "Android端无限制后台保活与IEPL抗丢包专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/sing-box-dns/",
+      "h1": "sing-box DNS怎么设置？DNS规则、Private DNS、IPv6、FakeIP与域名解析完整指南",
+      "keyword": "sing-box DNS",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/sing-box-android/",
+      "childUrls": [
+        "/tutorials/sing-box-android/",
+        "/issues/sing-box-connected-no-internet/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/v2rayng-dns/",
+        "/tutorials/v2rayn-dns/",
+        "/tutorials/shadowrocket-dns/"
+      ],
+      "conversionTarget": "标准DNS分流与住宅双栈纯净IP专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
