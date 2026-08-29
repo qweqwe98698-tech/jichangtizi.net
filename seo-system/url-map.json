@@ -1327,6 +1327,26 @@
         "/issues/clash-slow-speed/"
       ],
       "conversionTarget": "Android端晚高峰0丢包4K秒开IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/v2rayng-disconnect/",
+      "h1": "v2rayNG经常掉线怎么办？Android后台、电池优化、锁屏与Wi-Fi/5G切换完整排查",
+      "keyword": "v2rayNG经常掉线",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayng-android/",
+      "childUrls": [
+        "/tutorials/v2rayng-android/",
+        "/issues/v2rayng-slow-speed/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayn-disconnect/",
+        "/issues/v2rayng-node-timeout/",
+        "/issues/v2rayng-connected-no-internet/"
+      ],
+      "conversionTarget": "Android端锁屏防掉线与全天候长连接IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
