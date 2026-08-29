@@ -1427,6 +1427,26 @@
         "/protocols/vless-trojan-hysteria2/"
       ],
       "conversionTarget": "全协议全内核兼容的企业级IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/sing-box-android/",
+      "h1": "sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程",
+      "keyword": "sing-box Android",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/wiki/what-is-sing-box/",
+      "childUrls": [
+        "/wiki/what-is-sing-box/",
+        "/tutorials/android-tizi/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/v2rayng-android/",
+        "/tutorials/clash-verge-rev/",
+        "/tutorials/v2rayn-windows/"
+      ],
+      "conversionTarget": "Android端标准sing-box订阅与全线IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

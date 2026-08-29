@@ -343,7 +343,7 @@ graph TD
 **答**：**不能。** 流媒体与 AI 平台的可用性取决于节点出口 IP 的纯净度与地理位置，与本地客户端使用哪个 Core 没有必然联系。
 
 ### Q15：学习 sing-box 的下一步应该看什么？
-**答**：建议接下来关注本站即将推出的《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》，或者先阅读 [《安卓梯子怎么选？2026 Android科学上网客户端全景指南》](/tutorials/android-tizi/)，实操掌握移动端的完整使用流程。
+**答**：建议接下来阅读 [《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)，实操掌握移动端的完整使用流程。
 
 ---
 
@@ -362,7 +362,7 @@ graph TD
 ---
 
 ### 📚 sing-box 垂直知识库与全景导航
-- 📱 **Android 梯子全景指南**：[《安卓梯子怎么选？2026 Android科学上网客户端全景指南》](/tutorials/android-tizi/)
+- 📱 **下一篇·Android 核心主教程**：[《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)
 - 🌐 **V2Ray 核心概念科普**：[《V2Ray是什么？和Xray、VMess、VLESS到底什么关系？》](/wiki/v2ray-vs-xray/)
 - 🛡️ **VLESS 协议深度解析**：[《VLESS是什么？和VMess有什么区别？》](/protocols/vless-vs-vmess/)
 - 🐱 **Clash 与 Mihomo 深度对比**：[《Mihomo和Clash有什么区别？Clash.Meta内核完整解析》](/wiki/mihomo-vs-clash/)
