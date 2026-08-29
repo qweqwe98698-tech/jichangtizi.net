@@ -1947,6 +1947,27 @@
         "/tutorials/v2rayng-dns/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/nekobox-routing/",
+      "h1": "NekoBox Routing怎么设置？Direct、Proxy、分应用、规则与流量分流完整教程",
+      "keyword": "NekoBox Routing",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/nekobox-android/",
+      "childUrls": [
+        "/tutorials/nekobox-android/",
+        "/tutorials/nekobox-dns/",
+        "/tutorials/hiddify-routing/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/hiddify-routing/",
+        "/tutorials/sing-box-routing/",
+        "/tutorials/v2rayng-routing/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

@@ -232,7 +232,7 @@ graph TD
 **答**：**第一步必须确认节点本身是否正常连通。** 排除节点 Timeout 后，再观察 Core 日志中的 `[dns]` 模块报错，切莫盲目重装软件！
 
 ### Q11：DNS 设置好后，如何精准配置 Routing 分流规则与分应用代理？
-**答**：建议接下来关注本站即将推出的《NekoBox Routing怎么设置？Direct、Proxy、分应用、规则与流量分流完整教程》，系统攻坚流量分流。
+**答**：建议接下来阅读 [《NekoBox Routing怎么设置？Direct、Proxy、分应用、规则与流量分流完整教程》](/tutorials/nekobox-routing/)，系统攻坚流量分流。
 
 ---
 
