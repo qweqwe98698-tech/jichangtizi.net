@@ -1486,6 +1486,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Android端标准协议兼容与0报错IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-079",
+      "keyword": "sing-box是什么",
+      "intent": "informational",
+      "pageType": "wiki",
+      "url": "/wiki/what-is-sing-box/",
+      "category": "科普",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全协议全内核兼容的企业级IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

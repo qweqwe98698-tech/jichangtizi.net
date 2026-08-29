@@ -1407,6 +1407,26 @@
         "/issues/v2rayng-connected-no-internet/"
       ],
       "conversionTarget": "Android端标准协议兼容与0报错IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/wiki/what-is-sing-box/",
+      "h1": "sing-box是什么？和V2Ray、Xray、Clash有什么区别？Core、协议与客户端完整解析",
+      "keyword": "sing-box是什么",
+      "intent": "informational",
+      "pageType": "wiki",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/wiki/what-is-tizi/",
+      "childUrls": [
+        "/wiki/v2ray-vs-xray/",
+        "/wiki/mihomo-vs-clash/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/protocols/vless-vs-vmess/",
+        "/wiki/what-is-clash/",
+        "/protocols/vless-trojan-hysteria2/"
+      ],
+      "conversionTarget": "全协议全内核兼容的企业级IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
