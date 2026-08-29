@@ -1821,6 +1821,27 @@
         "/tutorials/v2rayng-android/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/nekobox-subscription/",
+      "h1": "NekoBox订阅怎么导入？订阅链接、二维码、节点更新与导入失败完整教程",
+      "keyword": "NekoBox订阅",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/nekobox-android/",
+      "childUrls": [
+        "/tutorials/nekobox-android/",
+        "/tutorials/hiddify-subscription/",
+        "/tutorials/v2rayng-subscription/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/hiddify-subscription/",
+        "/tutorials/sing-box-subscription/",
+        "/tutorials/v2rayng-subscription/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
