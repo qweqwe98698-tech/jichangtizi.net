@@ -2946,6 +2946,51 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/gaming-not-proxied/",
+      "h1": "游戏不走代理怎么办？System Proxy、TUN、Routing、UDP与客户端完整排查",
+      "keyword": "游戏不走代理怎么办",
+      "intent": "informational",
+      "pageType": "troubleshooting",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/gaming-high-ping/",
+      "childUrls": [
+        "/gaming-high-ping/",
+        "/gaming-jitter-high/",
+        "/gaming-packet-loss/",
+        "/gaming-peak-hour/",
+        "/gaming-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/discord-airport/",
+        "/airport-ranking/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/tutorials/clash-verge-rev/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/gaming-high-ping/",
+        "/gaming-jitter-high/",
+        "/gaming-packet-loss/",
+        "/gaming-peak-hour/",
+        "/gaming-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/discord-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
