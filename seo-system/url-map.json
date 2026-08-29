@@ -1695,6 +1695,27 @@
         "/issues/clash-slow-speed/"
       ],
       "conversionTarget": "大带宽低丢包与IEPL晚高峰专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/hiddify-disconnect/",
+      "h1": "Hiddify经常掉线怎么办？Android后台、电池优化、锁屏与Wi-Fi/5G切换完整排查",
+      "keyword": "Hiddify经常掉线",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/hiddify-android/",
+      "childUrls": [
+        "/tutorials/hiddify-android/",
+        "/issues/hiddify-slow-speed/",
+        "/issues/sing-box-disconnect/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/sing-box-disconnect/",
+        "/issues/v2rayng-disconnect/",
+        "/issues/v2rayn-disconnect/"
+      ],
+      "conversionTarget": "全天候长连接不掉线IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

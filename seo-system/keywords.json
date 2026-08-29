@@ -1752,6 +1752,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "大带宽低丢包与IEPL晚高峰专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-093",
+      "keyword": "Hiddify经常掉线",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "url": "/issues/hiddify-disconnect/",
+      "category": "问题解决",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全天候长连接不掉线IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
