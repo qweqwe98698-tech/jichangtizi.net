@@ -2786,6 +2786,43 @@
         "/recommend/best-airports/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/gaming-high-ping/",
+      "h1": "游戏Ping高怎么办？节点地区、线路、Jitter、Packet Loss、Wi-Fi与晚高峰完整排查",
+      "keyword": "游戏Ping高怎么办",
+      "intent": "informational",
+      "pageType": "troubleshooting",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/gaming-airport/",
+      "childUrls": [
+        "/gaming-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/discord-airport/",
+        "/airport-ranking/",
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/tutorials/clash-verge-rev/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/gaming-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/discord-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
