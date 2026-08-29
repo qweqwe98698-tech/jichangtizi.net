@@ -1247,6 +1247,26 @@
         "/tutorials/shadowrocket-tizi/"
       ],
       "conversionTarget": "Android端v2rayNG无感一键订阅高速专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/v2rayng-subscription/",
+      "h1": "v2rayNG订阅怎么导入？订阅链接、节点更新、二维码与更新失败完整教程",
+      "keyword": "v2rayNG订阅",
+      "intent": "how_to",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayng-android/",
+      "childUrls": [
+        "/tutorials/v2rayng-android/",
+        "/tutorials/v2ray-node-selection/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/v2rayn-subscription/",
+        "/tutorials/shadowrocket-subscription-import/",
+        "/tutorials/clash-subscription-import/"
+      ],
+      "conversionTarget": "v2rayNG订阅导入与全协议免转换高速专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
