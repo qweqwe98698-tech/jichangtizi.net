@@ -260,7 +260,7 @@ graph TD
 **答**：**存在极高泄露风险。** 公共转换服务能完全读取你的所有节点服务器 IP、密码与 Token，强烈建议优先使用服务商后台提供的原生兼容格式。
 
 ### Q11：节点已经成功导入，但点击连接依然无法上网怎么办？
-**答**：建议接下来关注本站即将推出的《Hiddify有节点但无法上网怎么办？VPN、TUN、DNS、Routing与Android网络完整排查》，或者先阅读 [《sing-box有节点但无法上网怎么办？TUN、DNS、Route与Android网络完整排查》](/issues/sing-box-connected-no-internet/)，系统解决底层网络链路故障。
+**答**：建议接下来阅读 [《Hiddify有节点但无法上网怎么办？VPN、TUN、DNS、Routing与Android网络完整排查》](/issues/hiddify-connected-no-internet/)，系统解决网络链路故障。
 
 ---
 
