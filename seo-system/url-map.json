@@ -1167,6 +1167,26 @@
         "/tutorials/v2ray-tizi/"
       ],
       "conversionTarget": "VLESS与VMess协议选型与全协议高速专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/wiki/v2ray-vs-xray/",
+      "h1": "V2Ray和Xray有什么区别？V2Fly、Xray-core、VLESS、REALITY与客户端关系完整解析",
+      "keyword": "V2Ray和Xray区别",
+      "intent": "informational_investigation",
+      "pageType": "wiki",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2ray-tizi/",
+      "childUrls": [
+        "/protocols/vless-vs-vmess/",
+        "/tutorials/v2rayn-windows/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/protocols/vless-vs-vmess/",
+        "/wiki/mihomo-vs-clash/",
+        "/tutorials/v2ray-tizi/"
+      ],
+      "conversionTarget": "V2Ray与Xray生态认知与全内核自适应专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

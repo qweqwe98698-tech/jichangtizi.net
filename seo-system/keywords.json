@@ -1258,6 +1258,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "VLESS与VMess协议选型与全协议高速专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-067",
+      "keyword": "V2Ray和Xray区别",
+      "intent": "informational_investigation",
+      "pageType": "wiki",
+      "url": "/wiki/v2ray-vs-xray/",
+      "category": "科普",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "V2Ray与Xray生态认知与全内核自适应专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
