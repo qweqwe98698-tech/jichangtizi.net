@@ -1487,6 +1487,26 @@
         "/issues/v2rayn-connected-no-internet/"
       ],
       "conversionTarget": "Android端TUN原生接管与住宅纯净IP专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/sing-box-slow-speed/",
+      "h1": "sing-box速度慢怎么办？节点、线路、协议、Wi-Fi/5G、丢包与晚高峰完整排查",
+      "keyword": "sing-box速度慢",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/sing-box-android/",
+      "childUrls": [
+        "/tutorials/sing-box-android/",
+        "/issues/sing-box-connected-no-internet/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayng-slow-speed/",
+        "/issues/clash-slow-speed/",
+        "/issues/v2rayn-slow-speed/"
+      ],
+      "conversionTarget": "全线IEPL专线晚高峰4K秒开专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

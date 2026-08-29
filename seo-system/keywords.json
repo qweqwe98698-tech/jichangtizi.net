@@ -1562,6 +1562,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Android端TUN原生接管与住宅纯净IP专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-083",
+      "keyword": "sing-box速度慢",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "url": "/issues/sing-box-slow-speed/",
+      "category": "问题解决",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全线IEPL专线晚高峰4K秒开专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
