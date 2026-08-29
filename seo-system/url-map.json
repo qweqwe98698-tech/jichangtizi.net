@@ -1447,6 +1447,26 @@
         "/tutorials/v2rayn-windows/"
       ],
       "conversionTarget": "Android端标准sing-box订阅与全线IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/sing-box-subscription/",
+      "h1": "sing-box订阅怎么导入？配置、节点更新、二维码与订阅失败完整教程",
+      "keyword": "sing-box订阅",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/sing-box-android/",
+      "childUrls": [
+        "/tutorials/sing-box-android/",
+        "/wiki/what-is-sing-box/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/v2rayng-subscription/",
+        "/tutorials/clash-subscription-import/",
+        "/tutorials/shadowrocket-subscription-import/"
+      ],
+      "conversionTarget": "标准sing-box JSON订阅与防404专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

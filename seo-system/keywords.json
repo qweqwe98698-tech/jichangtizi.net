@@ -1524,6 +1524,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Android端标准sing-box订阅与全线IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-081",
+      "keyword": "sing-box订阅",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "url": "/tutorials/sing-box-subscription/",
+      "category": "客户端教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "标准sing-box JSON订阅与防404专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
