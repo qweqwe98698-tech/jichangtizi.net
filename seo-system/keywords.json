@@ -2474,6 +2474,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-131",
+      "keyword": "游戏丢包怎么办",
+      "intent": "informational",
+      "pageType": "troubleshooting",
+      "url": "/gaming-packet-loss/",
+      "category": "故障排查",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 28,
+      "commercialScore": 22,
+      "difficultyScore": 12,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 92,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
