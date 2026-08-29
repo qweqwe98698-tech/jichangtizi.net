@@ -291,7 +291,7 @@ Android 操作系统出于安全隔离考虑，任何第三方应用若想接管
 **答**：**在主界面点击断开（Disconnect）按钮。** 避免直接从后台强杀进程，确保 Android 系统 VpnService 资源被正常注销释放。
 
 ### Q11：导入订阅时频繁报错该如何深度解决？
-**答**：建议接下来关注本站即将推出的《Hiddify订阅怎么导入？订阅链接、二维码、节点更新与订阅失败完整教程》，或者先阅读 [《sing-box订阅怎么导入？配置、节点更新、二维码与订阅失败完整教程》](/tutorials/sing-box-subscription/)，系统攻克各类导入故障。
+**答**：建议接下来阅读 [《Hiddify订阅怎么导入？订阅链接、二维码、节点更新与订阅失败完整教程》](/tutorials/hiddify-subscription/)，系统攻克各类导入故障。
 
 ---
 
@@ -311,7 +311,7 @@ Android 操作系统出于安全隔离考虑，任何第三方应用若想接管
 
 ### 📚 相关专题延伸阅读
 - 🏛️ **Hiddify 生态总览**：[《Hiddify是什么？Hiddify Next、sing-box、V2Ray、Xray与Clash有什么区别？》](/wiki/what-is-hiddify/)
-- 📦 **sing-box 订阅教程**：[《sing-box订阅怎么导入？配置、节点更新、二维码与订阅失败完整教程》](/tutorials/sing-box-subscription/)
+- 📦 **Hiddify 订阅教程**：[《Hiddify订阅怎么导入？订阅链接、二维码、节点更新与订阅失败完整教程》](/tutorials/hiddify-subscription/)
 - 📱 **sing-box Android 教程**：[《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)
 - 🤖 **v2rayNG Android 教程**：[《v2rayNG Android怎么用？下载安装、节点配置与完整使用教程》](/tutorials/v2rayng-android/)
 - ⚡ **老牌旗舰专线评测**：[《光速云深度评测：2020老牌IEPL专线与解锁实测》](/reviews/guangsu-cloud/)

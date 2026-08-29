@@ -1632,6 +1632,27 @@
         "/tutorials/clash-tizi/"
       ],
       "conversionTarget": "Android一键导入与全协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/hiddify-subscription/",
+      "h1": "Hiddify订阅怎么导入？订阅链接、二维码、节点更新与订阅失败完整教程",
+      "keyword": "Hiddify订阅",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/hiddify-android/",
+      "childUrls": [
+        "/tutorials/hiddify-android/",
+        "/tutorials/sing-box-subscription/",
+        "/tutorials/v2rayng-subscription/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/sing-box-subscription/",
+        "/tutorials/v2rayng-subscription/",
+        "/tutorials/clash-subscription-import/"
+      ],
+      "conversionTarget": "多格式智能兼容与全协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

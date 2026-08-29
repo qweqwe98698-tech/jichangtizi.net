@@ -1695,6 +1695,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Android一键导入与全协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-090",
+      "keyword": "Hiddify订阅",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "url": "/tutorials/hiddify-subscription/",
+      "category": "客户端教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "多格式智能兼容与全协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
