@@ -1507,6 +1507,27 @@
         "/issues/v2rayn-slow-speed/"
       ],
       "conversionTarget": "全线IEPL专线晚高峰4K秒开专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/sing-box-disconnect/",
+      "h1": "sing-box经常掉线怎么办？Android后台、电池优化、锁屏与Wi-Fi/5G切换完整排查",
+      "keyword": "sing-box经常掉线",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/sing-box-android/",
+      "childUrls": [
+        "/tutorials/sing-box-android/",
+        "/issues/sing-box-connected-no-internet/",
+        "/issues/sing-box-slow-speed/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayng-disconnect/",
+        "/issues/v2rayn-disconnect/",
+        "/issues/clash-node-timeout/"
+      ],
+      "conversionTarget": "Android端无限制后台保活与IEPL抗丢包专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
