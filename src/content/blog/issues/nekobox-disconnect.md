@@ -237,7 +237,7 @@ graph TD
 **答**：**第一步必须确认掉线发生的具体时机。** 区分是锁屏掉线、切后台掉线、切 Wi-Fi/5G 掉线还是定时掉线，切忌盲目乱改设置！
 
 ### Q11：掉线问题解决后，怎样配置 NekoBox 的 DNS 与域名解析才最稳定？
-**答**：建议接下来关注本站即将推出的《NekoBox DNS怎么设置？Private DNS、IPv6、FakeIP与域名解析完整指南》，系统攻坚 DNS 深度调优。
+**答**：建议接下来阅读 [《NekoBox DNS怎么设置？Private DNS、IPv6、FakeIP与域名解析完整指南》](/tutorials/nekobox-dns/)，系统攻坚 DNS 深度调优。
 
 ---
 

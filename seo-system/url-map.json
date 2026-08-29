@@ -1926,6 +1926,27 @@
         "/issues/v2rayng-disconnect/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/nekobox-dns/",
+      "h1": "NekoBox DNS怎么设置？Private DNS、IPv6、FakeIP与域名解析完整指南",
+      "keyword": "NekoBox DNS",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/nekobox-android/",
+      "childUrls": [
+        "/tutorials/nekobox-android/",
+        "/issues/nekobox-disconnect/",
+        "/tutorials/hiddify-dns/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/hiddify-dns/",
+        "/tutorials/sing-box-dns/",
+        "/tutorials/v2rayng-dns/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
