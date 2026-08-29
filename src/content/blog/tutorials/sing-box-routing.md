@@ -277,7 +277,7 @@ graph TD
 **答**：**Sniff 是从纯 IP 连接中解析出原始 TLS SNI 域名的技术。** 当某些 App 直接发起 IP 连接时，Sniff 能提取出域名并让基于域名的 Route 规则精准命中。
 
 ### Q13：配置好 Route 规则后，如果配置文件报错该如何排查？
-**答**：建议接下来关注本站即将推出的《sing-box配置报错怎么办？JSON、Schema、字段版本、Deprecated与配置迁移完整排查》，或者先阅读主教程 [《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)，系统优化网络连接。
+**答**：建议接下来阅读 [《sing-box配置报错怎么办？JSON、Schema、字段版本、Deprecated与配置迁移完整排查》](/issues/sing-box-config-error/)，全面解决配置语法与版本迁移故障。
 
 ---
 

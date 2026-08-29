@@ -1638,6 +1638,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "高精度Rule Set分流与IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-087",
+      "keyword": "sing-box配置报错",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "url": "/issues/sing-box-config-error/",
+      "category": "问题解决",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "标准Schema兼容订阅与IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

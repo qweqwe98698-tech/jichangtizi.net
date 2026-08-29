@@ -1569,6 +1569,27 @@
         "/tutorials/shadowrocket-rules/"
       ],
       "conversionTarget": "高精度Rule Set分流与IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/sing-box-config-error/",
+      "h1": "sing-box配置报错怎么办？JSON、Schema、字段版本、Deprecated与配置迁移完整排查",
+      "keyword": "sing-box配置报错",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/sing-box-android/",
+      "childUrls": [
+        "/tutorials/sing-box-android/",
+        "/tutorials/sing-box-subscription/",
+        "/issues/sing-box-connected-no-internet/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayng-startup-error/",
+        "/issues/v2rayn-startup-error/",
+        "/issues/v2rayn-port-conflict/"
+      ],
+      "conversionTarget": "标准Schema兼容订阅与IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
