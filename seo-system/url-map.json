@@ -2316,6 +2316,44 @@
         "/recommend/best-airports/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/netflix-airport/",
+      "h1": "Netflix机场推荐怎么选？流媒体解锁、原生IP、地区节点、4K速度与晚高峰完整指南",
+      "keyword": "Netflix机场推荐",
+      "intent": "commercial",
+      "pageType": "recommend",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/airport-ranking/",
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/native-ip-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/stable-airport/",
+        "/best-value-airport/",
+        "/cheap-airport/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/dedicated-line-airport/",
+        "/iepl-airport/",
+        "/iplc-airport/",
+        "/native-ip-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/best-value-airport/",
+        "/recommend/best-airports/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
