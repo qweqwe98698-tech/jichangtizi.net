@@ -1828,6 +1828,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "标准多客户端自适应Schema兼容专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-097",
+      "keyword": "NekoBox是什么",
+      "intent": "informational",
+      "pageType": "pillar",
+      "url": "/wiki/what-is-nekobox/",
+      "category": "科学上网科普",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

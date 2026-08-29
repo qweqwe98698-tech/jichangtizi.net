@@ -1779,6 +1779,27 @@
         "/issues/v2rayn-startup-error/"
       ],
       "conversionTarget": "标准多客户端自适应Schema兼容专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/wiki/what-is-nekobox/",
+      "h1": "NekoBox是什么？NekoBox for Android、sing-box、Xray、v2rayNG与Hiddify有什么区别？",
+      "keyword": "NekoBox是什么",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/wiki/what-is-tizi/",
+      "childUrls": [
+        "/wiki/what-is-sing-box/",
+        "/wiki/what-is-hiddify/",
+        "/tutorials/v2rayng-android/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/wiki/what-is-sing-box/",
+        "/wiki/what-is-hiddify/",
+        "/wiki/v2ray-vs-xray/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
