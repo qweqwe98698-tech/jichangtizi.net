@@ -285,7 +285,7 @@ graph TD
 **答**：**因为 Android 系统和各类 App 内部存在 DNS 缓存（TTL）。** 开启飞行模式 5 秒后关闭，或者在 sing-box 中点击 Stop 再 Start 重建连接即可刷新。
 
 ### Q15：配置好 DNS 规则后，下一步该如何深入学习流量分流？
-**答**：建议接下来关注本站即将推出的《sing-box Route怎么设置？Direct、Proxy、Block、Rule Set与分流完整教程》，或者先阅读主教程 [《sing-box Android怎么用？下载安装、配置、订阅、TUN与完整使用教程》](/tutorials/sing-box-android/)，全面精通路由规则体系。
+**答**：建议接下来阅读 [《sing-box Route怎么设置？Direct、Proxy、Block、Rule Set与分流完整教程》](/tutorials/sing-box-routing/)，全面精通路由规则体系。
 
 ---
 
