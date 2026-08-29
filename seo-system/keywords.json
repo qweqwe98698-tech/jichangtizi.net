@@ -1429,6 +1429,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Android端锁屏防掉线与全天候长连接IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-076",
+      "keyword": "v2rayNG DNS",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "url": "/tutorials/v2rayng-dns/",
+      "category": "客户端教程",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "Android端智能防污染与纯净Anycast解析IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
