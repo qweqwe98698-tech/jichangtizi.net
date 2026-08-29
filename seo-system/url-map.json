@@ -1307,6 +1307,26 @@
         "/issues/clash-connected-no-internet/"
       ],
       "conversionTarget": "Android端流量接管与智能分流IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/v2rayng-slow-speed/",
+      "h1": "v2rayNG速度慢怎么办？Android节点、Wi-Fi/5G、线路、丢包与晚高峰完整排查",
+      "keyword": "v2rayNG速度慢",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayng-android/",
+      "childUrls": [
+        "/tutorials/v2rayng-android/",
+        "/tutorials/v2ray-node-selection/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayn-slow-speed/",
+        "/issues/shadowrocket-slow-speed/",
+        "/issues/clash-slow-speed/"
+      ],
+      "conversionTarget": "Android端晚高峰0丢包4K秒开IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
