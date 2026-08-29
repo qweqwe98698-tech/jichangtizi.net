@@ -2010,6 +2010,28 @@
         "/wiki/v2ray-vs-xray/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/tutorials/nekobox-migration/",
+      "h1": "NekoBox迁移到Hiddify、sing-box、v2rayNG怎么做？订阅、节点、DNS、Routing与配置迁移完整指南",
+      "keyword": "NekoBox迁移",
+      "intent": "tutorial",
+      "pageType": "tutorial",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/wiki/nekobox-status/",
+      "childUrls": [
+        "/wiki/nekobox-status/",
+        "/tutorials/hiddify-android/",
+        "/tutorials/sing-box-android/",
+        "/tutorials/v2rayng-android/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/tutorials/hiddify-android/",
+        "/tutorials/sing-box-android/",
+        "/tutorials/v2rayng-android/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
