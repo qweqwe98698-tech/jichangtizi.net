@@ -1884,6 +1884,27 @@
         "/issues/v2rayng-connected-no-internet/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/nekobox-slow-speed/",
+      "h1": "NekoBox速度慢怎么办？节点、线路、Wi-Fi/5G、丢包与晚高峰完整排查",
+      "keyword": "NekoBox速度慢",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/nekobox-android/",
+      "childUrls": [
+        "/tutorials/nekobox-android/",
+        "/issues/nekobox-connected-no-internet/",
+        "/issues/hiddify-slow-speed/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/hiddify-slow-speed/",
+        "/issues/sing-box-slow-speed/",
+        "/issues/v2rayng-slow-speed/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
