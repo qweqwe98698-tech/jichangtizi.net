@@ -227,7 +227,7 @@ graph TD
 **答**：**第一步打开 NekoBox 实时日志。** 触发一次网络访问，观察日志中的 `[route]` 模块究竟命中了哪条 Rule 和哪个 Outbound，精准定位！
 
 ### Q11：NekoBox 出现启动闪退、Core 启动失败或 Profile 配置文件报错怎么办？
-**答**：建议接下来关注本站即将推出的《NekoBox打不开/配置报错怎么办？Core启动失败、Profile错误、版本兼容与Android运行环境完整排查》，系统攻坚底层崩溃与运行时故障。
+**答**：建议接下来阅读本站主线最终收口篇 [《NekoBox打不开/配置报错怎么办？Core启动失败、Profile错误、版本兼容与Android运行环境完整排查》](/issues/nekobox-config-error/)，系统攻坚底层崩溃与运行时故障。
 
 ---
 

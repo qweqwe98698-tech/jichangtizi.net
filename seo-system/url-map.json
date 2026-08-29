@@ -1968,6 +1968,27 @@
         "/tutorials/v2rayng-routing/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/nekobox-config-error/",
+      "h1": "NekoBox打不开/配置报错怎么办？Core启动失败、Profile错误、版本兼容与Android运行环境完整排查",
+      "keyword": "NekoBox配置报错",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/nekobox-android/",
+      "childUrls": [
+        "/tutorials/nekobox-android/",
+        "/tutorials/nekobox-routing/",
+        "/issues/hiddify-config-error/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/hiddify-config-error/",
+        "/issues/sing-box-config-error/",
+        "/issues/v2rayng-startup-error/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
