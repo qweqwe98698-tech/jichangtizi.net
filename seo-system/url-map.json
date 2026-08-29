@@ -1674,6 +1674,27 @@
         "/issues/clash-connected-no-internet/"
       ],
       "conversionTarget": "稳定高可用与全协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/hiddify-slow-speed/",
+      "h1": "Hiddify速度慢怎么办？节点、线路、Wi-Fi/5G、丢包与晚高峰完整排查",
+      "keyword": "Hiddify速度慢",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/hiddify-android/",
+      "childUrls": [
+        "/tutorials/hiddify-android/",
+        "/issues/hiddify-connected-no-internet/",
+        "/issues/sing-box-slow-speed/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/sing-box-slow-speed/",
+        "/issues/v2rayng-slow-speed/",
+        "/issues/clash-slow-speed/"
+      ],
+      "conversionTarget": "大带宽低丢包与IEPL晚高峰专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

@@ -1733,6 +1733,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "稳定高可用与全协议IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-092",
+      "keyword": "Hiddify速度慢",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "url": "/issues/hiddify-slow-speed/",
+      "category": "问题解决",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "A",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "大带宽低丢包与IEPL晚高峰专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
