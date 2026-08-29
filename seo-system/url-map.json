@@ -1387,6 +1387,26 @@
         "/issues/v2rayn-routing-rules/"
       ],
       "conversionTarget": "Android端智能分流与原生住宅IP专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/issues/v2rayng-startup-error/",
+      "h1": "v2rayNG打不开怎么办？Android启动失败、Core错误、配置损坏与运行环境完整排查",
+      "keyword": "v2rayNG打不开",
+      "intent": "troubleshooting",
+      "pageType": "issue",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/tutorials/v2rayng-android/",
+      "childUrls": [
+        "/tutorials/v2rayng-android/",
+        "/tutorials/v2rayng-subscription/",
+        "/recommend/best-airports/"
+      ],
+      "lateralUrls": [
+        "/issues/v2rayn-startup-error/",
+        "/issues/v2rayng-node-timeout/",
+        "/issues/v2rayng-connected-no-internet/"
+      ],
+      "conversionTarget": "Android端标准协议兼容与0报错IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
