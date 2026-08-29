@@ -2132,6 +2132,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-113",
+      "keyword": "专线机场推荐",
+      "intent": "commercial",
+      "pageType": "recommend",
+      "url": "/dedicated-line-airport/",
+      "category": "深度评测",
+      "cluster": "Tizi-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 25,
+      "difficultyScore": 13,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 98,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
