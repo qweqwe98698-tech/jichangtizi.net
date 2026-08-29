@@ -2054,6 +2054,28 @@
         "/risk/airport-running-away-warning-signs/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/stable-airport/",
+      "h1": "稳定机场怎么选？线路、晚高峰、丢包、断流与长期稳定性深度评测指南",
+      "keyword": "稳定机场推荐",
+      "intent": "commercial",
+      "pageType": "recommend",
+      "cluster": "Tizi-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/reviews/guangsu-cloud/",
+        "/reviews/weifeng-cloud/",
+        "/recommend/best-airports/",
+        "/airport-ranking/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/recommend/best-airports/",
+        "/protocols/iepl-vs-iplc-transit/"
+      ],
+      "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
