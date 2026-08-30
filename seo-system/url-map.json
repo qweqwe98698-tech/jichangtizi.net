@@ -3392,6 +3392,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "低风控高信誉商用专线与合规出口节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/static-ip-ai/",
+      "h1": "固定出口IP对ChatGPT、Claude、Gemini有必要吗？动态IP、共享IP、账号网络环境与长期使用完整分析",
+      "keyword": "固定出口IP对AI工具有必要吗",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "AI-Access-Pillar",
+      "parentUrl": "/ai-airport/",
+      "childUrls": [
+        "/ai-airport/",
+        "/ai-node-ip/",
+        "/chatgpt-airport/",
+        "/claude-airport/",
+        "/stable-airport/"
+      ],
+      "lateralUrls": [
+        "/ai-airport/",
+        "/ai-node-ip/",
+        "/chatgpt-airport/",
+        "/claude-airport/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "低风控高信誉商用专线与合规出口节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
