@@ -169,7 +169,8 @@
             let newActive: HTMLAnchorElement | null = null;
 
             links.forEach((link) => {
-                const href = link.getAttribute('href') || '';
+                const rawHref = link.getAttribute('href') || '';
+                const href = rawHref.replace(/\/$/, '') || '/';
                 const isActive = href === '/'
                     ? pathname === '/'
                     : pathname === href || pathname.startsWith(href + '/');
