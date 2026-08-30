@@ -3442,6 +3442,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "Google合规大区与低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/google-airport/",
+      "h1": "Google机场推荐怎么选？地区节点、IP、搜索、Gmail、Drive与账号网络环境完整指南",
+      "keyword": "Google机场推荐怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Google-Ecosystem-Pillar",
+      "parentUrl": "/ai-airport/",
+      "childUrls": [
+        "/ai-airport/",
+        "/gemini-not-working/",
+        "/google-ai-studio-not-working/",
+        "/low-latency-airport/",
+        "/stable-airport/"
+      ],
+      "lateralUrls": [
+        "/ai-airport/",
+        "/gemini-not-working/",
+        "/google-ai-studio-not-working/",
+        "/chatgpt-airport/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "Google全家桶双核分流专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
