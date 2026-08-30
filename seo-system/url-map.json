@@ -3927,6 +3927,35 @@
         "/tutorials/clash-verge-rev/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/vpn-vs-proxy-vs-airport/",
+      "h1": "访问国外网站用什么工具？VPN、代理、机场、加速器到底有什么区别",
+      "keyword": "访问国外网站用什么工具",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Wiki-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/foreign-websites-not-working/",
+        "/how-to-access-foreign-websites/",
+        "/wiki/airport-vs-vpn-difference/",
+        "/protocols/iepl-vs-iplc-transit/",
+        "/protocols/vless-trojan-hysteria2/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
