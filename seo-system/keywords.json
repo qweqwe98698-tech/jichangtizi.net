@@ -3519,6 +3519,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-186",
+      "keyword": "免费节点为什么这么慢",
+      "intent": "informational",
+      "pageType": "pillar",
+      "url": "/why-free-nodes-are-slow/",
+      "category": "原理解析",
+      "cluster": "Analysis-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
