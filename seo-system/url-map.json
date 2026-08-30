@@ -4130,6 +4130,35 @@
         "/wiki/free-tizi/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/is-free-airport-safe/",
+      "h1": "免费机场安全吗？隐私、日志、订阅链接、广告与数据风险完整分析",
+      "keyword": "免费机场安全吗",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Security-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/which-free-airport-is-best/",
+        "/what-is-airport/",
+        "/risk-warning/",
+        "/wiki/free-tizi/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
