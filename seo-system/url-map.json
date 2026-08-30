@@ -3417,6 +3417,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "低风控高信誉商用专线与合规出口节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/gemini-not-working/",
+      "h1": "Gemini打不开怎么办？Google账号、地区、节点、IP与浏览器完整排查",
+      "keyword": "Gemini打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Gemini-Access-Pillar",
+      "parentUrl": "/ai-airport/",
+      "childUrls": [
+        "/ai-airport/",
+        "/google-ai-studio-not-working/",
+        "/claude-not-working/",
+        "/chatgpt-not-working/",
+        "/stable-airport/"
+      ],
+      "lateralUrls": [
+        "/ai-airport/",
+        "/google-ai-studio-not-working/",
+        "/claude-not-working/",
+        "/chatgpt-not-working/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "Google合规大区与低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
