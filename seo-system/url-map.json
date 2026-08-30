@@ -3168,6 +3168,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "AI访问稳定低抖动专线与干净出口 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/chatgpt-airport/",
+      "h1": "ChatGPT机场推荐怎么选？节点地区、IP类型、稳定性、长连接与账号网络环境完整指南",
+      "keyword": "ChatGPT机场推荐",
+      "intent": "commercial-investigation",
+      "pageType": "pillar",
+      "cluster": "ChatGPT-Access-Pillar",
+      "parentUrl": "/ai-airport/",
+      "childUrls": [
+        "/ai-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/peak-hour-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/ai-airport/",
+        "/stable-airport/",
+        "/low-latency-airport/",
+        "/dedicated-line-airport/",
+        "/native-ip-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "ChatGPT低抖动长连接会话稳定节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

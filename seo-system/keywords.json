@@ -2607,6 +2607,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "AI访问稳定低抖动专线与干净出口 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-138",
+      "keyword": "ChatGPT机场推荐",
+      "intent": "commercial-investigation",
+      "pageType": "pillar",
+      "url": "/chatgpt-airport/",
+      "category": "测评指南",
+      "cluster": "ChatGPT-Access-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 29,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 103,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "ChatGPT低抖动长连接会话稳定节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
