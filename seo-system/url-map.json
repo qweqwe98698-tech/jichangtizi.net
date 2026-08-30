@@ -4449,6 +4449,35 @@
         "/free-airport-slow-speed/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/free-nodes-not-working/",
+      "h1": "免费节点为什么用不了？Timeout、连接失败、节点失效与订阅错误完整排查",
+      "keyword": "免费节点为什么用不了",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Troubleshooting-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/free-nodes/",
+        "/how-to-find-free-nodes/",
+        "/how-to-use-free-nodes/",
+        "/free-airport-slow-speed/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
