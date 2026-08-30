@@ -3647,6 +3647,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "Google Drive大文件断点续传低丢包专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/airport-running-away-status/",
+      "h1": "机场跑路了吗？官网失联、节点异常、订阅失效与服务状态怎么判断",
+      "keyword": "机场跑路了吗怎么判断",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Risk-Warning-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/risk/airport-running-away-warning-signs/"
+      ],
+      "conversionTarget": "老牌防跑路IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

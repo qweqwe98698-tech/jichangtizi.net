@@ -2968,6 +2968,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Google Drive大文件断点续传低丢包专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-157",
+      "keyword": "机场跑路了吗怎么判断",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/airport-running-away-status/",
+      "category": "避坑指南",
+      "cluster": "Risk-Warning-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "老牌防跑路IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
