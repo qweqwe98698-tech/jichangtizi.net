@@ -2645,6 +2645,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "稳定合规节点排障与出口分流方案 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-140",
+      "keyword": "ChatGPT网络错误怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/chatgpt-network-error/",
+      "category": "问题排查",
+      "cluster": "ChatGPT-Access-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 28,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 102,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "低丢包抗抖动专线与晚高峰长连接稳定节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

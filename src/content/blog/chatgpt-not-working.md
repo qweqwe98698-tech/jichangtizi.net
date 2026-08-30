@@ -64,7 +64,7 @@ graph TD
 ### 关键分流原则：
 1. **本指南核心处理症状 A 至 E 以及症状 G**：这些属于典型的**页面可达性（Page Reachability）与初始建连故障**；
 2. **症状 F（登录失败）**：如果首页能顺利展示，仅在点击 Log in 后出现报错，说明基础网络链路完全畅通，故障属于身份鉴权与本地会话层，应参考 [《ChatGPT选型与网络指南》](/chatgpt-airport/) 中的鉴权章节；
-3. **症状 H（生成中断）**：如果能正常发送 Prompt，只是在吐出数百字后跳出 `Network Error`，说明通信完全可以建立，问题出在**流式长连接会话稳定性（Session Continuity）与晚高峰抗丢包能力**上，应参考 [《晚高峰稳定机场推荐》](/peak-hour-airport/)。
+3. **症状 H（生成中断）**：如果能正常发送 Prompt，只是在吐出数百字后跳出 `Network Error`，说明通信完全可以建立，问题出在**流式长连接会话稳定性（Session Continuity）与晚高峰抗丢包能力**上，应参考 [《ChatGPT网络错误排查指南》](/chatgpt-network-error/)。
 
 ---
 

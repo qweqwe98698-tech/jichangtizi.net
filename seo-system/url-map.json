@@ -3218,6 +3218,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "稳定合规节点排障与出口分流方案 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/chatgpt-network-error/",
+      "h1": "ChatGPT网络错误怎么办？Network Error、连接中断、长回复失败、节点与线路完整排查",
+      "keyword": "ChatGPT网络错误怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "ChatGPT-Access-Pillar",
+      "parentUrl": "/chatgpt-not-working/",
+      "childUrls": [
+        "/chatgpt-not-working/",
+        "/chatgpt-airport/",
+        "/ai-airport/",
+        "/stable-airport/",
+        "/peak-hour-airport/"
+      ],
+      "lateralUrls": [
+        "/chatgpt-not-working/",
+        "/chatgpt-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/low-latency-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "低丢包抗抖动专线与晚高峰长连接稳定节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
