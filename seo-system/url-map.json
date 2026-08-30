@@ -3193,6 +3193,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "ChatGPT低抖动长连接会话稳定节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/chatgpt-not-working/",
+      "h1": "ChatGPT打不开怎么办？地区、节点、IP、DNS、浏览器与网络错误完整排查",
+      "keyword": "ChatGPT打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "ChatGPT-Access-Pillar",
+      "parentUrl": "/chatgpt-airport/",
+      "childUrls": [
+        "/chatgpt-airport/",
+        "/ai-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/low-latency-airport/"
+      ],
+      "lateralUrls": [
+        "/chatgpt-airport/",
+        "/ai-airport/",
+        "/stable-airport/",
+        "/peak-hour-airport/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "稳定合规节点排障与出口分流方案 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

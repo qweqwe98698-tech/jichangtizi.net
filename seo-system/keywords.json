@@ -2626,6 +2626,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "ChatGPT低抖动长连接会话稳定节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-139",
+      "keyword": "ChatGPT打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/chatgpt-not-working/",
+      "category": "问题排查",
+      "cluster": "ChatGPT-Access-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 27,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 101,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "稳定合规节点排障与出口分流方案 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
