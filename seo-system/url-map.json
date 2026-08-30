@@ -4159,6 +4159,35 @@
         "/wiki/free-tizi/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/why-free-airport-is-unstable/",
+      "h1": "免费机场为什么不稳定？限速、节点负载、晚高峰、失效与资源成本完整分析",
+      "keyword": "免费机场为什么不稳定",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Wiki-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/which-free-airport-is-best/",
+        "/is-free-airport-safe/",
+        "/what-is-airport/",
+        "/protocols/iepl-vs-iplc-transit/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
