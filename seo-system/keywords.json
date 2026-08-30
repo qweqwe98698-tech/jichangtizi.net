@@ -3063,6 +3063,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "老牌防跑路IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-162",
+      "keyword": "机场换域名安全吗",
+      "intent": "informational",
+      "pageType": "pillar",
+      "url": "/airport-domain-change-safety/",
+      "category": "避坑指南",
+      "cluster": "Risk-Warning-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "老牌防封防钓鱼IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
