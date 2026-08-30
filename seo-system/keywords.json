@@ -3576,6 +3576,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-189",
+      "keyword": "免费节点和付费节点有什么区别",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "url": "/free-vs-paid-nodes/",
+      "category": "对比评测",
+      "cluster": "Comparison-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
