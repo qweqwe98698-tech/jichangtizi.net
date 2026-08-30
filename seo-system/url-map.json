@@ -3293,6 +3293,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "低丢包抗抖动专线与晚高峰长任务开发稳定节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/claude-airport/",
+      "h1": "Claude机场推荐怎么选？地区节点、IP类型、稳定性、登录与长连接完整指南",
+      "keyword": "Claude机场推荐",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Claude-Access-Pillar",
+      "parentUrl": "/ai-airport/",
+      "childUrls": [
+        "/ai-airport/",
+        "/chatgpt-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/",
+        "/low-latency-airport/"
+      ],
+      "lateralUrls": [
+        "/ai-airport/",
+        "/chatgpt-airport/",
+        "/native-ip-airport/",
+        "/dedicated-line-airport/",
+        "/peak-hour-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "Anthropic合规大区与低风控高会话保持专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
