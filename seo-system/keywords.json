@@ -4070,6 +4070,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-215",
+      "keyword": "免费节点值得长期用吗",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "url": "/are-free-nodes-worth-it/",
+      "category": "使用教程",
+      "cluster": "Free-Nodes-Longevity-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
