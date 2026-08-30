@@ -4362,6 +4362,35 @@
         "/free-airport-nodes-timeout/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/free-nodes/",
+      "h1": "2026免费节点推荐：免费节点、订阅链接、可用性、测速与安全完整指南",
+      "keyword": "免费节点推荐",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "cluster": "Recommend-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/which-free-airport-is-best/",
+        "/is-free-airport-safe/",
+        "/no-registration-free-airport/",
+        "/free-airport-slow-speed/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
