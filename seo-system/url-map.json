@@ -3836,6 +3836,37 @@
         "/airport-domain-change-safety/"
       ],
       "conversionTarget": "老牌防跑路IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/should-i-renew-airport/",
+      "h1": "如何判断机场还能不能续费？运营时间、节点状态、线路维护与付款周期风险指南",
+      "keyword": "如何判断机场还能不能续费",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Risk-Warning-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/airport-running-away-signs/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-running-away-status/",
+        "/airport-not-working/",
+        "/airport-website-down/",
+        "/airport-subscription-failed/",
+        "/airport-nodes-timeout/",
+        "/airport-domain-change-safety/",
+        "/airport-running-away-signs/"
+      ],
+      "conversionTarget": "老牌防跑路IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
