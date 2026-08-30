@@ -2835,6 +2835,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Google全家桶双核分流专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-150",
+      "keyword": "Google打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/google-not-working/",
+      "category": "问题排查",
+      "cluster": "Google-Ecosystem-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "Google全家桶低延迟与防污染专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

@@ -3467,6 +3467,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "Google全家桶双核分流专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/google-not-working/",
+      "h1": "Google打不开怎么办？DNS、IPv6、节点、浏览器与网络环境完整排查",
+      "keyword": "Google打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Google-Ecosystem-Pillar",
+      "parentUrl": "/google-airport/",
+      "childUrls": [
+        "/google-airport/",
+        "/gemini-not-working/",
+        "/google-ai-studio-not-working/",
+        "/low-latency-airport/",
+        "/stable-airport/"
+      ],
+      "lateralUrls": [
+        "/google-airport/",
+        "/gemini-not-working/",
+        "/google-ai-studio-not-working/",
+        "/chatgpt-not-working/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "Google全家桶低延迟与防污染专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
