@@ -3492,6 +3492,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "Google全家桶低延迟与防污染专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/youtube-airport/",
+      "h1": "YouTube机场推荐怎么选？4K速度、地区节点、晚高峰、丢包与稳定性完整指南",
+      "keyword": "YouTube机场推荐怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Streaming-Media-Pillar",
+      "parentUrl": "/streaming-airport/",
+      "childUrls": [
+        "/streaming-airport/",
+        "/netflix-airport/",
+        "/google-airport/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/"
+      ],
+      "lateralUrls": [
+        "/streaming-airport/",
+        "/netflix-airport/",
+        "/google-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "YouTube 4K抗丢包与晚高峰稳定专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
