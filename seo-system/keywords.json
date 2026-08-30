@@ -2892,6 +2892,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "YouTube 4K低延迟抗丢包专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-153",
+      "keyword": "GitHub机场推荐怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "url": "/github-airport/",
+      "category": "场景选型",
+      "cluster": "Developer-Tools-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "GitHub开发者TUN模式低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

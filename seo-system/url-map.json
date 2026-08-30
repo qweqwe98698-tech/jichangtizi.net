@@ -3543,6 +3543,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "YouTube 4K低延迟抗丢包专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/github-airport/",
+      "h1": "GitHub机场推荐怎么选？Clone、Pull、Release下载、SSH、HTTPS与开发网络完整指南",
+      "keyword": "GitHub机场推荐怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Developer-Tools-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/airport-ranking/",
+        "/low-latency-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/tutorials/clash-verge-rev/"
+      ],
+      "lateralUrls": [
+        "/google-airport/",
+        "/chatgpt-airport/",
+        "/youtube-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "GitHub开发者TUN模式低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
