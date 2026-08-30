@@ -4014,6 +4014,35 @@
         "/tutorials/clash-subscription-import/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/what-is-airport-subscription/",
+      "h1": "机场订阅是什么？订阅链接、节点、客户端与更新机制完整解释",
+      "keyword": "机场订阅是什么",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Wiki-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/tutorials/clash-verge-rev/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/what-is-airport/",
+        "/how-to-use-airport/",
+        "/airport-subscription-failed/",
+        "/tutorials/clash-verge-rev/",
+        "/tutorials/clash-subscription-import/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
