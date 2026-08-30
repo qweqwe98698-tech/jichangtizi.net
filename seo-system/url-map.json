@@ -4072,6 +4072,35 @@
         "/protocols/iepl-vs-iplc-transit/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/free-airport/",
+      "h1": "2026免费机场推荐：免费套餐、试用流量、稳定性、限制与安全风险完整指南",
+      "keyword": "免费机场推荐",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "cluster": "Selection-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/what-is-airport/",
+        "/how-to-use-airport/",
+        "/airport-vs-vpn/",
+        "/wiki/free-tizi/",
+        "/risk-warning/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

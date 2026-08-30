@@ -3253,6 +3253,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-172",
+      "keyword": "免费机场推荐",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "url": "/free-airport/",
+      "category": "避坑指南",
+      "cluster": "Selection-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
