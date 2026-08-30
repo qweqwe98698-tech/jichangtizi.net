@@ -162,18 +162,25 @@
         if (!header) return;
 
         // --- 1. Update active class based on current URL ---
-        const pathname = window.location.pathname.replace(/\/$/, '') || '/';
+        let rawPath = window.location.pathname;
+        try {
+            rawPath = decodeURIComponent(rawPath);
+        } catch (_) {}
+        const pathname = rawPath.replace(/\/$/, '') || '/';
 
         const syncActiveState = (links: NodeListOf<HTMLAnchorElement>) => {
             let oldActive: HTMLAnchorElement | null = null;
             let newActive: HTMLAnchorElement | null = null;
 
             links.forEach((link) => {
-                const rawHref = link.getAttribute('href') || '';
+                let rawHref = link.getAttribute('href') || '';
+                try {
+                    rawHref = decodeURIComponent(rawHref);
+                } catch (_) {}
                 const href = rawHref.replace(/\/$/, '') || '/';
                 const isActive = href === '/'
                     ? pathname === '/'
-                    : pathname === href || pathname.startsWith(href + '/');
+                    : pathname.toLowerCase() === href.toLowerCase() || pathname.toLowerCase().startsWith(href.toLowerCase() + '/');
 
                 if (link.classList.contains('active') && !isActive) oldActive = link;
                 if (isActive) newActive = link;
