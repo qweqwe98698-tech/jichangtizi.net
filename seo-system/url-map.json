@@ -3143,6 +3143,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "全协议全客户端兼容IEPL专线 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/ai-airport/",
+      "h1": "AI工具机场推荐怎么选？ChatGPT、Claude、Gemini、Google AI Studio与节点/IP完整指南",
+      "keyword": "AI工具机场推荐",
+      "intent": "commercial-investigation",
+      "pageType": "pillar",
+      "cluster": "AI-Access-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/chatgpt-airport/",
+        "/gaming-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-ranking/"
+      ],
+      "lateralUrls": [
+        "/chatgpt-airport/",
+        "/streaming-airport/",
+        "/gaming-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "AI访问稳定低抖动专线与干净出口 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
