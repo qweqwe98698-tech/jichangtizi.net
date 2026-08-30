@@ -3594,6 +3594,33 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "Git Clone与Pull大仓库抗断流IEPL专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/github-ssh-failed/",
+      "h1": "GitHub SSH连接失败怎么办？22端口、443、代理、TUN、DNS与网络环境完整排查",
+      "keyword": "GitHub SSH连接失败怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Developer-Tools-Pillar",
+      "parentUrl": "/github-airport/",
+      "childUrls": [
+        "/github-airport/",
+        "/github-clone-slow/",
+        "/low-latency-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/"
+      ],
+      "lateralUrls": [
+        "/github-airport/",
+        "/github-clone-slow/",
+        "/google-airport/",
+        "/chatgpt-airport/",
+        "/youtube-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "GitHub SSH 22与443端口低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
