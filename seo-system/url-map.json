@@ -4217,6 +4217,35 @@
         "/airport-vs-vpn/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/permanent-free-airport/",
+      "h1": "永久免费机场是真的吗？长期免费、不限流量、不限速与隐藏成本完整分析",
+      "keyword": "永久免费机场是真的吗",
+      "intent": "investigative",
+      "pageType": "pillar",
+      "cluster": "Risk-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/which-free-airport-is-best/",
+        "/is-free-airport-safe/",
+        "/why-free-airport-is-unstable/",
+        "/risk-warning/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
