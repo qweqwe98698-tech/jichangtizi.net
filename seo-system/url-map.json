@@ -5232,6 +5232,35 @@
         "/free-nodes-not-working/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/is-free-vpn-safe/",
+      "h1": "免费VPN安全吗？隐私、日志、广告、流量劫持与长期使用风险完整分析",
+      "keyword": "免费VPN安全吗",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Free-VPN-Security-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/free-nodes/",
+        "/how-to-find-free-nodes/",
+        "/how-to-use-free-nodes/",
+        "/free-nodes-not-working/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
