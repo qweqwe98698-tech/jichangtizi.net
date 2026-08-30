@@ -4739,6 +4739,35 @@
         "/free-nodes-not-working/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/is-subscription-converter-safe/",
+      "h1": "免费订阅转换安全吗？转换网站、订阅Token、隐私泄露与本地转换风险完整分析",
+      "keyword": "免费订阅转换安全吗",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Security-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/free-nodes/",
+        "/how-to-find-free-nodes/",
+        "/how-to-use-free-nodes/",
+        "/free-nodes-not-working/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
