@@ -3621,6 +3621,32 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "GitHub SSH 22与443端口低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/google-drive-airport/",
+      "h1": "Google Drive机场推荐怎么选？上传、下载、大文件、地区节点与稳定性完整指南",
+      "keyword": "Google Drive机场推荐怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "Google-Ecosystem-Pillar",
+      "parentUrl": "/google-airport/",
+      "childUrls": [
+        "/google-airport/",
+        "/low-latency-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/peak-hour-airport/"
+      ],
+      "lateralUrls": [
+        "/google-airport/",
+        "/github-airport/",
+        "/chatgpt-airport/",
+        "/youtube-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "Google Drive大文件断点续传低丢包专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
