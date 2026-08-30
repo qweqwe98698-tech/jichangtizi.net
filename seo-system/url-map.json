@@ -3268,6 +3268,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "低风控高一致性合规出口与干净网络环境 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/codex-connection-dropped/",
+      "h1": "ChatGPT可以打开但Codex长连接断开怎么办？WebSocket、SSE、节点、TUN与线路完整排查",
+      "keyword": "ChatGPT可以打开但Codex长连接断开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "ChatGPT-Access-Pillar",
+      "parentUrl": "/chatgpt-network-error/",
+      "childUrls": [
+        "/chatgpt-network-error/",
+        "/chatgpt-not-working/",
+        "/chatgpt-login-failed/",
+        "/chatgpt-airport/",
+        "/ai-airport/"
+      ],
+      "lateralUrls": [
+        "/chatgpt-network-error/",
+        "/chatgpt-login-failed/",
+        "/chatgpt-airport/",
+        "/dedicated-line-airport/",
+        "/low-latency-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "低丢包抗抖动专线与晚高峰长任务开发稳定节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

@@ -269,12 +269,12 @@ graph TD
     Case3 -- 是: 文字中断但无报错 --> Action3[属于模型自身 Token 上限/安全审核策略拦截/用户误触停止生成]
     
     SpecialSymptom --> Case4{是否在调用独立 API 或使用 IDE 插件?}
-    Case4 -- 是: 编程插件或 API 报错 --> Action4[转入独立 API Rate Limit 或 Codex 长连接排障专题]
+    Case4 -- 是: 编程插件或 API 报错 --> Action4["转入 Codex 长连接排障专题: /codex-connection-dropped/"]
 ```
 
 - **旧会话状态损坏（New Conversation A/B）**：单体会话如果历史上下文堆叠了数万字，前端向服务端同步状态时数据包体积庞大，极易在握手时超时。新建一个清爽的 Conversation 往往瞬间恢复；
 - **文字中断没有报错提示**：如果模型吐字吐到一半停下，但界面没有弹出任何红色错误提示，多属于模型触发了单次输出最大 Token 截断，或者内容命中了平台的内部安全过滤策略（Safety Filter），切勿强行将其归结为网络断网；
-- **API 与 Codex 的独立性**：API 报错通常伴随明确的 HTTP 状态码（如 429 频率超限、401 凭证失效），应查阅官方后台配额，不能简单等同于消费级网页版的 Network Error。
+- **API 与 Codex 的独立性**：API 报错通常伴随明确的 HTTP 状态码（如 429 频率超限、401 凭证失效），应查阅官方后台配额，可参考专门的 [《Codex长连接排障指南》](/codex-connection-dropped/)，不能简单等同于消费级网页版的 Network Error。
 
 ---
 
@@ -407,7 +407,7 @@ graph TD
 ```mermaid
 graph TD
     D14_Start[开发场景排查] --> D14_Check{报错是否发生在 VSCode/Cursor 编程插件或 API 自动化调用中?}
-    D14_Check -- 是: 属于开发者接口报错 --> D14_Action1[排查 HTTP 429 速率限制、API 账单配额或转入 Codex 专项排查]
+    D14_Check -- 是: 属于开发者接口报错 --> D14_Action1["排查 HTTP 429 速率限制、API 账单配额或转入 Codex 专项: /codex-connection-dropped/"]
     D14_Check -- 否: 属于消费级 ChatGPT 网页版 --> D14_Action2[综合执行同大区备用节点与晚高峰专线升级方案]
 ```
 

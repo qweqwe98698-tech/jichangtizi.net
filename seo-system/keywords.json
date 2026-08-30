@@ -2683,6 +2683,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "低风控高一致性合规出口与干净网络环境 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-142",
+      "keyword": "ChatGPT可以打开但Codex长连接断开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/codex-connection-dropped/",
+      "category": "问题排查",
+      "cluster": "ChatGPT-Access-Pillar",
+      "searchVolumeScore": 28,
+      "commercialScore": 29,
+      "difficultyScore": 15,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 102,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "低丢包抗抖动专线与晚高峰长任务开发稳定节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
