@@ -3897,6 +3897,36 @@
         "/chatgpt-login-failed/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/how-to-access-foreign-websites/",
+      "h1": "国内怎么访问国外网站？手机、电脑、浏览器与海外网络工具新手完整指南",
+      "keyword": "国内怎么访问国外网站",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Tutorials-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/tutorials/clash-verge-rev/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/foreign-websites-not-working/",
+        "/airport-not-working/",
+        "/airport-website-down/",
+        "/google-not-working/",
+        "/chatgpt-login-failed/",
+        "/tutorials/clash-verge-rev/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
