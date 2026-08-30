@@ -3956,6 +3956,35 @@
         "/protocols/vless-trojan-hysteria2/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/what-is-airport/",
+      "h1": "机场是什么？网络机场、梯子、节点、订阅和VPN有什么区别？小白完整指南",
+      "keyword": "机场是什么",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Wiki-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/vpn-vs-proxy-vs-airport/",
+        "/how-to-access-foreign-websites/",
+        "/wiki/what-is-tizi/",
+        "/wiki/airport-vs-vpn-difference/",
+        "/wiki/what-is-clash/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
