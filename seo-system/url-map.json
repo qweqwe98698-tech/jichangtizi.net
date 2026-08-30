@@ -3318,6 +3318,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "Anthropic合规大区与低风控高会话保持专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/claude-not-working/",
+      "h1": "Claude打不开/登录失败怎么办？地区、节点、IP、浏览器与网络环境完整排查",
+      "keyword": "Claude打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Claude-Access-Pillar",
+      "parentUrl": "/claude-airport/",
+      "childUrls": [
+        "/claude-airport/",
+        "/ai-airport/",
+        "/chatgpt-not-working/",
+        "/chatgpt-login-failed/",
+        "/stable-airport/"
+      ],
+      "lateralUrls": [
+        "/claude-airport/",
+        "/ai-airport/",
+        "/chatgpt-not-working/",
+        "/chatgpt-login-failed/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "低风控合规出口与低丢包流式长连接节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
