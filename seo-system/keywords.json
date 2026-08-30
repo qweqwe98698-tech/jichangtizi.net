@@ -2759,6 +2759,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "Google合规大区与开发者API低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-146",
+      "keyword": "AI工具节点IP怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "url": "/ai-node-ip/",
+      "category": "场景选型",
+      "cluster": "AI-Access-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "低风控高信誉商用专线与合规出口节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

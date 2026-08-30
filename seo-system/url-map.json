@@ -3367,6 +3367,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "Google合规大区与开发者API低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/ai-node-ip/",
+      "h1": "AI工具节点IP怎么选？原生IP、住宅IP、数据中心IP、静态IP与共享IP完整指南",
+      "keyword": "AI工具节点IP怎么选",
+      "intent": "commercial_investigation",
+      "pageType": "pillar",
+      "cluster": "AI-Access-Pillar",
+      "parentUrl": "/ai-airport/",
+      "childUrls": [
+        "/ai-airport/",
+        "/native-ip-airport/",
+        "/chatgpt-airport/",
+        "/claude-airport/",
+        "/stable-airport/"
+      ],
+      "lateralUrls": [
+        "/ai-airport/",
+        "/native-ip-airport/",
+        "/chatgpt-airport/",
+        "/claude-airport/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "低风控高信誉商用专线与合规出口节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
