@@ -4710,6 +4710,35 @@
         "/free-nodes-not-working/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/free-subscription-update-failed/",
+      "h1": "免费订阅更新失败怎么办？404、403、Timeout、格式错误与订阅失效完整排查",
+      "keyword": "免费订阅更新失败怎么办",
+      "intent": "informational",
+      "pageType": "pillar",
+      "cluster": "Troubleshooting-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/free-nodes/",
+        "/how-to-find-free-nodes/",
+        "/how-to-use-free-nodes/",
+        "/free-nodes-not-working/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
