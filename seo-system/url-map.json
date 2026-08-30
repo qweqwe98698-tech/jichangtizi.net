@@ -5290,6 +5290,35 @@
         "/free-nodes-not-working/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/free-airport-vs-vpn-vs-proxy/",
+      "h1": "免费机场、免费VPN、免费代理哪个好？速度、安全、稳定性与适合人群完整对比",
+      "keyword": "免费机场免费VPN免费代理哪个好",
+      "intent": "commercial",
+      "pageType": "pillar",
+      "cluster": "Free-Tools-Comparison-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/free-nodes/",
+        "/how-to-find-free-nodes/",
+        "/how-to-use-free-nodes/",
+        "/free-nodes-not-working/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
