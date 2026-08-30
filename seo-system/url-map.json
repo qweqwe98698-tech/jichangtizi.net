@@ -3243,6 +3243,31 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "低丢包抗抖动专线与晚高峰长连接稳定节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/chatgpt-login-failed/",
+      "h1": "ChatGPT登录失败怎么办？地区、IP变化、浏览器、Cookie与账号网络环境完整排查",
+      "keyword": "ChatGPT登录失败怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "ChatGPT-Access-Pillar",
+      "parentUrl": "/chatgpt-not-working/",
+      "childUrls": [
+        "/chatgpt-not-working/",
+        "/chatgpt-network-error/",
+        "/chatgpt-airport/",
+        "/ai-airport/",
+        "/stable-airport/"
+      ],
+      "lateralUrls": [
+        "/chatgpt-not-working/",
+        "/chatgpt-network-error/",
+        "/chatgpt-airport/",
+        "/native-ip-airport/",
+        "/dedicated-line-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "低风控高一致性合规出口与干净网络环境 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
