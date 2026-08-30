@@ -2911,6 +2911,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "GitHub开发者TUN模式低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-154",
+      "keyword": "GitHub Clone很慢怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/github-clone-slow/",
+      "category": "问题排查",
+      "cluster": "Developer-Tools-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "Git Clone与Pull大仓库抗断流IEPL专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

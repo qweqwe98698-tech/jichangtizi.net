@@ -3568,6 +3568,32 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "GitHub开发者TUN模式低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/github-clone-slow/",
+      "h1": "GitHub Clone/Pull很慢怎么办？节点、线路、DNS、SSH、HTTPS与下载完整排查",
+      "keyword": "GitHub Clone很慢怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Developer-Tools-Pillar",
+      "parentUrl": "/github-airport/",
+      "childUrls": [
+        "/github-airport/",
+        "/low-latency-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/peak-hour-airport/"
+      ],
+      "lateralUrls": [
+        "/github-airport/",
+        "/google-airport/",
+        "/chatgpt-airport/",
+        "/youtube-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "Git Clone与Pull大仓库抗断流IEPL专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
