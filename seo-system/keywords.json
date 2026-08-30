@@ -2740,6 +2740,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "低风控合规出口与低丢包流式长连接节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-145",
+      "keyword": "Google AI Studio打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/google-ai-studio-not-working/",
+      "category": "问题排查",
+      "cluster": "Gemini-Access-Pillar",
+      "searchVolumeScore": 28,
+      "commercialScore": 29,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 101,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "Google合规大区与开发者API低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

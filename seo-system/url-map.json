@@ -3343,6 +3343,30 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "低风控合规出口与低丢包流式长连接节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/google-ai-studio-not-working/",
+      "h1": "Google AI Studio打不开怎么办？地区、Google账号、节点、IP与网络错误完整排查",
+      "keyword": "Google AI Studio打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Gemini-Access-Pillar",
+      "parentUrl": "/ai-airport/",
+      "childUrls": [
+        "/ai-airport/",
+        "/claude-airport/",
+        "/chatgpt-airport/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/ai-airport/",
+        "/claude-not-working/",
+        "/chatgpt-not-working/",
+        "/low-latency-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "Google合规大区与开发者API低延迟专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
