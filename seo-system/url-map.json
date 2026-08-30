@@ -3517,6 +3517,32 @@
         "/airport-ranking/"
       ],
       "conversionTarget": "YouTube 4K抗丢包与晚高峰稳定专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/youtube-slow/",
+      "h1": "YouTube很慢怎么办？节点、线路、CDN、DNS、晚高峰与视频缓冲完整排查",
+      "keyword": "YouTube很慢怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Streaming-Media-Pillar",
+      "parentUrl": "/youtube-airport/",
+      "childUrls": [
+        "/youtube-airport/",
+        "/streaming-airport/",
+        "/google-not-working/",
+        "/low-latency-airport/",
+        "/peak-hour-airport/"
+      ],
+      "lateralUrls": [
+        "/youtube-airport/",
+        "/streaming-airport/",
+        "/netflix-airport/",
+        "/google-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-ranking/"
+      ],
+      "conversionTarget": "YouTube 4K低延迟抗丢包专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

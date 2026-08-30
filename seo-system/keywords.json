@@ -2873,6 +2873,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "YouTube 4K抗丢包与晚高峰稳定专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-152",
+      "keyword": "YouTube很慢怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/youtube-slow/",
+      "category": "问题排查",
+      "cluster": "Streaming-Media-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "YouTube 4K低延迟抗丢包专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
