@@ -4246,6 +4246,35 @@
         "/risk-warning/"
       ],
       "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/no-registration-free-airport/",
+      "h1": "免注册免费机场靠谱吗？无需登录、匿名使用、隐私与安全风险完整分析",
+      "keyword": "免注册免费机场靠谱吗",
+      "intent": "investigative",
+      "pageType": "pillar",
+      "cluster": "Security-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/dedicated-line-airport/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/free-airport/",
+        "/which-free-airport-is-best/",
+        "/is-free-airport-safe/",
+        "/permanent-free-airport/",
+        "/risk-warning/"
+      ],
+      "conversionTarget": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

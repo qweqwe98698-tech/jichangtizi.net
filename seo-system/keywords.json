@@ -3367,6 +3367,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-178",
+      "keyword": "免注册免费机场靠谱吗",
+      "intent": "investigative",
+      "pageType": "pillar",
+      "url": "/no-registration-free-airport/",
+      "category": "避坑指南",
+      "cluster": "Security-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
