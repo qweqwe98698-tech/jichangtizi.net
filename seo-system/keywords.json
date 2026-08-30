@@ -3120,6 +3120,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "老牌防跑路IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-165",
+      "keyword": "国外网站打不开怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/foreign-websites-not-working/",
+      "category": "问题排查",
+      "cluster": "Troubleshooting-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "高可用多线BGP与IEPL内网专线节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
