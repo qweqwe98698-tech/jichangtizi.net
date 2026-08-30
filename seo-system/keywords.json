@@ -3025,6 +3025,25 @@
       "status": "published",
       "commercialValue": "high",
       "targetConversion": "老牌防封防跑路IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "id": "kw-160",
+      "keyword": "机场订阅突然失效怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "url": "/airport-subscription-failed/",
+      "category": "问题排查",
+      "cluster": "Troubleshooting-Master-Pillar",
+      "searchVolumeScore": 30,
+      "commercialScore": 30,
+      "difficultyScore": 14,
+      "longevityScore": 20,
+      "internalLinkScore": 10,
+      "totalScore": 104,
+      "priority": "P0",
+      "status": "published",
+      "commercialValue": "high",
+      "targetConversion": "全协议兼容与防封订阅分发节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }

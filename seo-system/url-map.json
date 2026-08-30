@@ -3723,6 +3723,32 @@
         "/airport-not-working/"
       ],
       "conversionTarget": "老牌防封防跑路IEPL专线大厂与按量计费备用 (光速云 / 微风网络 / 唯兔云)"
+    },
+    {
+      "url": "/airport-subscription-failed/",
+      "h1": "机场订阅突然失效怎么办？订阅地址、Token、套餐到期与服务异常完整排查",
+      "keyword": "机场订阅突然失效怎么办",
+      "intent": "troubleshooting",
+      "pageType": "pillar",
+      "cluster": "Troubleshooting-Master-Pillar",
+      "parentUrl": "/airport-ranking/",
+      "childUrls": [
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/airport-ranking/",
+        "/stable-airport/",
+        "/airport-not-working/"
+      ],
+      "lateralUrls": [
+        "/airport-ranking/",
+        "/cheap-airport/",
+        "/best-value-airport/",
+        "/dedicated-line-airport/",
+        "/stable-airport/",
+        "/airport-not-working/",
+        "/airport-website-down/"
+      ],
+      "conversionTarget": "全协议兼容与防封订阅分发节点 (光速云 / 微风网络 / 唯兔云)"
     }
   ]
 }
