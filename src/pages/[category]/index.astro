@@ -1,0 +1,370 @@
+---
+import ContentCard from '../../components/ContentCard.astro';
+import HeroHeader from '../../components/HeroHeader.astro';
+import PageShell from '../../layouts/PageShell.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { heroConfig, siteTitle, siteUrl } from '../../config';
+import { getBlogPosts, type BlogPost } from '../../lib/content/blog';
+
+export async function getStaticPaths() {
+  const categories = [
+    {
+      id: 'reviews',
+      title: '机场深度评测',
+      subtitle: '真实客观的机场节点质量、网络专线与流媒体解锁实测报告',
+      description: '汇总2026最新科学上网机场深度评测，包含光速云、微风网络、灵猫云等各主流机场节点测速、稳定性及流媒体解锁实测。',
+    },
+    {
+      id: 'compare',
+      title: '机场横向对比',
+      subtitle: '全方位对比各主流机场的专线质量、价格资费与性价比',
+      description: '多维度对比不同机场线路架构、月付/年付价格方案、性价比及替代方案推荐，助您快速选出最适合的高速稳定机场。',
+    },
+    {
+      id: 'protocols',
+      title: '协议解析与技术对比',
+      subtitle: '深度拆解 IPLC、IEPL、VLESS、Hysteria2、Trojan 现代代理架构',
+      description: '科学上网核心底层协议原理解析，对比 IPLC 与 IEPL 专线区别、VLESS / VMess / Trojan / Hysteria2 协议优劣与适用场景。',
+    },
+    {
+      id: 'issues',
+      title: '故障排查与问题解决',
+      subtitle: '常见代理客户端报错、节点超时、断网与连不上排查指南',
+      description: '汇集 Clash、Shadowrocket、v2rayN、sing-box 等常见网络与客户端报错解决方案，解决连接成功无法上网、延迟超时等疑难问题。',
+    },
+    {
+      id: 'tutorials',
+      title: '客户端使用教程',
+      subtitle: '全平台科学上网客户端安装、订阅导入与分流配置指南',
+      description: '提供 Windows、macOS、iOS、Android 全平台代理客户端详细配置指南，包括 Clash Verge Rev、小火箭、v2rayN 安装与订阅导入。',
+    },
+    {
+      id: 'wiki',
+      title: '基础科普与概念指南',
+      subtitle: '科学上网、网络代理与安全加密核心概念通俗知识库',
+      description: '解答什么是梯子、什么是机场、机场与VPN区别、Mihomo与Clash区别、TUN模式原理等网络代理新手必读基础知识。',
+    },
+    {
+      id: 'risk',
+      title: '安全与风险防范',
+      subtitle: '机场跑路预警信号识别、数据安全防护与隐私风险规避指南',
+      description: '深度剖析机场跑路前兆特征、科学上网数据安全与隐私泄露防范，教您如何规避资金损失与网络安全风险。',
+    },
+    {
+      id: 'recommend',
+      title: '精选机场推荐',
+      subtitle: '精选高速稳定、晚高峰不卡顿、支持 AI 与流媒体解锁的优质梯子',
+      description: '2026最新稳定高速机场排行榜与梯子推荐指南，按性价比、专线质量、设备支持与日常办公娱乐场景精选推荐。',
+    },
+  ];
+
+  const allPosts = await getBlogPosts();
+
+  return categories.map((cat) => {
+    // 筛选出属于该目录下的文章 (例如 post.id 类似 'reviews/guangsu-cloud')
+    const posts = allPosts.filter((p) => p.id.startsWith(`${cat.id}/`));
+    return {
+      params: { category: cat.id },
+      props: {
+        ...cat,
+        posts,
+      },
+    };
+  });
+}
+
+interface Props {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  posts: BlogPost[];
+}
+
+const { id: categoryId, title, subtitle, description, posts } = Astro.props;
+const canonicalUrl = new URL(`/${categoryId}/`, siteUrl).toString();
+
+// Schema.org 结构化数据 (CollectionPage + BreadcrumbList)
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: `${title} · ${siteTitle}`,
+      description: description,
+      inLanguage: 'zh-CN',
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: siteUrl,
+        name: siteTitle,
+      },
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '首页',
+            item: siteUrl,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: title,
+            item: canonicalUrl,
+          },
+        ],
+      },
+    },
+  ],
+};
+---
+
+<PageShell
+  title={`${title} | ${siteTitle}`}
+  description={description}
+  canonical={canonicalUrl}
+  schema={collectionSchema}
+  transparentHeader={true}
+  pageId="blog-list"
+  useMainWrapper={false}
+>
+  <HeroHeader
+    text={title}
+    subtitle={subtitle}
+    compact={true}
+    backgroundImage={heroConfig.postDefaultBackground}
+  />
+
+  <ContentCard floating={true} as="main">
+    <!-- 面包屑导航 -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="/" class="breadcrumb-link">首页</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        </li>
+        <li class="breadcrumb-item current" aria-current="page">
+          <span>{title}</span>
+        </li>
+      </ol>
+      <span class="posts-count-badge">共收录 {posts.length} 篇专题文章</span>
+    </nav>
+
+    <!-- 分类导言 -->
+    <section class="category-intro-card">
+      <p class="category-description">{description}</p>
+    </section>
+
+    <!-- 文章列表 -->
+    <div class="category-posts-grid">
+      {posts.map((post) => (
+        <article class="category-post-card">
+          <div class="card-meta-top">
+            <span class="post-date">
+              <FormattedDate date={post.data.pubDate} />
+            </span>
+            {post.data.tags && post.data.tags.length > 0 && (
+              <span class="primary-tag">{post.data.tags[0]}</span>
+            )}
+          </div>
+
+          <h2 class="card-title">
+            <a href={`/${post.id}/`} class="card-link">
+              {post.data.title}
+            </a>
+          </h2>
+
+          {post.data.description && (
+            <p class="card-excerpt">{post.data.description}</p>
+          )}
+
+          <div class="card-footer">
+            <a href={`/${post.id}/`} class="read-more-link">
+              阅读全文
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </ContentCard>
+</PageShell>
+
+<style>
+  .breadcrumb-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+  }
+
+  .breadcrumb-item.current {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  .breadcrumb-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb-link:hover {
+    color: var(--color-primary);
+  }
+
+  .breadcrumb-sep {
+    opacity: 0.4;
+  }
+
+  .posts-count-badge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    background: var(--color-surface-hover);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+  }
+
+  .category-intro-card {
+    padding: 1.25rem 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+
+  .category-description {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .category-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .category-post-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .category-post-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 24px rgba(var(--shadow-color), 0.06);
+  }
+
+  .card-meta-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.75rem;
+  }
+
+  .primary-tag {
+    background: var(--color-surface-hover);
+    padding: 0.15rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--color-primary);
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+    line-height: 1.45;
+    margin: 0 0 0.75rem 0;
+    font-weight: 600;
+  }
+
+  .card-link {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .card-link:hover {
+    color: var(--color-primary);
+  }
+
+  .card-excerpt {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0 0 1.25rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .read-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: gap 0.2s ease;
+  }
+
+  .read-more-link:hover {
+    gap: 0.6rem;
+  }
+
+  @media (max-width: 640px) {
+    .category-posts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

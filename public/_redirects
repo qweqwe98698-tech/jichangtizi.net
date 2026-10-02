@@ -1,0 +1,86 @@
+# Cloudflare Pages 301 Permanent Redirects
+# Generated for https://jichangtizi.net
+
+/blog/2026-airport-recommendation/ /recommend/best-airports/ 301
+/blog/2026-airport-recommendation /recommend/best-airports/ 301
+
+/blog/guangsu-cloud-review/ /reviews/guangsu-cloud/ 301
+/blog/guangsu-cloud-review /reviews/guangsu-cloud/ 301
+
+/blog/weifeng-cloud-review/ /reviews/weifeng-cloud/ 301
+/blog/weifeng-cloud-review /reviews/weifeng-cloud/ 301
+
+/blog/longmao-cloud-review/ /reviews/longmao-cloud/ 301
+/blog/longmao-cloud-review /reviews/longmao-cloud/ 301
+
+/blog/longmao-cloud-is-it-worth-buying/ /reviews/longmao-cloud/buying-guide/ 301
+/blog/longmao-cloud-is-it-worth-buying /reviews/longmao-cloud/buying-guide/ 301
+
+/blog/longmao-cloud-pricing-plans/ /reviews/longmao-cloud/pricing/ 301
+/blog/longmao-cloud-pricing-plans /reviews/longmao-cloud/pricing/ 301
+
+/blog/longmao-cloud-nodes-selection-guide/ /reviews/longmao-cloud/nodes/ 301
+/blog/longmao-cloud-nodes-selection-guide /reviews/longmao-cloud/nodes/ 301
+
+/blog/longmao-cloud-lines-architecture-guide/ /reviews/longmao-cloud/lines/ 301
+/blog/longmao-cloud-lines-architecture-guide /reviews/longmao-cloud/lines/ 301
+
+/blog/longmao-cloud-alternatives-recommendations/ /compare/longmao-cloud-alternatives/ 301
+/blog/longmao-cloud-alternatives-recommendations /compare/longmao-cloud-alternatives/ 301
+
+/blog/longmao-cloud-vs-guangsu-cloud-comparison/ /compare/longmao-vs-guangsu/ 301
+/blog/longmao-cloud-vs-guangsu-cloud-comparison /compare/longmao-vs-guangsu/ 301
+
+/blog/clash-verge-rev-tutorial/ /tutorials/clash-verge-rev/ 301
+/blog/clash-verge-rev-tutorial /tutorials/clash-verge-rev/ 301
+
+/blog/how-to-import-airport-subscription-to-clash/ /tutorials/clash-subscription-import/ 301
+/blog/how-to-import-airport-subscription-to-clash /tutorials/clash-subscription-import/ 301
+
+/blog/longmao-cloud-clash-verge-rev-tutorial/ /tutorials/clash/longmao-cloud/ 301
+/blog/longmao-cloud-clash-verge-rev-tutorial /tutorials/clash/longmao-cloud/ 301
+
+/blog/longmao-cloud-shadowrocket-ios-tutorial/ /tutorials/shadowrocket/longmao-cloud/ 301
+/blog/longmao-cloud-shadowrocket-ios-tutorial /tutorials/shadowrocket/longmao-cloud/ 301
+
+/blog/clash-connected-no-internet-fix/ /issues/clash-connected-no-internet/ 301
+/blog/clash-connected-no-internet-fix /issues/clash-connected-no-internet/ 301
+
+/blog/airport-node-low-ping-slow-speed-reasons/ /issues/low-ping-slow-speed-reasons/ 301
+/blog/airport-node-low-ping-slow-speed-reasons /issues/low-ping-slow-speed-reasons/ 301
+
+/blog/longmao-cloud-connected-no-internet-fix/ /issues/longmao-cloud-connected-no-internet/ 301
+/blog/longmao-cloud-connected-no-internet-fix /issues/longmao-cloud-connected-no-internet/ 301
+
+/blog/longmao-cloud-node-timeout-troubleshooting/ /issues/longmao-cloud-node-timeout/ 301
+/blog/longmao-cloud-node-timeout-troubleshooting /issues/longmao-cloud-node-timeout/ 301
+
+/blog/longmao-cloud-slow-speed-reasons-fix/ /issues/longmao-cloud-slow-speed/ 301
+/blog/longmao-cloud-slow-speed-reasons-fix /issues/longmao-cloud-slow-speed/ 301
+
+/blog/iepl-vs-iplc-vs-transit-difference/ /protocols/iepl-vs-iplc-transit/ 301
+/blog/iepl-vs-iplc-vs-transit-difference /protocols/iepl-vs-iplc-transit/ 301
+
+/blog/vless-trojan-hysteria2-comparison/ /protocols/vless-trojan-hysteria2/ 301
+/blog/vless-trojan-hysteria2-comparison /protocols/vless-trojan-hysteria2/ 301
+
+/blog/what-is-clash-beginner-guide/ /wiki/what-is-clash/ 301
+/blog/what-is-clash-beginner-guide /wiki/what-is-clash/ 301
+
+/blog/airport-vs-vpn-difference/ /wiki/airport-vs-vpn-difference/ 301
+/blog/airport-vs-vpn-difference /wiki/airport-vs-vpn-difference/ 301
+
+/blog/mihomo-vs-clash-difference/ /wiki/mihomo-vs-clash/ 301
+/blog/mihomo-vs-clash-difference /wiki/mihomo-vs-clash/ 301
+
+/blog/clash-tun-mode-vs-system-proxy/ /wiki/clash-tun-mode-vs-system-proxy/ 301
+/blog/clash-tun-mode-vs-system-proxy /wiki/clash-tun-mode-vs-system-proxy/ 301
+
+/blog/airport-running-away-warning-signs/ /risk/airport-running-away-warning-signs/ 301
+/blog/airport-running-away-warning-signs /risk/airport-running-away-warning-signs/ 301
+
+/blog/longmao-cloud-security-privacy-risk-analysis/ /risk/longmao-cloud-security/ 301
+/blog/longmao-cloud-security-privacy-risk-analysis /risk/longmao-cloud-security/ 301
+
+/blog/longmao-cloud-is-it-running-away-status-check/ /risk/longmao-cloud-status/ 301
+/blog/longmao-cloud-is-it-running-away-status-check /risk/longmao-cloud-status/ 301

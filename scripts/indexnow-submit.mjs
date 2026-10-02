@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const HOST = 'jichangtizi.net';
-const KEY = '8f2e7b1a9c4d3e5f6a7b8c9d0e1f2a3b';
+const KEY = '0f59de258e3342a6ac1d891768728410';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const SITEMAP_PATH = path.resolve('dist/sitemap-0.xml');
 
