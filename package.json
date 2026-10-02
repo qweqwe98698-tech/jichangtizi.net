@@ -23,7 +23,8 @@
     "frontmatter:check": "node scripts/normalize-frontmatter.mjs --check",
     "frontmatter:fix": "node scripts/normalize-frontmatter.mjs --write",
     "optimize:images": "node scripts/optimize-blog-images.mjs",
-    "optimize:images:dry-run": "node scripts/optimize-blog-images.mjs --dry-run"
+    "optimize:images:dry-run": "node scripts/optimize-blog-images.mjs --dry-run",
+    "publish:matrix": "node scripts/auto-publish-matrix.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.2.1",
