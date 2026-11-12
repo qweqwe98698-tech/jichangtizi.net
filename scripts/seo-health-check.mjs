@@ -2,7 +2,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIST_DIR = path.resolve('dist');
-const SITE_DOMAIN = 'https://jichangtizi.net';
 const SNAPSHOT_PATH = path.resolve('seo-system/sitemap-snapshot.json');
 
 console.log('================================================================');

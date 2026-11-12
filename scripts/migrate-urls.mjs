@@ -81,7 +81,6 @@ function updateLinksInFile(filePath) {
 
   for (const [oldUrl, newUrl] of Object.entries(urlRedirects)) {
     const oldUrlNoSlash = oldUrl.slice(0, -1);
-    const newUrlNoSlash = newUrl.slice(0, -1);
 
     if (content.includes(oldUrl)) {
       content = content.replaceAll(oldUrl, newUrl);
