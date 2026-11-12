@@ -1,12 +1,13 @@
 ---
-title: "Shadowrocket节点怎么选？香港、日本、新加坡、美国节点与延迟、线路、AI和流媒体完整指南"
+title: "Shadowrocket小火箭节点怎么选？香港/日本/美国节点延迟、专线与AI流媒体选型指南"
 date: 2026-08-28T21:55:00.000Z
-updated: 2026-08-28T21:55:00.000Z
-description: "Shadowrocket（小火箭）节点怎么选？香港、日本、新加坡、美国节点有什么区别？Ping最低就是最好吗？本文深度详解小火箭节点延迟、Jitter、丢包率、IEPL专线线路、ChatGPT/Claude与Netflix流媒体节点选型与晚高峰决策树。"
+updated: 2026-11-12T15:30:00.000Z
+description: "Shadowrocket小火箭节点怎么选？香港、日本、新加坡、美国节点有什么区别？Ping最低就是最好吗？本文深度详解小火箭节点延迟、Jitter、丢包率、IEPL专线线路、ChatGPT/Claude与Netflix流媒体节点选型与晚高峰决策树。"
 categories:
   - "教程"
 tags:
   - "Shadowrocket"
+  - "小火箭节点"
   - "小火箭"
   - "Shadowrocket节点"
   - "Shadowrocket教程"

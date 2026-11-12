@@ -34,6 +34,8 @@ const readingTime = Math.ceil(wordCount / 400);
 	readingTime={readingTime}
 	seoDescription={seoDescription}
 	loadKatexStyles={hasMath}
+	canonical={`/${post.id}/`}
+	noindex={true}
 >
 	<Content />
 </BlogPost>

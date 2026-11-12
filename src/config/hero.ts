@@ -34,8 +34,8 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   home: {
-    text: '2026 免费机场便宜稳定梯子VPN翻墙机场推荐与魔法梯子科学上网总控（持续更新中）',
-    subtitle: '严选稳定、高性价比、流媒体与 ChatGPT 专线翻墙梯子 · 晚高峰实测数据驱动',
+    text: '2026 稳定梯子与高速机场推荐：全平台翻墙工具、专线评测与科学上网指南',
+    subtitle: '严选高速稳定 IEPL/IPLC 专线梯子 · 实测 ChatGPT 解锁、4K 流媒体与多端客户端配置 · 数据驱动持续更新',
     backgroundImage: defaultBackground.src,
   },
   blog: {

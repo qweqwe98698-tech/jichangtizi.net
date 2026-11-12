@@ -35,8 +35,8 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   siteUrl: 'https://jichangtizi.net',
   siteTitle: '机场梯子',
-  siteTitleSuffix: '2026 稳定机场推荐与梯子评测导航',
-  siteDescription: '机场梯子 (jichangtizi.net) 专注于2026最新高速稳定科学上网机场推荐、Clash/Shadowrocket梯子评测与ChatGPT解锁专线实测。',
+  siteTitleSuffix: '2026好用的梯子工具与稳定机场推荐评测导航',
+  siteDescription: '机场梯子 (jichangtizi.net) 专注于2026稳定好用的梯子工具与高速机场推荐，提供 Windows/Mac 电脑梯子与 iPhone/安卓手机梯子配置教程、Clash Verge Rev/小火箭节点选型及晚高峰实测数据。',
   locale: 'zh-CN',
   headerGithubRepoUrl: '',
   faviconIco: '/favicon.ico',

@@ -69,7 +69,7 @@ const normalizedTitle = title.trim();
 const normalizedBrand = siteTitle.trim();
 const fullTitle =
 	normalizedTitle === normalizedBrand
-		? `${normalizedBrand} - 2026 稳定机场推荐与梯子评测导航`
+		? `${normalizedBrand} - ${siteTitleSuffix}`
 		: normalizedTitle.endsWith(normalizedBrand)
 			? normalizedTitle
 			: `${normalizedTitle} | ${normalizedBrand}`;

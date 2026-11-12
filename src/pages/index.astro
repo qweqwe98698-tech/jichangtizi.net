@@ -6,7 +6,7 @@ import { heroConfig, locale, siteDescription, siteTitle, siteUrl } from '../conf
 
 const homeHero = heroConfig.home;
 
-// 用户主推的 2026 真实机场排行榜数据 (01 光速云, 02 微风网络, 03 飞猫云)
+// 用户主推的 2026 真实机场排行榜数据（前十严格按指定顺序：01光速云主推、02暮光加速、03飞猫云、04微风网络、05大佬云、06星岛梦、07二猫云、08无忧链接、09唯兔云、10Firefly）
 const airports = [
   {
     num: '01',
@@ -18,13 +18,43 @@ const airports = [
     traffic: '59GB ~ 238GB / 月',
     lineType: 'IEPL / 全球 IPLC 专线',
     protocol: 'VLESS / Shadowsocks',
-    tags: ['2020年老牌', 'IPLC专线', 'VLESS', 'ChatGPT全解锁', '流媒体', '优惠码:AMM'],
+    tags: ['第一主推', '2020年老牌', 'IPLC专线', 'VLESS', 'ChatGPT全解锁', '优惠码:AMM'],
     promoNote: '新人注册8折码 AMM',
     reviewUrl: '/reviews/guangsu-cloud/',
     affUrl: 'https://sahude.gsyvipaff.com/#/?code=keqgvT5Y',
   },
   {
     num: '02',
+    id: 'muguang',
+    name: '暮光加速',
+    enName: 'Twilight',
+    tagline: '2023年运营 · BGP 智能调度专线级出口 · 全平台客户端 · 多设备同时在线',
+    price: '¥20 / 月起 (月付) · 年付¥109',
+    traffic: '120GB ~ 1500GB / 月',
+    lineType: 'BGP 智能调度专线级',
+    protocol: '全协议支持',
+    tags: ['2023运营', '多设备同时在线', '全平台客户端', '不限时流量包', '优惠码:muguang5555'],
+    promoNote: '优惠码 muguang5555',
+    reviewUrl: '/reviews/muguang-cloud/',
+    affUrl: 'https://varnexa.twilightaff.com/#/?code=D1LHglg3',
+  },
+  {
+    num: '03',
+    id: 'flycat',
+    name: '飞猫云',
+    enName: 'FlyCat',
+    tagline: '2023年运营 · IEPL 专线小流量入门 · 专属客户端免配置登录即用',
+    price: '¥7 / 月起 (年付折算)',
+    traffic: '50GB / 月',
+    lineType: 'IEPL 专线',
+    protocol: '通用订阅',
+    tags: ['2023运营', '专属免配客户端', '约7元/月', '轻度用户', '优惠码:flycat888'],
+    promoNote: '季付8折码 flycat888',
+    reviewUrl: '/reviews/feimao-cloud/',
+    affUrl: 'https://guangs.flycataff.com/#/?code=6uq0Xe9y',
+  },
+  {
+    num: '04',
     id: 'weifeng',
     name: '微风网络',
     enName: 'BreezeNet',
@@ -32,123 +62,149 @@ const airports = [
     price: '¥7 / 月起 (年付折算)',
     traffic: '50GB / 月',
     lineType: 'IEPL 专线',
-    protocol: '通用全订阅',
-    tags: ['2023年运营', 'IEPL专线', '约7元/月', '自研客户端', '轻度办公', '优惠码:flat888'],
+    protocol: 'VLESS / Shadowsocks',
+    tags: ['2023运营', 'IEPL专线', '约7元/月', '自研客户端', '轻度办公', '优惠码:flat888'],
     promoNote: '季付9折码 flat888',
     reviewUrl: '/reviews/weifeng-cloud/',
-    affUrl: 'https://edp01.breezenetaff.com/#/?code=R9ZazSfE',
-  },
-  {
-    num: '03',
-    id: 'flycat',
-    name: '飞猫云',
-    enName: 'FlyCat',
-    tagline: '2023年运营 · IEPL 专线小流量入门 · 低价轻度用户首选',
-    price: '¥7 / 月起 (年付折算)',
-    traffic: '50GB / 月',
-    lineType: 'IEPL 专线',
-    protocol: '通用订阅',
-    tags: ['2023年运营', 'IEPL专线', '约7元/月', '轻度用户', 'AI办公', '优惠码:flycat888'],
-    promoNote: '季付8折码 flycat888',
-    reviewUrl: '/recommend/best-airports/',
-    affUrl: 'https://guangs.flycataff.com/#/?code=6uq0Xe9y',
-  },
-  {
-    num: '04',
-    id: 'xingdaomeng',
-    name: '星岛梦',
-    enName: 'XingDaoMeng',
-    tagline: '2020年老牌运营 · 企业级内网专线 · 低价长期套餐与不限时备用流量包',
-    price: '¥8 / 月起 (年付折算)',
-    traffic: '60GB / 月',
-    lineType: '企业级内网专线',
-    protocol: '通用全协议',
-    tags: ['2020老牌', '内网专线', '不限时套餐', '低价年付', '优惠码:nmw888'],
-    promoNote: '新人9折码 nmw888',
-    reviewUrl: '/recommend/best-airports/',
-    affUrl: 'https://guangs.xingdaomeng.com/#/?code=1TynBYnR',
+    affUrl: 'https://edp01.breezenetaff.com/#/?code=t3huofyI',
   },
   {
     num: '05',
-    id: 'v2yun',
-    name: '唯兔云',
-    enName: 'V2Yun',
-    tagline: '2023年运营 · 60+ 多地区节点 · 三网智能优化与自动负载均衡调度',
-    price: '¥14.9 / 月起 (月付)',
-    traffic: '100GB / 月',
-    lineType: '三网优化集群',
+    id: 'dalaoyun',
+    name: '大佬云',
+    enName: 'DaLaoYun',
+    tagline: '2024年运营 · 5.6元档 IEPL 经济型标准方案 · VLESS 协议 · 季付7折',
+    price: '¥5.6 / 月起 (年付折算)',
+    traffic: '60GB / 月',
+    lineType: 'IEPL 专线',
     protocol: 'VLESS 协议',
-    tags: ['14.9元月付', 'VLESS', '60+节点', '三网优化', '智能调度', '优惠码:rabbit'],
-    promoNote: '新人9折码 rabbit',
+    tags: ['2024运营', '5.6元/月超低门槛', 'IEPL专线', 'VLESS', '优惠码:dly888'],
+    promoNote: '季付及以上7折码 dly888',
     reviewUrl: '/recommend/best-airports/',
-    affUrl: 'https://guangs.v2yunvipaff.com/#/?code=xIutqOBA',
+    affUrl: 'https://qwerty.dalaoyunaff.com/#/?code=jCPLmoWN',
   },
   {
     num: '06',
-    id: 'u1s1',
-    name: 'U1S1',
-    enName: 'U1S1',
-    tagline: '2023年运营 · 20元主流月付档 · VLESS 与 IEPL 专线均衡配置',
-    price: '¥20 / 月起 (月付)',
-    traffic: '120GB / 月',
-    lineType: 'IEPL 专线',
-    protocol: 'VLESS 协议',
-    tags: ['20元月付', '120GB', 'VLESS', 'IEPL专线', '自研客户端'],
-    promoNote: '优惠码: akaka',
-    reviewUrl: '/recommend/best-airports/',
-    affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f',
+    id: 'xingdaomeng',
+    name: '星岛梦',
+    enName: 'XingDaoMeng',
+    tagline: '2020年老牌运营 · 企业级内网专线 · 1倍率不限设备 · 提供永久不限时备用包',
+    price: '¥8 / 月起 (年付折算)',
+    traffic: '60GB / 月 · 不限时包',
+    lineType: '企业级内网专线',
+    protocol: '通用全协议',
+    tags: ['2020老牌', '内网专线', '不限时流量包', '不限设备', '优惠码:nmw888'],
+    promoNote: '新人9折码 nmw888',
+    reviewUrl: '/reviews/xingdaomeng-cloud/',
+    affUrl: 'https://guangs.xingdaomeng.com/#/?code=1TynBYnR',
   },
   {
     num: '07',
-    id: 'civetnet',
-    name: '灵猫网络',
-    enName: 'CivetNet',
-    tagline: '2024年运营 · 19元即可获得 150GB 月流量 · 企业级内网专线大流量首选',
-    price: '¥19 / 月起 (月付)',
-    traffic: '150GB / 月',
-    lineType: '企业级内网专线',
-    protocol: '通用订阅',
-    tags: ['19元月付', '150GB大流量', '内网专线', '不限时套餐', '优惠码:lmao888'],
-    promoNote: '新人9折码 lmao888',
-    reviewUrl: '/recommend/best-airports/',
-    affUrl: 'https://vip01.civetnet.com/#/?code=8MIAyxak',
+    id: 'ermao',
+    name: '二猫云',
+    enName: 'TwoCat',
+    tagline: '2023年运营 · 全线 IEPL 专线 · 不限设备连接数 · 20元130GB实用型月付',
+    price: '¥20 / 月起 (月付) · 年付¥89',
+    traffic: '130GB / 月',
+    lineType: '全线 IEPL 专线',
+    protocol: 'VLESS 协议',
+    tags: ['2023运营', '20元130G', 'IEPL专线', '不限设备', '优惠码:ermao5555'],
+    promoNote: '优惠码 ermao5555',
+    reviewUrl: '/reviews/ermao-cloud/',
+    affUrl: 'https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW',
   },
   {
     num: '08',
-    id: 'speedworld',
-    name: '速界',
-    enName: 'SpeedWorld',
-    tagline: '2024年运营 · 专为 ChatGPT / Claude / Gemini 调优的 AI 专用专线',
-    price: '¥25 / 月起 (月付)',
-    traffic: '150GB / 月',
-    lineType: 'IEPL 专线',
+    id: 'wuyou',
+    name: '无忧链接',
+    enName: 'WorryFree',
+    tagline: '2025年运营 · 跨境电商与TikTok专线优化 · 免转换专属客户端 · 全线无倍率不限速',
+    price: '¥6.5~19 / 月起 · 不限时¥108',
+    traffic: '40GB ~ 100GB / 月',
+    lineType: 'IEPL 专线 (电商优化)',
+    protocol: '专属免配置客户端',
+    tags: ['2025新秀', '免转换客户端', 'TikTok专线', '跨境电商', '优惠码:wuyou666'],
+    promoNote: '优惠码 wuyou666',
+    reviewUrl: '/reviews/wuyou-link/',
+    affUrl: 'https://wep01.worryfreeaff.com/#/?code=4ZoSbLdL',
+  },
+  {
+    num: '09',
+    id: 'v2yun',
+    name: '唯兔云',
+    enName: 'V2Yun',
+    tagline: '2023年运营 · 60+ 多地区节点 · 三网智能优化集群 · 14.9元真实月付',
+    price: '¥14.9 / 月起 (月付)',
+    traffic: '100GB / 月',
+    lineType: 'IPLC / 三网优化集群',
     protocol: 'VLESS 协议',
-    tags: ['AI场景专用', 'ChatGPT', 'Claude', '150GB', 'IEPL专线', '自研客户端'],
-    promoNote: '优惠码: sss1111',
+    tags: ['14.9元月付', 'VLESS', '60+节点', '三网优化', '优惠码:weitu666'],
+    promoNote: '新人9折码 weitu666',
+    reviewUrl: '/reviews/weitu-cloud/',
+    affUrl: 'https://guangs.v2yunvipaff.com/#/?code=xIutqOBA',
+  },
+  {
+    num: '10',
+    id: 'firefly',
+    name: 'Firefly',
+    enName: 'Firefly',
+    tagline: 'IPLC 纯专线接入 · 全节点不限速不限设备 · 原生 IP 节点 · 免翻墙访问官网',
+    price: '¥8 / 月起 (年付折算)',
+    traffic: '60GB ~ 1000GB / 月',
+    lineType: '全专线 IPLC',
+    protocol: 'VLESS 协议',
+    tags: ['IPLC专线', '原生IP', '不限速', '不限设备', '优惠码:firefly'],
+    promoNote: '新用户8折码 firefly',
     reviewUrl: '/recommend/best-airports/',
-    affUrl: 'https://guangs.speedworldaff.cc/#/register?code=xgXzEfZB',
+    affUrl: 'https://vip02.fireflyaff.com/#/?code=2n7VURre',
   },
 ];
 
-// 17 个机场品牌全景对比摘要数据
+// 42 个机场品牌全景对比完整数据
 const fullComparisonAirports = [
-  { name: '光速云', year: '2020', price: '约 7.5~8 元/月', traffic: '59G~238G', type: '年付折算/月付', line: 'IEPL / 全球 IPLC / VLESS', pos: '老牌旗舰综合型', affUrl: 'https://sahude.gsyvipaff.com/#/?code=keqgvT5Y' },
-  { name: '微风网络', year: '2023', price: '约 7 元/月', traffic: '50GB', type: '年付折算', line: 'IEPL 专线', pos: '低价轻度专线', affUrl: 'https://edp01.breezenetaff.com/#/?code=R9ZazSfE' },
-  { name: '飞猫云', year: '2023', price: '约 7 元/月', traffic: '50GB', type: '年付折算', line: 'IEPL 专线', pos: '低价轻度用户', affUrl: 'https://guangs.flycataff.com/#/?code=6uq0Xe9y' },
-  { name: '星岛梦', year: '2020', price: '约 8 元/月', traffic: '60GB', type: '年付折算', line: '企业级内网专线', pos: '低价长期/不限时', affUrl: 'https://guangs.xingdaomeng.com/#/?code=1TynBYnR' },
-  { name: '唯兔云', year: '2023', price: '14.9 元/月', traffic: '100GB', type: '月付', line: 'VLESS / 60+节点', pos: '节点丰富/三网优化', affUrl: 'https://guangs.v2yunvipaff.com/#/?code=xIutqOBA' },
-  { name: '宇宙云', year: '2023', price: '14.9 元/月', traffic: '100GB', type: '月付', line: 'VLESS / IEPL', pos: '15元性价比', affUrl: 'https://guangs.yuzoucloud.cc/#/register?code=yrThwMP1' },
-  { name: '极连云', year: '2024', price: '18 元/月', traffic: '100GB', type: '月付', line: 'IEPL 专线', pos: '20元内综合型', affUrl: 'https://guangs.jlyvipaff.com/#/?code=VM1rKGUu' },
-  { name: '光年梯', year: '2025', price: '18 元/月', traffic: '110GB', type: '月付', line: 'VLESS / IEPL', pos: '18元综合专线', affUrl: 'https://guangs.gntaff.com/#/?code=X1FoxjGE' },
-  { name: '灵猫网络', year: '2024', price: '19 元/月', traffic: '150GB', type: '月付', line: '企业级内网专线', pos: '月付大流量', affUrl: 'https://vip01.civetnet.com/#/?code=8MIAyxak' },
-  { name: 'U1S1', year: '2023', price: '20 元/月', traffic: '120GB', type: '月付', line: 'VLESS / IEPL', pos: '20元均衡型', affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f' },
-  { name: '二猫云', year: '2023', price: '20 元/月', traffic: '130GB', type: '月付', line: 'VLESS / IEPL', pos: '20元中等流量', affUrl: 'https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW' },
-  { name: '一翻云', year: '2024', price: '20 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: '20元大流量', affUrl: 'https://guangs.1flyunaff.cc/#/register?code=Yr7FhB7r' },
-  { name: '全球云', year: '2026', price: '20 元/月', traffic: '120GB', type: '月付', line: 'VLESS / IEPL', pos: '20元综合型', affUrl: 'https://guangs.gcvipaff.com/#/?code=Ov2nvU9C' },
-  { name: 'SOGO 云', year: '2026', price: '25 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: '25元综合型', affUrl: 'https://guangs.sogoyunaff.cc/#/?code=327Vs0w7' },
-  { name: '可信云', year: '2024', price: '25 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: '150GB专线型', affUrl: 'https://guangs.kosingaff.com/#/register?code=UYDtNlCY' },
-  { name: '速界', year: '2024', price: '25 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: 'AI 场景首选', affUrl: 'https://guangs.speedworldaff.cc/#/register?code=xgXzEfZB' },
-  { name: '快狸', year: '2023', price: '25 元/月', traffic: '150GB', type: '月付', line: 'VLESS / IEPL', pos: '综合使用型', affUrl: 'https://guangs.kuailicloud.cc/#/register?code=AiqyM8oG' },
+  { name: '光速云', year: '2020', price: '约 7.5~8 元/月', traffic: '59G~238G', type: '年付折算/支持月付', line: 'IEPL / 全球 IPLC / VLESS', pos: '第一主推 / 老牌旗舰综合首选', affUrl: 'https://sahude.gsyvipaff.com/#/?code=keqgvT5Y' },
+  { name: '暮光加速', year: '2023', price: '20 元/月', traffic: '120GB', type: '月付 / 不限时包', line: 'BGP 智能调度 / 专线级出口', pos: '全平台客户端 / 多设备同时在线', affUrl: 'https://varnexa.twilightaff.com/#/?code=D1LHglg3' },
+  { name: '飞猫云', year: '2023', price: '约 7 元/月', traffic: '50GB', type: '年付折算', line: 'IEPL 专线', pos: '专属免配客户端 / 新手首选', affUrl: 'https://guangs.flycataff.com/#/?code=6uq0Xe9y' },
+  { name: '微风网络', year: '2023', price: '约 7 元/月', traffic: '50GB', type: '年付折算', line: 'IEPL 专线 / VLESS', pos: '低价轻度专线 / 客服响应快', affUrl: 'https://edp01.breezenetaff.com/#/?code=t3huofyI' },
+  { name: '大佬云', year: '2024', price: '约 5.6 元/月', traffic: '60GB', type: '年付折算', line: 'IEPL 专线 / VLESS', pos: '5.6元超低门槛经济型', affUrl: 'https://qwerty.dalaoyunaff.com/#/?code=jCPLmoWN' },
+  { name: '星岛梦', year: '2020', price: '约 8 元/月', traffic: '60GB', type: '年付折算 / 永久不限时', line: '企业级内网专线', pos: '老牌低价 / 不限时备用包首选', affUrl: 'https://guangs.xingdaomeng.com/#/?code=1TynBYnR' },
+  { name: '二猫云', year: '2023', price: '20 元/月', traffic: '130GB', type: '月付 / 不限时包', line: '全线 IEPL 专线 / VLESS', pos: '不限设备连接数 / 长期稳定', affUrl: 'https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW' },
+  { name: '无忧链接', year: '2025', price: '约 6.5~19 元/月', traffic: '40G~100G', type: '月付 / 年付 / 不限时', line: 'IEPL 专线 (电商优化)', pos: '免转换客户端 / TikTok直播', affUrl: 'https://wep01.worryfreeaff.com/#/?code=4ZoSbLdL' },
+  { name: '唯兔云', year: '2023', price: '14.9 元/月', traffic: '100GB', type: '真实月付 / 不限时包', line: 'IPLC 专线 / 三网优化', pos: '60+节点智能调度 / 1倍率不限速', affUrl: 'https://guangs.v2yunvipaff.com/#/?code=xIutqOBA' },
+  { name: 'Firefly', year: '2024', price: '约 8 元/月起', traffic: '60GB~1000GB', type: '年付 / 月付 / 不限时', line: '全专线 IPLC / VLESS', pos: '原生 IP / 全节点不限速 / 免翻访问', affUrl: 'https://vip02.fireflyaff.com/#/?code=2n7VURre' },
+  { name: '宇宙云', year: '2023', price: '14.9 元/月', traffic: '100GB', type: '真实月付', line: 'VLESS / IEPL 中转', pos: '15元档性价比推荐', affUrl: 'https://wzjc.yuzoucloud.cc/#/?code=yrThwMP1' },
+  { name: 'U1S1', year: '2023', price: '20 元/月', traffic: '120GB', type: '真实月付', line: 'VLESS / IEPL 专线', pos: '20元主流均衡型', affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f' },
+  { name: '灵猫网络', year: '2024', price: '19 元/月', traffic: '150GB', type: '真实月付 / 不限时', line: '企业级内网专线', pos: '月付 150GB 大流量首选', affUrl: 'https://vip01.civetnet.com/#/?code=8MIAyxak' },
+  { name: '极连云', year: '2024', price: '18 元/月', traffic: '100GB', type: '真实月付', line: 'IEPL 专线 / VLESS', pos: '20元内综合均衡型', affUrl: 'https://guangs.jlyvipaff.com/#/?code=VM1rKGUu' },
+  { name: '光年梯', year: '2025', price: '18 元/月', traffic: '110GB', type: '真实月付', line: 'VLESS / IEPL 专线', pos: '18元综合专线', affUrl: 'https://guangs.gntaff.com/#/?code=X1FoxjGE' },
+  { name: '一翻云', year: '2024', price: '20 元/月', traffic: '150GB', type: '真实月付', line: 'VLESS / IEPL 专线', pos: '20元大流量优选', affUrl: 'https://guangs.1flyunaff.cc/#/register?code=Yr7FhB7r' },
+  { name: 'SOGO 云', year: '2026', price: '25 元/月', traffic: '150GB', type: '真实月付', line: 'VLESS / IEPL 专线', pos: '2026新品牌专线', affUrl: 'https://guangs.sogoyunaff.cc/#/?code=327Vs0w7' },
+  { name: '可信云', year: '2024', price: '25 元/月', traffic: '150GB', type: '真实月付', line: 'VLESS / IEPL 专线', pos: '150GB稳健专线', affUrl: 'https://guangs.kosingaff.com/#/register?code=UYDtNlCY' },
+  { name: '速界', year: '2024', price: '25 元/月', traffic: '150GB', type: '真实月付', line: 'IEPL 专线 (AI优化)', pos: '专为 ChatGPT/Claude 调优专线', affUrl: 'https://guangs.speedworldaff.cc/#/register?code=xgXzEfZB' },
+  { name: '闪跃', year: '2024', price: '24 元/月', traffic: '150GB', type: '真实月付', line: '专线中转', pos: '24元中高流量', affUrl: 'https://vip02.flashleapaff.com/#/?code=3lgzm9mm' },
+  { name: '全球云', year: '2026', price: '20 元/月', traffic: '120GB', type: '真实月付', line: 'VLESS / IEPL 专线', pos: '2026新兴综合型', affUrl: 'https://guangs.gcvipaff.com/#/?code=Ov2nvU9C' },
+  { name: '闪电鼠', year: '2024', price: '约 5.6 元/月', traffic: '60GB', type: '年付折算', line: 'IEPL 专线 / VLESS', pos: '5.6元经济型入门', affUrl: 'https://qwerty.shandianshuaff.com/#/?code=rUE75iYh' },
+  { name: '云界线', year: '2024', price: '约 5.6 元/月', traffic: '60GB', type: '年付折算', line: 'IEPL 专线 / VLESS', pos: '5.6元平价专线', affUrl: 'https://qwerty.yunjiexianaff.com/?code=HBaZ91c6' },
+  { name: '榴莲云', year: '2024', price: '约 5.6 元/月', traffic: '60GB', type: '年付折算', line: '经济型专线', pos: '5.6元轻度查资料', affUrl: 'https://qwerty.liulianyunaff.com#/?code=hS5pvbfE' },
+  { name: '神行加速', year: '2024', price: '14 元/月', traffic: '120GB', type: '真实月付', line: '专线中转', pos: '14元月付均衡', affUrl: 'https://qwerty.shenxingaff.com/#/?code=gawDQqVE' },
+  { name: '环球梯', year: '2024', price: '约 5.6 元/月', traffic: '60GB', type: '年付折算', line: '轻量专线', pos: '5.6元预算敏感型', affUrl: 'https://qwerty.huanqiutiaff.com/?code=9I4KRNPH' },
+  { name: '隐形人', year: '2024', price: '常规月付', traffic: '多档可选', type: '月付', line: '自研专线 / 60+节点', pos: '1小时修复承诺 / 专属App', affUrl: 'https://yinxingren1.invisibleaff.com/#/?code=kcyEeoJT' },
+  { name: '梯子云', year: '2024', price: '常规月付', traffic: '多档可选', type: '月付', line: '全平台专线', pos: '全平台客户端 + 通用订阅', affUrl: 'https://tiziyun3.ladderaff.com/#/?code=7EmnpHs0' },
+  { name: '快狸', year: '2023', price: '25 元/月', traffic: '150GB', type: '真实月付', line: 'VLESS / IEPL 专线', pos: '综合大流量专线', affUrl: 'https://guangs.kuailicloud.cc/#/register?code=AiqyM8oG' },
+  { name: 'WgetCloud', year: '2021', price: '季付 ¥297 起', traffic: '230GB/月', type: '季付大厂', line: '精品专线 / Trojan', pos: '高净值商务 / 高SLA保障', affUrl: 'https://invite.wgetcloud.ltd/auth/register?code=VLG2xb' },
+  { name: '白月光', year: '2022', price: '季付 ¥66 起', traffic: '100GB/月', type: '季付', line: 'Shadowsocks / 108节点', pos: '79地区覆盖 / 亚洲近端低延迟', affUrl: 'https://sibker.com/register?invite_code=gg6puAId' },
+  { name: 'FlyingBird', year: '2022', price: '15 元/月起', traffic: '100G~1000G', type: '月付 / 季付', line: '全专线 IPLC / SS', pos: '无倍率不限速 / 飞鸟老牌', affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f' },
+  { name: 'CyberGuard', year: '2024', price: '32 元/月', traffic: '350GB', type: '月付 / 不限时', line: 'Trojan / VLESS', pos: '32元大流量 / 不限时包', affUrl: 'https://cyberguard.best/#/register?code=AxXNNYng' },
+  { name: '龙猫云', year: '2023', price: '15 元/月起', traffic: '100G~1000G', type: '月付 / 季付', line: 'SS + IPLC 全专线', pos: '最高2000Mbps专线 / 教程完善', affUrl: '/reviews/longmao-cloud/' },
+  { name: 'FATCAT', year: '2023', price: '约 8~20 元/月', traffic: '60G~1500G', type: '年付 / 月付', line: '企业级 IEPL / IPLC', pos: '内网专线抗封锁', affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f' },
+  { name: 'TNTCloud', year: '2022', price: '季付 ¥30 起', traffic: '60G~1100G', type: '季付 / 月付', line: 'IPLC 内网专线', pos: '原3A加速器 / 跨境直播定制', affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f' },
+  { name: '青云梯', year: '2019', price: '年付 ¥96 起', traffic: '60G~1000G', type: '年付 / 月付', line: 'SS + 企业级 IPLC', pos: '6年老牌 / 80+节点 / 智能负载', affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f' },
+  { name: '山水云', year: '2024', price: '15 元/月起', traffic: '64G~500G', type: '月付 / 年付', line: '专线中转', pos: '年付88元 / 月付15元三档', affUrl: 'https://sldm1.ssyylf.com/#/register?code=YD5iQ888' },
+  { name: '灵动云', year: '2025', price: '20 元/月起', traffic: '70G~1.5TB', type: '月付 / 年付', line: 'VLESS + IEPL 专线', pos: '2025新开业专线 / 不限速不限设备', affUrl: 'https://varnexa.lingdongaff.com/#/?code=wZvEhEoI' },
+  { name: '浪网', year: '2024', price: '30 元/月起', traffic: '80G~2000G', type: '月付 / 年付', line: 'IEPL 专线', pos: '入门到商业多层级 / 定制线路', affUrl: 'https://varnexa.wavenetaff.com/#/?code=xwAM4tTd' },
+  { name: 'EdgeNova', year: '2024', price: '15 元/月起', traffic: '45G~1000G', type: '月付 / 年付', line: '高速直连 / IPLC', pos: '多线路自动分配 / 新用户8折', affUrl: 'https://work.edgenovaaff.cc/#/register?code=cl3iB5YG' },
+  { name: '萤火虫', year: '2024', price: '约 8 元/月起', traffic: '60G~1000G', type: '年付 / 月付', line: 'IPLC + VLESS', pos: '原生 IP / 8年团队 / 新用户8折', affUrl: 'https://vip02.fireflyaff.com/#/?code=jTp9wSgZ' },
+  { name: 'SSLAR', year: '2023', price: '17 元/月起', traffic: '100G~300G', type: '月付', line: '企业级 IEPL + 多线 BGP', pos: '自研客户端 / 远程协助 / 8折', affUrl: 'https://guangs.vipaff.cc/#/?code=xhX5X22f' },
 ];
 
 const webSiteSchema = {
@@ -252,7 +308,7 @@ const webSiteSchema = {
                   <a
                     href={ap.affUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow sponsored noopener"
                     class="editorial-cta-secondary"
                   >
                     官网 ↗
@@ -266,13 +322,13 @@ const webSiteSchema = {
 
         <div class="editorial-divider"></div>
 
-        <!-- 02 / 全景参数与线路对比 (17 大品牌) -->
+        <!-- 02 / 全景参数与线路对比 (42 大品牌) -->
         <section class="editorial-section" id="comparison">
           <div class="section-header-wrap">
             <span class="section-badge-tag">02 / COMPARISON</span>
-            <h2 class="editorial-section-title">17 大主流机场参数与线路全景对比</h2>
+            <h2 class="editorial-section-title">42 大主流机场参数与线路全景对比</h2>
             <p class="editorial-section-desc">
-              一表看清各家服务商在开业时间、价格类型、线路架构与主要推荐定位上的核心差异。
+              一表看清 2026 年 42 家主流机场在开业年份、起步价格、线路架构（IEPL专线/隧道/BGP中转/直连）、协议支持与核心定位上的差异。
             </p>
           </div>
 
@@ -303,7 +359,7 @@ const webSiteSchema = {
                     <td>{ap.line}</td>
                     <td><span class="td-pos-tag">{ap.pos}</span></td>
                     <td class="td-action">
-                      <a href={ap.affUrl} target="_blank" rel="noopener noreferrer" class="table-text-link">访问官网 ↗</a>
+                      <a href={ap.affUrl} target="_blank" rel="nofollow sponsored noopener" class="table-text-link">访问官网 ↗</a>
                     </td>
                   </tr>
                 ))}
@@ -318,54 +374,50 @@ const webSiteSchema = {
         <section class="editorial-section" id="scenarios">
           <div class="section-header-wrap">
             <span class="section-badge-tag">03 / SCENARIOS</span>
-            <h2 class="editorial-section-title">按使用场景精准选型</h2>
+            <h2 class="editorial-section-title">按终端与使用场景精准选型</h2>
             <p class="editorial-section-desc">
-              根据你的核心需求与预算，快速定位最合适的产品方案。
+              根据您的终端设备（手机/电脑）、核心需求（AI/流媒体/办公）与预算，快速定位最匹配的梯子方案。
             </p>
           </div>
 
           <div class="scenarios-editorial-grid">
             <div class="scenario-item">
-              <h4 class="scenario-title">ChatGPT & AI 生产力</h4>
+              <h4 class="scenario-title">📱 手机端科学上网 (iOS / 安卓)</h4>
               <p class="scenario-desc">
-                需要原生住宅 IP、稳定不过期的长连接，杜绝频繁报错降级。
+                注重 5G/Wi-Fi 智能切换不掉线、后台省电防杀进程与小火箭/v2rayNG 一键导入。
               </p>
               <div class="scenario-footer">
-                <span class="recom-label">推荐：</span>
-                <span class="recom-text">光速云 · 速界</span>
+                <a href="/recommend/mobile-tizi/" class="table-text-link">查看手机梯子选型指南 →</a>
               </div>
             </div>
 
             <div class="scenario-item">
-              <h4 class="scenario-title">Netflix / 4K 高清流媒体</h4>
+              <h4 class="scenario-title">💻 电脑桌面端 (Windows / Mac)</h4>
               <p class="scenario-desc">
-                需要大带宽、低丢包，支持 4K/8K 视频秒开与全地区非自制剧解锁。
+                注重 Clash Verge Rev / TUN 虚拟网卡接管、终端开发与系统代理稳定性。
               </p>
               <div class="scenario-footer">
-                <span class="recom-label">推荐：</span>
-                <span class="recom-text">光速云 · 唯兔云</span>
+                <a href="/recommend/pc-tizi/" class="table-text-link">查看电脑梯子配置指南 →</a>
               </div>
             </div>
 
             <div class="scenario-item">
-              <h4 class="scenario-title">超低预算 / 轻度查资料</h4>
+              <h4 class="scenario-title">🤖 ChatGPT & AI 生产力专线</h4>
               <p class="scenario-desc">
-                流量需求约 50GB，追求 IEPL 专线与极低年付均价（约 7 元/月）。
+                需要原生住宅 IP、稳定不过期的长连接，杜绝频繁报错降级与账号风控。
               </p>
               <div class="scenario-footer">
-                <span class="recom-label">推荐：</span>
-                <span class="recom-text">微风网络 · 飞猫云</span>
+                <a href="/recommend/which-tizi-is-best/" class="table-text-link">查看梯子软件横向对比 →</a>
               </div>
             </div>
 
             <div class="scenario-item">
-              <h4 class="scenario-title">月付大流量 / 备用防失联</h4>
+              <h4 class="scenario-title">🆓 免费体验 / 应急断网备用</h4>
               <p class="scenario-desc">
-                每月需要 150GB 流量或需要 0 月租不限时备用流量包。
+                大厂官方 1 元试用与小额流量包，突发断网救急与本地网络测速首选。
               </p>
               <div class="scenario-footer">
-                <span class="recom-label">推荐：</span>
-                <span class="recom-text">灵猫网络 · 星岛梦</span>
+                <a href="/wiki/free-tizi/" class="table-text-link">查看免费体验与避坑指南 →</a>
               </div>
             </div>
           </div>
@@ -377,45 +429,45 @@ const webSiteSchema = {
         <section class="editorial-section" id="knowledge">
           <div class="section-header-wrap">
             <span class="section-badge-tag">04 / KNOWLEDGE BASE</span>
-            <h2 class="editorial-section-title">机场梯子知识库 & 客户端教程</h2>
+            <h2 class="editorial-section-title">核心知识库 & 客户端教程</h2>
             <p class="editorial-section-desc">
-              完整的客户端安装、订阅导入、TUN 模式配置与故障排查技术手册。
+              覆盖梯子基础科普、Clash Verge Rev、Shadowrocket 小火箭与网络故障排查。
             </p>
           </div>
 
           <div class="kb-editorial-grid">
-            <a href="/reviews/guangsu-cloud/" class="kb-editorial-card">
-              <span class="kb-topic-tag">旗舰评测</span>
-              <h4 class="kb-item-title">光速云深度评测：2020老牌IEPL专线实测</h4>
-              <p class="kb-item-desc">晚高峰千兆跑分、VLESS 协议与 ChatGPT 解锁实测数据。</p>
-              <span class="kb-arrow-cta">阅读评测 →</span>
-            </a>
-
-            <a href="/reviews/weifeng-cloud/" class="kb-editorial-card">
-              <span class="kb-topic-tag">超低价专线</span>
-              <h4 class="kb-item-title">微风网络评测：约7元/月IEPL轻度专线</h4>
-              <p class="kb-item-desc">50GB 小流量轻度办公、自研客户端与 9 折优惠码实测。</p>
-              <span class="kb-arrow-cta">阅读评测 →</span>
-            </a>
-
-            <a href="/wiki/what-is-clash/" class="kb-editorial-card">
-              <span class="kb-topic-tag">新手入门</span>
-              <h4 class="kb-item-title">Clash 是什么？新手完整使用指南</h4>
-              <p class="kb-item-desc">搞懂规则分流、节点配置与代理模式核心原理。</p>
-              <span class="kb-arrow-cta">阅读指南 →</span>
+            <a href="/wiki/what-is-tizi/" class="kb-editorial-card">
+              <span class="kb-topic-tag">基础科普</span>
+              <h4 class="kb-item-title">梯子是什么？梯子与VPN/机场区别</h4>
+              <p class="kb-item-desc">零基础搞懂客户端、节点、订阅链接与物理专线层级关系。</p>
+              <span class="kb-arrow-cta">阅读科普 →</span>
             </a>
 
             <a href="/tutorials/clash-verge-rev/" class="kb-editorial-card">
-              <span class="kb-topic-tag">客户端教程</span>
-              <h4 class="kb-item-title">Clash Verge Rev 下载与安装教程</h4>
-              <p class="kb-item-desc">Windows/macOS 平台最主流的 Clash 客户端配置实战。</p>
+              <span class="kb-topic-tag">电脑客户端</span>
+              <h4 class="kb-item-title">Clash Verge Rev 电脑下载与配置教程</h4>
+              <p class="kb-item-desc">Windows/Mac 订阅导入、系统代理与 TUN 模式一站式搞定。</p>
               <span class="kb-arrow-cta">阅读指南 →</span>
+            </a>
+
+            <a href="/tutorials/shadowrocket-nodes/" class="kb-editorial-card">
+              <span class="kb-topic-tag">手机客户端</span>
+              <h4 class="kb-item-title">Shadowrocket 小火箭节点怎么选？</h4>
+              <p class="kb-item-desc">香港/日本/美国节点延迟对比、线路选择与晚高峰决策树。</p>
+              <span class="kb-arrow-cta">阅读指南 →</span>
+            </a>
+
+            <a href="/recommend/which-tizi-is-best/" class="kb-editorial-card">
+              <span class="kb-topic-tag">选型对比</span>
+              <h4 class="kb-item-title">梯子软件哪个好用？测速与稳定性对比</h4>
+              <p class="kb-item-desc">主流梯子软件多维度横向实测，提供各场景决策清单。</p>
+              <span class="kb-arrow-cta">阅读对比 →</span>
             </a>
           </div>
 
           <div class="kb-bottom-cta">
             <a href="/blog/" class="editorial-hub-link">
-              前往「知识库」浏览全部 28 篇深度评测与使用手册 ⇗
+              前往「知识库」浏览全部 100+ 篇深度评测与使用手册 ⇗
             </a>
           </div>
         </section>

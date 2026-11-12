@@ -1,13 +1,14 @@
 ---
-title: Clash Verge Rev 下载、安装与订阅配置教程：Windows、macOS、Linux 完整指南
+title: "Clash Verge Rev 电脑下载与配置教程（2026最新）：Windows/Mac订阅导入、TUN模式与断网排查"
 date: 2026-08-28T08:30:00.000Z
-updated: 2026-08-28T17:00:00.000Z
-description: 2026年最新 Windows、macOS 与 Linux 平台 Clash Verge Rev 客户端官方安全下载、安装选型、机场订阅导入、系统代理与 TUN 模式开启及常见故障排查完整图文指南。
+updated: 2026-11-12T15:30:00.000Z
+description: "2026 最新 Clash Verge Rev 客户端新手图文指南。详解 Windows 10/11 与 macOS 官方安全下载、机场订阅导入、系统代理与 TUN 模式配置，以及连接成功打不开网页、节点超时等断网故障排查。"
 categories:
   - 客户端教程
 tags:
   - Clash
   - 客户端教程
+  - 电脑梯子
   - Windows
   - Mihomo
   - 教程
