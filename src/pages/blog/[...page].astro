@@ -64,10 +64,17 @@ const pageTitle =
     ? `机场梯子知识库：机场推荐、Clash教程、节点订阅与网络问题解决 · ${siteTitle}`
     : `知识库 - 第 ${page.currentPage} 页 · ${siteTitle}`;
 
-const pageDescription =
-  '机场梯子知识库持续整理机场推荐、机场评测、Clash、Mihomo、Clash Verge Rev、节点订阅、线路协议、客户端教程及常见问题解决方案。';
+const pageTopics = page.data
+  .slice(0, 2)
+  .map((post) => post.data.title)
+  .join('、');
 
-const shouldNoindex = page.currentPage > 1;
+const pageDescription =
+  page.currentPage === 1
+    ? '机场梯子知识库持续整理机场推荐、机场评测、Clash、Mihomo、Clash Verge Rev、节点订阅、线路协议、客户端教程及常见问题解决方案。'
+    : `机场梯子知识库第 ${page.currentPage}/${page.lastPage} 页归档，收录${pageTopics ? `「${pageTopics}」等 ` : ''}${page.data.length} 篇机场评测、客户端教程、节点协议与网络排障指南。`;
+
+const shouldNoindex = false;
 const canonicalPath = getBlogPagePath(page.currentPage);
 const canonicalURL = new URL(canonicalPath, siteUrl).toString();
 const prevURL = page.url.prev ? new URL(page.url.prev, siteUrl).toString() : undefined;
@@ -234,7 +241,7 @@ const blogSchema = {
         '@type': 'ListItem',
         position: idx + 1,
         name: post.data.title,
-        url: new URL(`/blog/${post.id}/`, siteUrl).toString(),
+        url: new URL(`/${post.id}/`, siteUrl).toString(),
       })),
     },
   ],

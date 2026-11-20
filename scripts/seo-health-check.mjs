@@ -23,6 +23,8 @@ const checkResults = {
   coreUrls: { pass: true, msg: '', missingCore: [] },
   schema: { pass: true, msg: '', errorCount: 0, details: [] },
   duplicateTitles: { pass: true, msg: '', dupes: [] },
+  duplicateDescriptions: { pass: true, msg: '', dupes: [] },
+  shortDescriptions: { pass: true, msg: '', shorts: [] },
   pageCount: { pass: true, msg: '', totalHtmlPages: 0 },
 };
 
@@ -96,7 +98,7 @@ function assetExists(targetPath) {
 for (const htmlFile of htmlFiles) {
   const route = getRoutePath(htmlFile);
   const content = fs.readFileSync(htmlFile, 'utf-8');
-  const isRedirectStub = content.includes('http-equiv="refresh"') || content.includes('canonical') && route.startsWith('/blog/') && !route.endsWith('/blog/');
+  const isRedirectStub = content.includes('http-equiv="refresh"');
   const is404 = route === '/404.html/' || route === '/404/';
 
   // A. Noindex check
@@ -126,8 +128,8 @@ for (const htmlFile of htmlFiles) {
     }
   }
 
-  // C. Title & Description check (ONLY for active indexable pages, ignore redirect stubs and tags)
-  if (!isRedirectStub && !is404 && !route.startsWith('/tags/')) {
+  // C. Title & Description check (across all non-redirect, non-404 pages)
+  if (!isRedirectStub && !is404) {
     const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
     if (titleMatch) {
       const pageTitle = titleMatch[1].trim();
@@ -138,9 +140,12 @@ for (const htmlFile of htmlFiles) {
       }
     }
 
-    const descMatch = content.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i);
+    const descMatch = content.match(/<meta[^>]+name=["']description["'][^>]+content=(?:"([^"]*)"|'([^']*)')/i);
+    const pageDesc = descMatch ? (descMatch[1] ?? descMatch[2] ?? '').trim() : '';
+    if (!descMatch || pageDesc.length < 50) {
+      checkResults.shortDescriptions.shorts.push(`Description too short (${pageDesc.length} chars) on: ${route}`);
+    }
     if (descMatch) {
-      const pageDesc = descMatch[1].trim();
       if (descMap.has(pageDesc)) {
         descMap.get(pageDesc).push(route);
       } else {
@@ -181,15 +186,27 @@ for (const htmlFile of htmlFiles) {
   }
 }
 
-// Check Duplicate Titles (filter out pagination /blog/page/*)
+// Check Duplicate Titles
 for (const [t, routes] of titleMap.entries()) {
-  const filtered = routes.filter((r) => !r.startsWith('/tags/') && !r.startsWith('/blog/page/'));
-  if (filtered.length > 1) {
-    checkResults.duplicateTitles.dupes.push(`Title "${t}" shared across: ${filtered.join(', ')}`);
+  if (routes.length > 1) {
+    checkResults.duplicateTitles.dupes.push(`Title "${t}" shared across: ${routes.join(', ')}`);
   }
 }
 if (checkResults.duplicateTitles.dupes.length > 0) {
   checkResults.duplicateTitles.pass = false;
+}
+
+// Check Duplicate & Short Descriptions
+for (const [d, routes] of descMap.entries()) {
+  if (routes.length > 1) {
+    checkResults.duplicateDescriptions.dupes.push(`Description "${d.slice(0, 40)}..." shared across: ${routes.join(', ')}`);
+  }
+}
+if (checkResults.duplicateDescriptions.dupes.length > 0) {
+  checkResults.duplicateDescriptions.pass = false;
+}
+if (checkResults.shortDescriptions.shorts.length > 0) {
+  checkResults.shortDescriptions.pass = false;
 }
 
 // 4. Sitemap Validation
@@ -270,7 +287,9 @@ console.log(`6.  Internal Links:   ${checkResults.internalLinks.pass ? '✅ PASS
 console.log(`7.  Core URL Route:   ${checkResults.coreUrls.pass ? '✅ PASS' : '❌ FAIL'} (${checkResults.coreUrls.missingCore.length} missing)`);
 console.log(`8.  Schema JSON-LD:   ${checkResults.schema.pass ? '✅ PASS' : '❌ FAIL'} (${checkResults.schema.errorCount} parse errors)`);
 console.log(`9.  Duplicate Titles: ${checkResults.duplicateTitles.pass ? '✅ PASS' : '❌ FAIL'} (${checkResults.duplicateTitles.dupes.length} duplicates)`);
-console.log(`10. IndexNow Ready:   ✅ PASS (Key verified in public/ & dist/)\n`);
+console.log(`10. Duplicate Descs:  ${checkResults.duplicateDescriptions.pass ? '✅ PASS' : '❌ FAIL'} (${checkResults.duplicateDescriptions.dupes.length} duplicates)`);
+console.log(`11. Short Descs (<50):${checkResults.shortDescriptions.pass ? '✅ PASS' : '❌ FAIL'} (${checkResults.shortDescriptions.shorts.length} too short)`);
+console.log(`12. IndexNow Ready:   ✅ PASS (Key verified in public/ & dist/)\n`);
 
 const isAllPass =
   checkResults.build.pass &&
@@ -281,7 +300,9 @@ const isAllPass =
   checkResults.internalLinks.pass &&
   checkResults.coreUrls.pass &&
   checkResults.schema.pass &&
-  checkResults.duplicateTitles.pass;
+  checkResults.duplicateTitles.pass &&
+  checkResults.duplicateDescriptions.pass &&
+  checkResults.shortDescriptions.pass;
 
 console.log('================================================================');
 if (isAllPass) {
@@ -292,6 +313,8 @@ if (isAllPass) {
   if (checkResults.canonical.details.length) checkResults.canonical.details.forEach((d) => console.error('   ' + d));
   if (checkResults.internalLinks.details.length) checkResults.internalLinks.details.forEach((d) => console.error('   ' + d));
   if (checkResults.duplicateTitles.dupes.length) checkResults.duplicateTitles.dupes.forEach((d) => console.error('   ' + d));
+  if (checkResults.duplicateDescriptions.dupes.length) checkResults.duplicateDescriptions.dupes.forEach((d) => console.error('   ' + d));
+  if (checkResults.shortDescriptions.shorts.length) checkResults.shortDescriptions.shorts.slice(0, 20).forEach((d) => console.error('   ' + d));
   process.exit(1);
 }
 console.log('================================================================\n');

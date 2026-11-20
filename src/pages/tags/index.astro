@@ -11,11 +11,12 @@ import { extractExcerpt } from '../../lib/content/text';
 const sortedTags = await getTagStats();
 const posts = await getBlogPosts();
 const tagsHero = heroConfig.tags;
+const tagsIndexDescription = `机场梯子全站主题标签与关键词索引，汇集 ${sortedTags.length} 个热门标签与 ${posts.length} 篇机场推荐、品牌实测、Clash/Shadowrocket 客户端教程及排障指南。`;
 ---
 
 <PageShell
   title={`标签 | ${siteTitle}`}
-  description="按标签及关键词浏览所有博客文章"
+  description={tagsIndexDescription}
   transparentHeader={true}
   pageId="tags-index"
   useMainWrapper={false}
@@ -561,7 +562,7 @@ const tagsHero = heroConfig.tags;
                 >
                   <article class="tag-post-item">
                     <h4 class="tag-post-title">
-                      <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+                      <a href={`/${post.id}/`}>{post.data.title}</a>
                       <DraftBadge draft={post.data.draft} />
                     </h4>
                     {excerpt && <p class="tag-post-excerpt">{excerpt}</p>}

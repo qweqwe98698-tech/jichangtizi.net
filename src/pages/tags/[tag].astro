@@ -28,11 +28,16 @@ export async function getStaticPaths() {
 
 const { tag, posts, sortedTags } = Astro.props;
 const tagsHero = heroConfig.tags;
+const featuredTitles = posts
+  .slice(0, 2)
+  .map((p) => p.data.title)
+  .join('、');
+const tagDescription = `精选 ${posts.length} 篇「${tag}」专题文章与实用指南，涵盖${featuredTitles || `${tag}推荐与评测`}等核心内容，助你快速掌握机场选型、客户端配置与网络排障。`;
 ---
 
 <PageShell
   title={`标签: ${tag} | ${siteTitle}`}
-  description={`所有标记为 "${tag}" 的博客文章`}
+  description={tagDescription}
   transparentHeader={true}
   pageId="tag-detail"
   useMainWrapper={false}
